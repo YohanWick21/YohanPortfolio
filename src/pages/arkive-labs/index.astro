@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import Reveal from '../../components/Reveal';
+import { Lightbulb, PenTool, Rocket, Globe, MessageCircle } from 'lucide-react';
+import { asset } from '../../data/site';
+const logo = asset('Full Logo Black.png');
+const offers = [
+  { n: 'Ideate', c: 'var(--sun)', Ic: Lightbulb, t: 'Strategy and positioning', d: 'Market positioning, messaging and brand strategy that give a business a clear story to build on.' },
+  { n: 'Create', c: 'var(--pink)', Ic: PenTool, t: 'Brand and creative', d: 'Visual identity, campaign creative and content direction that make that story look and feel unmistakably yours.' },
+  { n: 'Execute', c: 'var(--sky)', Ic: Rocket, t: 'Digital and growth', d: 'Websites, content, SEO and performance campaigns, built as one system and measured so we know what’s working.' },
+];
+---
+<Base title="Arkive Labs | Yohan Wickramasinghe" desc="Arkive Labs is a strategy-led creative and digital studio that turns what a business is genuinely good at into something the market can understand and trust." current="arkive">
+  <section class="page-head">
+    <div class="ak-hero">
+      <div>
+        <h1 class="display">Arkive Labs</h1>
+        <p class="sub">A strategy-led creative and digital studio that turns what a business is genuinely good at into something the market can understand and trust.</p>
+        <div class="btns" style="margin-top:1.8rem"><a class="btn" href="https://arkivelabs.com" target="_blank" rel="noopener"><Globe size={18} /> Visit arkivelabs.com</a><a class="btn line" href="/contact/"><MessageCircle size={18} /> Talk to me first</a></div>
+      </div>
+      <div class="ak-logo"><img src={logo.src} alt="Arkive Labs logo" width={logo.w} height={logo.h} /></div>
+    </div>
+  </section>
+  <section class="sec paper" aria-labelledby="w"><Reveal client:visible>
+    <div class="split"><h2 class="display" id="w">What we do</h2><div>
+      <p class="lead-p">We help capable businesses explain themselves clearly. That means positioning, brand, websites, content and campaigns, all built from a real understanding of what the company does and why it matters.</p>
+      <p>Plenty of strong companies struggle to communicate their value, so the market overlooks them. We start with the business, not the deliverable. Understand first, clarify the story, then build the presence that carries it.</p>
+    </div></div></Reveal>
+  </section>
+  <section class="sec" aria-labelledby="f"><Reveal client:visible>
+    <div class="split"><h2 class="display" id="f">Who it is for</h2><div>
+      <p class="lead-p">Founders, early-stage startups, and growing SMEs who have real substance but a message that hasn't caught up.</p>
+      <p style="color:var(--mute)">We work mostly with Sri Lankan and regional brands, and with technically complex businesses that need their value translated into plain, confident language.</p>
+    </div></div></Reveal>
+  </section>
+  <section class="sec paper" aria-labelledby="o">
+    <Reveal client:visible><div class="sec-head"><h2 class="display" id="o">What we offer</h2><p>The same three stages you can drag through on the homepage.</p></div></Reveal>
+    <div class="map" style="border-top-color:var(--ink)">
+      {offers.map((m, i) => <Reveal client:visible delay={i * 0.1}><article><span class="ico" style={`background:${m.c}`}><m.Ic size={24} strokeWidth={2.4} /></span><br /><span class="n">0{i + 1} {m.n}</span><h3 class="display">{m.t}</h3><p>{m.d}</p></article></Reveal>)}
+    </div>
+  </section>
+  <section class="sec" aria-labelledby="r"><Reveal client:visible>
+    <div class="split"><h2 class="display" id="r">My role</h2><div>
+      <p class="lead-p">I'm co-founder and creative director at Arkive Labs, leading brand strategy, visual identity, content and digital experience.</p>
+      <p style="color:var(--mute)">I built it with Akesh Chandrasiri, who leads AI engineering and compliance. Together we keep strategy, design and technology under one roof, so the people shaping the idea are the people building it.</p>
+      <div class="btns" style="margin-top:1.4rem"><a class="btn" href="https://arkivelabs.com" target="_blank" rel="noopener"><Globe size={18} /> Visit arkivelabs.com</a></div>
+    </div></div></Reveal>
+  </section>
+</Base>

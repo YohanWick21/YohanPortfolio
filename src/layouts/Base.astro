@@ -1,0 +1,50 @@
+---
+import Nav from '../components/Nav';
+import { Link2, BookOpen, Globe, ArrowUpRight, Send } from 'lucide-react';
+import '../styles/site.css';
+import '../styles/fun.css';
+interface Props { title: string; desc: string; current?: string; og?: string; total?: number; footer?: boolean }
+const { title, desc, current, og, total, footer = true } = Astro.props;
+const WORDS = ['Ideate', 'Create', 'Execute', 'Published', 'Brand', 'Campaigns', 'Culture', 'Craft. Code. Conquer.'];
+const COLS = ['#FFC83D', '#FF5CAA', '#3DD9FF', '#C8FF00', '#8B5CFF', '#FF6B2C'];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={desc} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={desc} />
+  {og && <meta property="og:image" content={og} />}
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23C8FF00'/%3E%3Ctext x='32' y='42' font-family='Impact,sans-serif' font-size='30' font-style='italic' text-anchor='middle' fill='%23070707'%3EYW%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <noscript><style>[style*="opacity: 0"]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <Nav client:load current={current} total={total} />
+  <main id="main"><slot /></main>
+  {footer && (
+    <footer class="foot">
+      <div class="ribbon" aria-hidden="true"><div class="ribbon-track">
+        {[0, 1].map(() => WORDS.map((w, i) => <span style={`color:${COLS[i % COLS.length]}`}>{w}<b>✦</b></span>))}
+      </div></div>
+      <h2 class="display">Got something rough?</h2>
+      <div class="btns">
+        <a class="btn" href="/contact/"><Send size={18} /> Start a project</a>
+        <a class="btn line" href="https://arkivelabs.com" target="_blank" rel="noopener"><Globe size={18} /> arkivelabs.com</a>
+      </div>
+      <small class="mono">
+        <span>Yohan Wickramasinghe, Sri Lanka</span>
+        <span class="socials">
+          <a href="https://www.linkedin.com/in/yohan-wickramasinghe/" target="_blank" rel="noopener"><Link2 size={14} /> LinkedIn</a>
+          <a href="https://medium.com/@yohanwick17" target="_blank" rel="noopener"><BookOpen size={14} /> Medium</a>
+        </span>
+      </small>
+    </footer>
+  )}
+</body>
+</html>

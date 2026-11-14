@@ -1,0 +1,3 @@
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+export default defineConfig({ integrations: [react()], vite: { ssr: { noExternal: ['lucide-react', 'motion'] } }, build: { format: 'directory' }, trailingSlash: 'always' });

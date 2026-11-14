@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import Machine from '../components/Machine';
+import Stickers from '../components/Stickers';
+import Reveal from '../components/Reveal';
+import { Lightbulb, PenTool, Rocket, ArrowRight, Globe, Sparkles } from 'lucide-react';
+import { JOBS, A, dims, asset } from '../data/site';
+const strip = [['verdentra-movie-night.jpg', 'Verdentra movie night poster', 'Movie night'], ['verdentra-poson.jpg', 'Verdentra Poson greeting post', 'Poson'], ['verdentra-interns-thesara.jpg', 'Interns, Unfiltered post', 'Interns, Unfiltered'], ['verdentra-new-joiner.jpg', 'Verdentra new joiner welcome template', 'New joiner template']];
+const logo = asset('Full Logo Black.png');
+const map = [
+  { n: 'Ideate', c: 'var(--sun)', Ic: Lightbulb, t: 'Strategy and positioning', d: 'Market positioning, messaging and brand strategy that give a business a clear story to build on.' },
+  { n: 'Create', c: 'var(--pink)', Ic: PenTool, t: 'Brand and creative', d: 'Visual identity, campaign creative and content direction that make that story look and feel unmistakably yours.' },
+  { n: 'Execute', c: 'var(--sky)', Ic: Rocket, t: 'Digital and growth', d: "Websites, content, SEO and performance campaigns, built as one system and measured so we know what's working." },
+];
+---
+<Base title="Yohan Wickramasinghe | Co-founder, Arkive Labs. Employer branding, Verdentra" desc="Yohan Wickramasinghe co-founded Arkive Labs and leads employer branding and communications at Verdentra. Drag a job from rough idea to published post." total={JOBS.length}>
+  <section class="hero" aria-labelledby="h1">
+    <Stickers client:load />
+    <h1 class="display" id="h1">From rough idea to <span class="hl">published.</span></h1>
+    <div class="intro">
+      <p>I'm Yohan. I co-founded Arkive Labs and I lead employer branding and comms at Verdentra. Here is how a job moves from my head to your feed.</p>
+      <p class="how"><strong>Pick a job from the queue, then drag the puck.</strong> Watch real campaigns turn from a brief into a published post.</p>
+    </div>
+    <Machine client:load jobs={JOBS} />
+  </section>
+
+  <section class="sec" aria-labelledby="ak-h">
+    <Reveal client:visible><div class="sec-head"><h2 class="display" id="ak-h">Same method, your brand</h2><p>What you just dragged is how Arkive Labs works, with strategy before design and design before launch.</p></div></Reveal>
+    <div class="map">
+      {map.map((m, i) => <Reveal client:visible delay={i * 0.1}><article><span class="ico" style={`background:${m.c}`}><m.Ic size={24} strokeWidth={2.4} /></span><br /><span class="n">0{i + 1} {m.n}</span><h3 class="display">{m.t}</h3><p>{m.d}</p></article></Reveal>)}
+    </div>
+    <Reveal client:visible>
+      <div class="ak">
+        <div class="ak-logo"><img src={logo.src} alt="Arkive Labs logo" width={logo.w} height={logo.h} /></div>
+        <div>
+          <p class="lead">A strategy-led creative and digital studio that turns what a business is genuinely good at into something the market can understand and trust.</p>
+          <p>I co-founded Arkive Labs with Akesh Chandrasiri, who leads AI engineering and compliance. I lead brand strategy, visual identity, content and digital experience for founders, startups and growing SMEs, mostly Sri Lankan and regional brands.</p>
+          <div class="btns"><a class="btn" href="/arkive-labs/"><Sparkles size={18} /> The studio</a><a class="btn line" href="https://arkivelabs.com" target="_blank" rel="noopener"><Globe size={18} /> Visit arkivelabs.com</a></div>
+        </div>
+      </div>
+    </Reveal>
+  </section>
+
+  <section class="sec paper" aria-labelledby="v-h">
+    <Reveal client:visible><div class="sec-head"><h2 class="display" id="v-h">Inside Verdentra</h2><p>The same press, running every week on a live employer brand.</p></div></Reveal>
+    <ul class="roles"><li>Exec. Employer Branding &amp; Comms</li><li>Social media</li><li>Campaigns</li><li>Internal comms</li><li>Verdentra Waves, CSR</li></ul>
+    <div class="v-grid">
+      {strip.map(([s, a, c]) => <figure><a class="proof" href="/work/verdentra/"><img src={A(s)} alt={a} width={dims(s).w} height={dims(s).h} loading="lazy" /></a><figcaption class="mono">{c}</figcaption></figure>)}
+    </div>
+    <div class="btns" style="margin-top:2.4rem"><a class="btn" style="background:var(--ink);border-color:var(--ink);color:var(--stock)" href="/work/">See all work <ArrowRight size={18} /></a></div>
+  </section>
+</Base>

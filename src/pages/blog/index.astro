@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import Reveal from '../../components/Reveal';
+import { ArrowUpRight, BookOpen, Clock, Pencil } from 'lucide-react';
+import { BLOG } from '../../data/site';
+const [first, ...rest] = BLOG;
+const BC = ['var(--electric)', 'var(--pink)', 'var(--sky)', 'var(--sun)', 'var(--violet)'];
+---
+<Base title="Writing | Yohan Wickramasinghe" desc="Articles by Yohan Wickramasinghe on marketing strategy, branding, design and culture, published on Medium." current="blog">
+  <section class="page-head">
+    <h1 class="display">Writing</h1>
+    <p class="sub">Notes on marketing, branding and design: how brands get noticed, and why the messy, human version often beats the polished one.</p>
+    <div class="btns" style="margin-top:1.6rem"><a class="btn" href="https://medium.com/@yohanwick17" target="_blank" rel="noopener"><BookOpen size={18} /> Follow on Medium</a></div>
+  </section>
+  <section class="sec paper" aria-label="Latest article">
+    <Reveal client:visible>
+      <a class="feature" href={first.url} target="_blank" rel="noopener">
+        <div class="proof" style="--c:var(--pink)"><img src={first.asset.src} alt="" width={first.asset.w} height={first.asset.h} style="width:100%;height:auto;display:block" /></div>
+        <div>
+          <span class="post"><span class="meta"><span class="badge" style={`background:${BC[0]}`}><Pencil size={12} /> {first.badge}</span></span></span>
+          <h2 class="display">{first.title}</h2>
+          <p>{first.excerpt}</p>
+          <p class="mono" style="margin:1rem 0"><Clock size={14} /> {first.date} / {first.read}</p>
+          <ul class="tag-row">{first.tags.map((t: string) => <li>{t}</li>)}</ul>
+          <p style="margin-top:1.4rem;font-weight:700">Read on Medium <ArrowUpRight size={18} /></p>
+        </div>
+      </a>
+    </Reveal>
+  </section>
+  <section class="sec paper" style="padding-top:0" aria-label="More articles">
+    <div class="posts">
+      {rest.map((b: any, i: number) => (
+        <Reveal client:visible delay={(i % 3) * 0.08}>
+          <a class="post" href={b.url} target="_blank" rel="noopener">
+            <div class="proof"><div class="thumb"><img src={b.asset.src} alt="" width={b.asset.w} height={b.asset.h} loading="lazy" style="border:1.5px solid var(--ink)" /></div></div>
+            <div class="meta"><span class="badge" style={`background:${BC[(i + 1) % BC.length]}`}>{b.badge}</span><span class="mono"><Clock size={12} /> {b.read}</span></div>
+            <h3 class="display">{b.title}</h3>
+            <p>{b.excerpt}</p>
+            <span class="read">Read on Medium <ArrowUpRight size={16} /></span>
+          </a>
+        </Reveal>
+      ))}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import Gallery from '../../components/Gallery';
+import Reveal from '../../components/Reveal';
+import { ORDER, P, CARDS, asset } from '../../data/site';
+export function getStaticPaths() { return ORDER.map(slug => ({ params: { slug } })); }
+const { slug } = Astro.params as { slug: string };
+const p = P[slug], c = CARDS[slug];
+const i = ORDER.indexOf(slug as any), prev = ORDER[(i + ORDER.length - 1) % ORDER.length], next = ORDER[(i + 1) % ORDER.length];
+const h1 = p.h1.join(' ');
+const cover = asset(p.cover);
+const items = p.gallery.map((g: any) => ({ ...asset(g.src), tag: g.tag }));
+const SC = ['var(--sun)', 'var(--pink)', 'var(--sky)', 'var(--electric)'];
+---
+<Base title={`${h1} | Yohan Wickramasinghe`} desc={p.desc} current="work" og={cover.src}>
+  <section class="p-head">
+    <p class="crumb mono"><a href="/work/">Work</a><span>/</span><span>{p.chip}</span></p>
+    <div class="chips"><span class="pill fill">{p.badge}</span><span class="mono">{p.year}</span></div>
+    <h1 class="display">{h1}</h1>
+    <p class="desc">{p.desc}</p>
+    <div class="stats">{p.stats.map((x: any, k: number) => <div class="stat"><b style={`color:${SC[k % 4]}`}>{x.n}</b><span>{x.l}</span></div>)}</div>
+  </section>
+  <section class="cover"><div class="proof"><img src={cover.src} alt={c.title} width={cover.w} height={cover.h} /></div></section>
+  <section class="sec paper" aria-labelledby="ov"><Reveal client:visible>
+    <div class="overview">
+      <div><h2 class="display" id="ov">{p.ovtitle}</h2>{p.paras.map((t: string) => <p>{t}</p>)}</div>
+      <dl class="facts">{p.rows.map((x: any) => <div><dt>{x.l}</dt><dd>{x.v}</dd></div>)}</dl>
+    </div></Reveal>
+  </section>
+  <section class="sec" aria-labelledby="pr">
+    <Reveal client:visible><div class="sec-head"><h2 class="display" id="pr">Process</h2><p>How the work moved from brief to finished.</p></div></Reveal>
+    <div class="steps">{p.steps.map((x: any, n: number) => <Reveal client:visible delay={n * 0.08}><article><span class="n">0{n + 1}</span><h3 class="display">{x.t}</h3><p>{x.x}</p></article></Reveal>)}</div>
+  </section>
+  <section class="sec paper" aria-labelledby="gl">
+    <div class="sec-head"><h2 class="display" id="gl">The work</h2><p>Select any piece to view it full size.</p></div>
+    <Gallery client:visible items={items} />
+  </section>
+  <section class="sec" aria-labelledby="oc">
+    <Reveal client:visible><div class="sec-head"><h2 class="display" id="oc">Outcomes</h2></div></Reveal>
+    <div class="outcomes">{p.outcomes.map((x: any, n: number) => <Reveal client:visible delay={n * 0.08}><article><h3 class="display">{x.t}</h3><p>{x.x}</p></article></Reveal>)}</div>
+  </section>
+  <nav class="pn paper" aria-label="More projects">
+    <a href={`/work/${prev}/`}><span class="mono">Previous</span><span class="display">{P[prev].chip}</span></a>
+    <a href={`/work/${next}/`}><span class="mono">Next</span><span class="display">{P[next].chip}</span></a>
+  </nav>
+</Base>

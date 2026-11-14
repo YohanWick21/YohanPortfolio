@@ -1,0 +1,10 @@
+---
+import Base from '../../layouts/Base.astro';
+import WorkGrid from '../../components/WorkGrid';
+import { ORDER, CARDS, P, FILTERS, asset } from '../../data/site';
+const cards = ORDER.map(s => { const c = CARDS[s]; return { slug: s, category: c.category, cat: c.cat, year: P[s].year, title: c.title, desc: c.desc, tags: c.tags, img: asset(c.img) }; });
+---
+<Base title="Work | Yohan Wickramasinghe" desc="Employer branding, campaigns, event promotion, corporate communications and brand design by Yohan Wickramasinghe." current="work">
+  <section class="page-head"><h1 class="display">Work</h1><p class="sub">Employer brand, campaigns, events and identity. The press on the homepage runs a few of these in miniature.</p></section>
+  <section class="sec paper" aria-label="Projects"><WorkGrid client:load cards={cards} filters={FILTERS} /></section>
+</Base>

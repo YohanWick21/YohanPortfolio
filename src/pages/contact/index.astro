@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import { Send, Mail, Link2, Globe } from 'lucide-react';
+const kinds = ['Brand and strategy', 'A campaign', 'Employer branding', 'A website', 'Something else'];
+---
+<Base title="Contact | Yohan Wickramasinghe" desc="Send Yohan Wickramasinghe a rough idea and get a first take on how to take it to published." current="contact" footer={false}>
+  <section class="page-head"><h1 class="display">Got something rough?</h1><p class="sub">Send me the rough version. I read every brief, and I will come back with a first idea of how I would take it from here to published.</p></section>
+  <section class="sec paper" aria-label="Send a brief">
+    <form class="form" name="brief" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="brief" />
+      <p class="hp"><label>Leave this empty <input name="bot-field" /></label></p>
+      <div class="field"><label for="name">Your name</label><input class="in" id="name" name="name" type="text" autocomplete="name" required /></div>
+      <div class="field"><label for="email">Your email</label><input class="in" id="email" name="email" type="email" autocomplete="email" required /></div>
+      <fieldset class="field"><legend>What is it?</legend><div class="opts">{kinds.map((k, i) => <span><input type="radio" name="kind" id={`k${i}`} value={k} checked={i === 0} /><label for={`k${i}`}>{k}</label></span>)}</div></fieldset>
+      <div class="field"><label for="idea">The rough idea</label><textarea class="in" id="idea" name="idea" required placeholder="A sentence is enough. Who is it for, and what should they do?"></textarea></div>
+      <div class="field"><label for="where">Where should it end up? (optional)</label><input class="in" id="where" name="where" type="text" placeholder="Instagram, a website, a careers page, print" /></div>
+      <button class="btn" type="submit"><Send size={18} /> Send the brief</button>
+    </form>
+    <div class="direct"><p class="mono">Or reach me directly</p>
+      <a href="mailto:yohanwick17@gmail.com"><Mail size={16} /> yohanwick17@gmail.com</a>
+      <a href="https://www.linkedin.com/in/yohan-wickramasinghe/" target="_blank" rel="noopener"><Link2 size={16} /> LinkedIn</a>
+      <a href="https://arkivelabs.com" target="_blank" rel="noopener"><Globe size={16} /> arkivelabs.com</a></div>
+  </section>
+</Base>

@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import Reveal from '../../components/Reveal';
+import { FileText, BookOpen, GraduationCap, Briefcase, Users } from 'lucide-react';
+import { ABOUT } from '../../data/site';
+const a = ABOUT;
+const CC = ['var(--electric)', 'var(--pink)', 'var(--sky)', 'var(--sun)', 'var(--violet)', 'var(--orange)'];
+---
+<Base title="About | Yohan Wickramasinghe" desc="Yohan Wickramasinghe is the co-founder of Arkive Labs and leads employer branding and communications at Verdentra." current="about" og={a.photo.src}>
+  <section class="page-head">
+    <div class="about">
+      <div class="portrait"><img src={a.photo.src} alt="Yohan Wickramasinghe" width={a.photo.w} height={a.photo.h} /></div>
+      <div>
+        <h1 class="display" style="margin-bottom:1.2rem">Yohan Wickramasinghe</h1>
+        <p class="lead">Co-founder of Arkive Labs. Exec. Employer Branding &amp; Comms at Verdentra.</p>
+        <p>I'm a co-founder and employer branding specialist. I co-founded Arkive Labs, and at Verdentra I lead employer branding and communications, from social campaigns to internal engagement to our CSR programme, Verdentra Waves.</p>
+        <p>I started in design, building campaigns and event brands with AIESEC in SLIIT, and I still make the work myself. That background is why I care about how a company looks and sounds as much as what it says: clarity, consistency and people at the centre.</p>
+        <dl class="dl">{a.details.map((d: any) => <div><dt>{d.l}</dt><dd>{d.href ? <a href={d.href} target={d.href.startsWith('http') ? '_blank' : undefined} rel="noopener">{d.v}</a> : d.v}</dd></div>)}</dl>
+        <div class="btns" style="margin-top:1.6rem"><a class="btn" href="/assets/yohan-cv.pdf" target="_blank" rel="noopener"><FileText size={18} /> View CV</a><a class="btn line" href="/blog/"><BookOpen size={18} /> Read my writing</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec paper" aria-labelledby="ex">
+    <Reveal client:visible><div class="sec-head"><h2 class="display" id="ex"><Briefcase size={40} /> Experience</h2></div></Reveal>
+    <ol class="exp" style="list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink)">
+      {a.exp.map((x: any, i: number) => <Reveal client:visible><li><p class="date" style={`color:var(--ink)`}><span style={`background:${CC[i % CC.length]};padding:.15rem .6rem;border-radius:999px`}>{x.date}</span></p><div><h3 class="display">{x.role}</h3><p class="co">{x.company}</p><ul>{x.bullets.map((b: string) => <li style="display:list-item;border:0;padding:0">{b}</li>)}</ul></div></li></Reveal>)}
+    </ol>
+  </section>
+  <section class="sec" aria-labelledby="ed">
+    <Reveal client:visible><div class="sec-head"><h2 class="display" id="ed"><GraduationCap size={40} /> Education</h2></div></Reveal>
+    <ol class="edu on-ink" style="border-top-color:var(--stock)">
+      {a.edu.map((x: any, i: number) => <li><span class="badge" aria-hidden="true" style={`background:${CC[(i + 2) % CC.length]};color:var(--ink)`}>{x.icon}</span><div><h3 class="display">{x.degree}</h3><p>{x.school}</p><p>{x.note}</p></div><p class="year">{x.year}</p></li>)}
+    </ol>
+  </section>
+  <section class="sec paper" aria-labelledby="ld">
+    <Reveal client:visible><div class="sec-head"><h2 class="display" id="ld"><Users size={40} /> Leadership and volunteering</h2><p>The work I do outside the day job, mostly with AIESEC in SLIIT.</p></div></Reveal>
+    <div class="lead-grid">{a.lead.map((x: any, i: number) => <Reveal client:visible delay={(i % 3) * 0.08}><article class="lead-card"><span class="pill" style={`background:${CC[i % CC.length]};color:var(--ink);border-color:var(--ink)`}>{x.tag}</span><h3 class="display">{x.title}</h3><p class="mono">{x.when}</p><p>{x.desc}</p></article></Reveal>)}</div>
+  </section>
+</Base>
