@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yohan Wickramasinghe | Co-founder, Arkive Labs. Employer branding, Verdentra</title>
+<meta name="description" content="Yohan Wickramasinghe co-founded Arkive Labs and leads employer branding and communications at Verdentra. Drag a job from rough idea to published post.">
+<meta property="og:title" content="Yohan Wickramasinghe | Co-founder, Arkive Labs. Employer branding, Verdentra">
+<meta property="og:description" content="Yohan Wickramasinghe co-founded Arkive Labs and leads employer branding and communications at Verdentra. Drag a job from rough idea to published post.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23C8FF00'/%3E%3Ctext x='32' y='42' font-family='Impact,sans-serif' font-size='30' font-style='italic' text-anchor='middle' fill='%23070707'%3EYW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="mark" href="/" aria-label="Yohan Wickramasinghe, home">YW</a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main"><a href="/work/">Work</a><a href="/arkive-labs/">Arkive Labs</a><a href="/about/">About</a><a href="/contact/">Contact</a><span class="tally" id="tally" aria-live="polite">0 of 8 shipped</span></nav>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <h1 class="display" id="h1">From rough idea to published.</h1>
+  <div class="intro">
+    <p>I'm Yohan. I co-founded Arkive Labs and I lead employer branding and comms at Verdentra. Here is how a job moves from my head to your feed.</p>
+    <p class="how"><strong>Pick a job from the queue, then drag the puck.</strong> Watch real campaigns turn from a brief into a published post.</p>
+  </div>
+  <div class="queue" role="group" aria-label="Jobs in the queue"><span class="label mono">Queue</span></div>
+  <div class="machine">
+    <div class="card-wrap">
+      <div class="card" id="card" aria-label="The work in progress. Drag sideways to move it along.">
+        <div class="layer note" id="note">
+          <div><span class="k mono">The brief</span><p class="brief" id="nBrief"></p></div>
+          <hr>
+          <div><span class="k mono">The idea</span><h2 class="display idea" id="nIdea"></h2></div>
+          <div class="foot mono"><span id="nTag"></span><span id="nSize"></span></div>
+        </div>
+        <canvas class="layer bp" id="bp" width="540" height="675" aria-hidden="true"></canvas>
+        <img class="layer color" id="colorImg" alt="">
+        <div class="scan" id="scan"></div>
+        <span class="dims mono" id="dims"></span>
+        <div class="layer chrome" id="chrome"><span class="pub-pill"><i></i>Published</span></div>
+        <div class="stamp" id="stamp">Published</div>
+      </div>
+    </div>
+    <div class="panel" id="panel">
+      <div class="stage-row"><span class="stage-no" id="stageNo">01 / 03</span><div class="display stage-word" id="stageWord">Ideate</div></div>
+      <p class="mono meta" id="meta"></p>
+      <div class="qa"><span class="k mono">The question I ask</span><p class="q" id="qText"></p></div>
+      <div class="qa"><span class="k mono">What I did on this job</span><p id="doText"></p></div>
+      <div class="after" id="after" hidden>
+        <button class="btn line" type="button" id="nextJob">Next job</button>
+        <a class="btn line" id="projLink" href="/work/">See the full project</a>
+        <a class="btn" href="/arkive-labs/">Do this for my brand</a>
+      </div>
+    </div>
+  </div>
+  <div class="rail">
+    <div class="stations" id="stations"></div>
+    <div class="belt" aria-hidden="true"><div class="fill" id="fill"></div></div>
+    <label class="sr" for="run">Move the work along: from idea to published</label>
+    <input type="range" id="run" min="0" max="1000" step="1" value="0">
+    <p class="rail-hint mono">Drag the puck, drag the card, or use the arrow keys. Each stage changes what you see.</p>
+  </div>
+  <p class="sr" id="live" aria-live="polite"></p>
+</section>
+
+<section class="sec" aria-labelledby="ak-h">
+  <div class="sec-head">
+    <h2 class="display" id="ak-h">Same method, your brand</h2>
+    <p>What you just dragged is how Arkive Labs works, with strategy before design and design before launch.</p>
+  </div>
+  <div class="map">
+    <article><span class="n">01 Ideate</span><h3 class="display">Strategy and positioning</h3><p>Market positioning, messaging and brand strategy that give a business a clear story to build on.</p></article>
+    <article><span class="n">02 Create</span><h3 class="display">Brand and creative</h3><p>Visual identity, campaign creative and content direction that make that story look and feel unmistakably yours.</p></article>
+    <article><span class="n">03 Execute</span><h3 class="display">Digital and growth</h3><p>Websites, content, SEO and performance campaigns, built as one system and measured so we know what's working.</p></article>
+  </div>
+  <div class="ak">
+    <div class="ak-logo"><img src="/assets/full-logo-black.png" alt="Arkive Labs logo" width="613" height="139"></div>
+    <div>
+      <p class="lead">A strategy-led creative and digital studio that turns what a business is genuinely good at into something the market can understand and trust.</p>
+      <p>I co-founded Arkive Labs with Akesh Chandrasiri, who leads AI engineering and compliance. I lead brand strategy, visual identity, content and digital experience for founders, startups and growing SMEs, mostly Sri Lankan and regional brands.</p>
+      <div class="btns"><a class="btn" href="/arkive-labs/">The studio</a><a class="btn line" href="https://arkivelabs.com" target="_blank" rel="noopener">Visit arkivelabs.com</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper" aria-labelledby="v-h">
+  <div class="sec-head">
+    <h2 class="display" id="v-h">Inside Verdentra</h2>
+    <p>The same press, running every week on a live employer brand.</p>
+  </div>
+  <ul class="roles"><li>Exec. Employer Branding &amp; Comms</li><li>Social media</li><li>Campaigns</li><li>Internal comms</li><li>Verdentra Waves, CSR</li></ul>
+  <div class="v-grid"><figure><a class="proof" href="/work/verdentra/"><img src="/assets/verdentra-movie-night.webp" alt="Verdentra movie night poster" width="1122" height="1402" loading="lazy"></a><figcaption class="mono">Movie night</figcaption></figure><figure><a class="proof" href="/work/verdentra/"><img src="/assets/verdentra-poson.webp" alt="Verdentra Poson greeting post" width="1080" height="1350" loading="lazy"></a><figcaption class="mono">Poson</figcaption></figure><figure><a class="proof" href="/work/verdentra/"><img src="/assets/verdentra-interns-thesara.webp" alt="Interns, Unfiltered post" width="1080" height="1350" loading="lazy"></a><figcaption class="mono">Interns, Unfiltered</figcaption></figure><figure><a class="proof" href="/work/verdentra/"><img src="/assets/verdentra-office-trip.webp" alt="Verdentra office trip post" width="997" height="1577" loading="lazy"></a><figcaption class="mono">Office trip</figcaption></figure></div>
+  <div class="btns" style="margin-top:2.4rem"><a class="btn" style="background:var(--ink);border-color:var(--ink);color:var(--stock)" href="/work/">See all work</a></div>
+</section>
+</main>
+<footer class="foot">
+  <h2 class="display">Got something rough?</h2>
+  <div class="btns">
+    <a class="btn" href="/contact/">Start a project</a>
+    <a class="btn line" href="https://arkivelabs.com" target="_blank" rel="noopener">arkivelabs.com</a>
+  </div>
+  <small class="mono"><span>Yohan Wickramasinghe, Sri Lanka</span><span><a href="https://www.linkedin.com/in/yohan-wickramasinghe/" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://medium.com/@yohanwick17" target="_blank" rel="noopener">Medium</a>, <a href="https://arkivelabs.com" target="_blank" rel="noopener">Arkive Labs</a></span></small>
+</footer>
+<script defer src="/js/site.js"></script>
+<script defer src="/js/jobs.js"></script>
+<script defer src="/js/machine.js"></script>
+</body>
+</html>

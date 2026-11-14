@@ -1,0 +1,1018 @@
+{
+ "cards": [
+  {
+   "slug": "igvirnm",
+   "category": "campaign",
+   "img": "featuredv4.png",
+   "client": "View project →",
+   "cat": "Attraction Campaigns",
+   "badge": "Featured",
+   "title": "Driving Global Impact Through Youth Exchange",
+   "desc": "Designed and executed attraction campaigns for iGV IR & M at AIESEC in SLIIT, connecting purpose-driven youth to international volunteering opportunities.",
+   "tags": [
+    "Campaign Design",
+    "Social Media",
+    "AIESEC"
+   ]
+  },
+  {
+   "slug": "nlds",
+   "category": "branding",
+   "img": "Registration reminder 1.png",
+   "client": "View project →",
+   "cat": "Personal Branding",
+   "badge": "Branding",
+   "title": "Crafting a Standout Marketing Application",
+   "desc": "Designed a series of digital posts as part of my application to AIESEC in Sri Lanka's marketing team, showcasing my creativity, visual communication, and understanding of campaign-driven content.",
+   "tags": [
+    "Personal Branding",
+    "Digital Design",
+    "Content"
+   ]
+  },
+  {
+   "slug": "catalyst",
+   "category": "event",
+   "img": "Toph Post.png",
+   "client": "View project →",
+   "cat": "Event Promotion",
+   "badge": "Event",
+   "title": "Inspiring Leadership Through Experience",
+   "desc": "Designed promotional content for Catalyst 5.0, AIESEC in SLIIT's Leadership Development Seminar, focused on engaging participants and driving attendance through cohesive visual storytelling.",
+   "tags": [
+    "Event Design",
+    "Visual Storytelling",
+    "Promotion"
+   ]
+  },
+  {
+   "slug": "goldcoin",
+   "category": "corporate",
+   "img": "goldcoinv4.png",
+   "client": "View project →",
+   "cat": "Corporate Communications",
+   "badge": "Corporate",
+   "title": "Communicating Prestige Through Design",
+   "desc": "Developed flyers and email banners for A Company's Gold Coin Award Ceremony, supporting event communication by presenting the agenda and announcements with clarity and visual consistency.",
+   "tags": [
+    "Corporate Design",
+    "Print",
+    "Email Banners"
+   ]
+  },
+  {
+   "slug": "merch",
+   "category": "branding",
+   "img": "merchandising.png",
+   "client": "View project →",
+   "cat": "Brand & Merchandising",
+   "badge": "Jackets",
+   "title": "Bringing Identity to Life Through Merchandise Design",
+   "desc": "Designed a range of merchandise including t-shirts and jackets, translating brand identity into wearable designs for events, membership, and personal creative exploration.",
+   "tags": [
+    "Merchandising",
+    "Brand Identity",
+    "Print"
+   ]
+  }
+ ],
+ "projects": {
+  "igvirnm": {
+   "chip": "AIESEC in SLIIT",
+   "badge": "Featured",
+   "year": "2025/26",
+   "h1": [
+    "Driving Global Impact",
+    "Through Youth Exchange"
+   ],
+   "desc": "Designed and executed attraction campaigns for iGV IR & M at AIESEC in SLIIT, connecting purpose-driven youth to international volunteering opportunities.",
+   "stats": [
+    {
+     "n": "iGV",
+     "l": "Front Office"
+    },
+    {
+     "n": "IR & M",
+     "l": "Function"
+    },
+    {
+     "n": "15+",
+     "l": "Assets Created"
+    },
+    {
+     "n": "3",
+     "l": "Platforms"
+    }
+   ],
+   "cover": "featuredv4.png",
+   "ovtitle": "The mission behind the campaign",
+   "paras": [
+    "AIESEC in SLIIT’s iGV (Incoming Global Volunteer) programme connects Sri Lankan youth with international volunteering experiences that create real-world social impact. As part of the IR & M (International Relations and Marketing) team, I was responsible for shaping the visual identity of our attraction campaigns. The goal was to create content that could stand out on social media while speaking directly to purpose-driven students.",
+    "The challenge was to balance AIESEC’s global brand guidelines with a tone that felt local, personal, and compelling enough to drive sign-ups during a highly competitive recruitment period."
+   ],
+   "rows": [
+    {
+     "l": "Role",
+     "v": "Visual Designer & Content Strategist"
+    },
+    {
+     "l": "Category",
+     "v": "Attraction Campaigns"
+    },
+    {
+     "l": "Tools",
+     "v": "Canva · Adobe Photoshop · Figma"
+    },
+    {
+     "l": "Deliverables",
+     "v": "Social posts · Stories · Promotional graphics"
+    },
+    {
+     "l": "Organisation",
+     "v": "AIESEC in SLIIT"
+    }
+   ],
+   "gallery": [
+    {
+     "src": "Aquatica 4 week.png",
+     "tag": "IR Attraction"
+    },
+    {
+     "src": "Heartbeat 4 week.png",
+     "tag": "IR Attraction"
+    },
+    {
+     "src": "LCM Happening Tomorrow v6.png",
+     "tag": "Christmas LCM"
+    },
+    {
+     "src": "100 APD V5.png",
+     "tag": "Milestone Post"
+    },
+    {
+     "src": "LCM Post 1.png",
+     "tag": "Christmas LCM"
+    },
+    {
+     "src": "OTM 4 week.png",
+     "tag": "IR Attraction"
+    },
+    {
+     "src": "Rooted v2.png",
+     "tag": "IR Attraction"
+    },
+    {
+     "src": "Skillup 4 week gv.png",
+     "tag": "IR Attraction"
+    },
+    {
+     "src": "$30 + 4 week v3.png",
+     "tag": "IR Attraction"
+    },
+    {
+     "src": "4 weeks GV v2.png",
+     "tag": "IR Attraction"
+    },
+    {
+     "src": "Choose your impact v5.png",
+     "tag": "IR Attraction"
+    },
+    {
+     "src": "Formal Apology Short form v6.png",
+     "tag": "IR Attraction"
+    },
+    {
+     "src": "Hackathon Final Day V2.png",
+     "tag": "Hackathon Post"
+    },
+    {
+     "src": "Workspace happening today v3.png",
+     "tag": "Workspace Post"
+    },
+    {
+     "src": "Awards from NLDS Poster v2.png",
+     "tag": "R&R"
+    },
+    {
+     "src": "Flash hour sale NLDS hackathon.png",
+     "tag": "IR Attraction"
+    },
+    {
+     "src": "Good Luck Crazy OPS v3.png",
+     "tag": "Hackathon Post"
+    },
+    {
+     "src": "Hackathon Post 1.png",
+     "tag": "Hackathon Post"
+    }
+   ],
+   "steps": [
+    {
+     "t": "Research & Brief",
+     "x": "Studied AIESEC’s global brand guidelines and reviewed past campaigns from other local committees. Defined a tone that was youthful, purposeful, and bold, while identifying the most effective platforms and formats to maximise reach."
+    },
+    {
+     "t": "Concept & Mood",
+     "x": "Developed a visual direction centred on contrast and urgency, using vibrant accent colours against dark backgrounds and a strong typographic hierarchy to guide attention toward the call to action. Created mood boards before moving into design."
+    },
+    {
+     "t": "Design & Execution",
+     "x": "Built a modular system of templates in Figma to ensure speed and consistency across the team. Each post followed a structured grid, allowing flexibility in content while maintaining a cohesive visual identity throughout the campaign."
+    },
+    {
+     "t": "Review & Launch",
+     "x": "Refined designs based on feedback from the iGV IR & M VP and AIESEC in Sri Lanka’s national standards. Final assets were approved and published across Global WhatsApp groups and Instagram during the peak attraction period."
+    }
+   ],
+   "outcomes": [
+    {
+     "t": "Increased Reach",
+     "x": "Campaign posts consistently outperformed organic benchmarks, expanding visibility for AIESEC in SLIIT’s iGV programme across campus."
+    },
+    {
+     "t": "Template System",
+     "x": "Developed a reusable design framework that enabled the team to create future campaign content efficiently while maintaining brand consistency."
+    },
+    {
+     "t": "Cross-Platform Execution",
+     "x": "Assets were deployed across WhatsApp and Instagram with platform-specific adaptations, ensuring a consistent visual identity across all touchpoints."
+    },
+    {
+     "t": "Attraction Goal Met",
+     "x": "Contributed to achieving the iGV IR & M team’s attraction target for the cycle, connecting more students to international volunteering opportunities."
+    }
+   ]
+  },
+  "nlds": {
+   "chip": "Personal Branding",
+   "badge": "NLDS",
+   "year": "2025",
+   "h1": [
+    "Crafting a Standout",
+    "Marketing Application"
+   ],
+   "desc": "Designed a series of application creatives for the National Leadership Development Seminar (NLDS) Organising Committee selection, focused on presenting ideas with clarity, creativity, and strong visual storytelling.",
+   "stats": [
+    {
+     "n": "NLDS",
+     "l": "Conference"
+    },
+    {
+     "n": "Organising Committee",
+     "l": "Vice President"
+    },
+    {
+     "n": "5",
+     "l": "Assets Created"
+    },
+    {
+     "n": "3",
+     "l": "Platforms"
+    }
+   ],
+   "cover": "nldsgrid.png",
+   "ovtitle": "The idea behind the application",
+   "paras": [
+    "The National Leadership Development Seminar (NLDS) is a flagship AIESEC experience focused on developing leadership among members across the country. As part of my application for the Organising Committee, I created a series of visual assets to communicate ideas, showcase creativity, and demonstrate my approach to campaign design.",
+    "The challenge was to present concepts in a way that was both visually engaging and strategically clear, while aligning with AIESEC’s brand guidelines. The content needed to stand out, communicate intent effectively, and reflect my ability to contribute to a high-impact national event."
+   ],
+   "rows": [
+    {
+     "l": "Role",
+     "v": "Visual Designer & Content Strategist"
+    },
+    {
+     "l": "Category",
+     "v": "Application Design / Creative Strategy"
+    },
+    {
+     "l": "Tools",
+     "v": "Canva · Adobe Photoshop · Figma"
+    },
+    {
+     "l": "Deliverables",
+     "v": "Social posts · Concept visuals · Presentation graphics"
+    },
+    {
+     "l": "Organisation",
+     "v": "AIESEC in Sri Lanka"
+    }
+   ],
+   "gallery": [
+    {
+     "src": "Registration teaser.png",
+     "tag": "Registration Teaser"
+    },
+    {
+     "src": "Registration open.png",
+     "tag": "Registration Open"
+    },
+    {
+     "src": "Registration reminder 1.png",
+     "tag": "Registration Reminder"
+    },
+    {
+     "src": "Registration reminder 2.png",
+     "tag": "Registration Reminder"
+    },
+    {
+     "src": "Registration closed.png",
+     "tag": "Registration Closed"
+    }
+   ],
+   "steps": [
+    {
+     "t": "Research & Brief",
+     "x": "Studied AIESEC’s brand guidelines and reviewed past national event content to understand expectations. Defined a tone that was bold, clear, and aligned with leadership-focused messaging."
+    },
+    {
+     "t": "Concept & Mood",
+     "x": "Explored visual directions that reflected energy and impact, using strong typography and contrast to emphasise key messages. Developed initial concepts before moving into design."
+    },
+    {
+     "t": "Design & Execution",
+     "x": "Created a series of cohesive assets that showcased both creativity and structure. Focused on clarity, layout balance, and visual consistency across all pieces."
+    },
+    {
+     "t": "Review & Launch",
+     "x": "Iterated on designs to improve clarity, alignment, and overall presentation, ensuring each asset effectively communicated its intended message."
+    }
+   ],
+   "outcomes": [
+    {
+     "t": "Creative Thinking",
+     "x": "Showcased the ability to translate ideas into strong visual concepts that communicate clearly and effectively."
+    },
+    {
+     "t": "Strategic Approach",
+     "x": "Demonstrated an understanding of aligning design decisions with purpose, audience, and context."
+    },
+    {
+     "t": "Visual Consistency",
+     "x": "Maintained a cohesive style across all assets while exploring different creative directions."
+    },
+    {
+     "t": "Application Impact",
+     "x": "Presented a well-structured and visually engaging application that highlighted both creative and strategic capabilities."
+    }
+   ]
+  },
+  "catalyst": {
+   "chip": "Event Promotion",
+   "badge": "Cat 5.0",
+   "year": "2024",
+   "h1": [
+    "Inspiring Leadership",
+    "Through Experience"
+   ],
+   "desc": "Designed promotional content for Catalyst 5.0, AIESEC in SLIIT's Leadership Development Seminar, focused on engaging participants and driving attendance through cohesive visual storytelling.",
+   "stats": [
+    {
+     "n": "Catalyst 5.0",
+     "l": "Conference"
+    },
+    {
+     "n": "OC",
+     "l": "Vice President"
+    },
+    {
+     "n": "10+",
+     "l": "Assets Created"
+    },
+    {
+     "n": "3",
+     "l": "Platforms"
+    }
+   ],
+   "cover": "catv1.png",
+   "ovtitle": "The idea behind the campaign",
+   "paras": [
+    "Catalyst 5.0 is AIESEC in SLIIT’s flagship Leadership Development Seminar, designed to inspire and develop future leaders. As Organising Committee Vice President for Marketing, I was responsible for leading the overall marketing direction and execution of the event.",
+    "The campaign was built around an Avatar: The Last Airbender-inspired theme, using familiar elements and storytelling to create a strong emotional connection with the audience. The challenge was to translate this concept into a cohesive visual identity while maintaining alignment with AIESEC’s brand guidelines and ensuring the campaign remained engaging, relevant, and effective in driving participation."
+   ],
+   "rows": [
+    {
+     "l": "Role",
+     "v": "Organising Committee Vice President Marketing"
+    },
+    {
+     "l": "Category",
+     "v": "Event Marketing / Campaign Design"
+    },
+    {
+     "l": "Tools",
+     "v": "Canva · Adobe Photoshop · Figma"
+    },
+    {
+     "l": "Deliverables",
+     "v": "Social posts · Promotional graphics · Campaign assets"
+    },
+    {
+     "l": "Organisation",
+     "v": "AIESEC in SLIIT"
+    }
+   ],
+   "gallery": [
+    {
+     "src": "cat1.png",
+     "tag": "Informative Post"
+    },
+    {
+     "src": "cat2.png",
+     "tag": "Registration Teaser"
+    },
+    {
+     "src": "cat3.png",
+     "tag": "Registration Open"
+    },
+    {
+     "src": "cat4.png",
+     "tag": "Registration Reminder"
+    },
+    {
+     "src": "cat5.png",
+     "tag": "Attraction Post"
+    },
+    {
+     "src": "cat6.png",
+     "tag": "Attraction Post"
+    },
+    {
+     "src": "cat7.png",
+     "tag": "Attraction Post"
+    },
+    {
+     "src": "cat8.png",
+     "tag": "Testimonial"
+    },
+    {
+     "src": "cat9.png",
+     "tag": "Testimonial"
+    },
+    {
+     "src": "cat10.png",
+     "tag": "Testimonial"
+    },
+    {
+     "src": "cat11.png",
+     "tag": "Registration Reminder"
+    },
+    {
+     "src": "cat12.png",
+     "tag": "Registration Reminder"
+    },
+    {
+     "src": "cat13.png",
+     "tag": "Countdown Post"
+    },
+    {
+     "src": "cat14.png",
+     "tag": "Countdown Post"
+    },
+    {
+     "src": "cat15.png",
+     "tag": "Countdown Post"
+    },
+    {
+     "src": "cat16.png",
+     "tag": "Countdown Post"
+    },
+    {
+     "src": "cat17.png",
+     "tag": "Countdown Post"
+    },
+    {
+     "src": "cat18.png",
+     "tag": "Countdown Post"
+    }
+   ],
+   "steps": [
+    {
+     "t": "Research & Brief",
+     "x": "Analyzed past event campaigns and aligned with AIESEC’s brand guidelines. Defined a direction that combined leadership messaging with a strong thematic identity."
+    },
+    {
+     "t": "Concept & Theme Development",
+     "x": "Built the campaign around an Avatar-inspired concept, translating elements of storytelling, character, and progression into a visual and narrative direction that resonated with the audience."
+    },
+    {
+     "t": "Design & Execution",
+     "x": "Led the creation of campaign assets, ensuring consistency across all platforms. Focused on strong typography, visual hierarchy, and thematic elements to maintain a cohesive identity."
+    },
+    {
+     "t": "Review & Launch",
+     "x": "Refined assets based on team feedback and rolled out the campaign across Instagram, LinkedIn, and other digital platforms during the event promotion phase."
+    }
+   ],
+   "outcomes": [
+    {
+     "t": "Strong Engagement",
+     "x": "Delivered a visually distinctive campaign that captured attention and increased interest in the event."
+    },
+    {
+     "t": "Thematic Consistency",
+     "x": "Successfully translated a pop culture theme into a cohesive campaign while maintaining alignment with brand guidelines."
+    },
+    {
+     "t": "Effective Promotion",
+     "x": "Supported event visibility and participation through consistent and engaging content across multiple platforms."
+    },
+    {
+     "t": "Leadership in Execution",
+     "x": "Demonstrated the ability to lead marketing efforts, manage creative direction, and deliver a complete campaign experience."
+    }
+   ]
+  },
+  "goldcoin": {
+   "chip": "Corporate Communications",
+   "badge": "GC",
+   "year": "2025",
+   "h1": [
+    "Communicating Prestige",
+    "Through Design"
+   ],
+   "desc": "Developed flyers and email banners for A Company's Gold Coin Award Ceremony, supporting event communication by presenting the agenda and announcements with clarity and visual consistency.",
+   "stats": [
+    {
+     "n": "Gold Coin",
+     "l": "Awards Ceremony"
+    },
+    {
+     "n": "Corporate Event",
+     "l": "Creative Design"
+    },
+    {
+     "n": "10+",
+     "l": "Assets Created"
+    },
+    {
+     "n": "2",
+     "l": "Platforms"
+    }
+   ],
+   "cover": "goldcoinmain.png",
+   "ovtitle": "The idea behind the project",
+   "paras": [
+    "This project involved designing posters and invitation materials for a large-scale corporate award ceremony hosted by a leading organization in the apparel industry. The objective was to create visuals that reflected the prestige of the event while communicating key information clearly and effectively.",
+    "The challenge was to balance professionalism with visual appeal, ensuring that every asset aligned with corporate standards while still feeling engaging. The designs needed to maintain a high level of clarity, hierarchy, and consistency across both print and digital formats."
+   ],
+   "rows": [
+    {
+     "l": "Role",
+     "v": "Visual Designer"
+    },
+    {
+     "l": "Category",
+     "v": "Corporate Communications / Event Design"
+    },
+    {
+     "l": "Tools",
+     "v": "Canva · Adobe Photoshop · Figma"
+    },
+    {
+     "l": "Deliverables",
+     "v": "Posters · Invitations · Event collateral"
+    },
+    {
+     "l": "Organisation",
+     "v": "Confidential Corporate Client"
+    }
+   ],
+   "gallery": [
+    {
+     "src": "goldcoin1.png",
+     "tag": "Announcement Post"
+    },
+    {
+     "src": "goldcoin2.png",
+     "tag": "Announcement Post"
+    },
+    {
+     "src": "goldcoin3.png",
+     "tag": "Announcement Post"
+    },
+    {
+     "src": "goldcoin4.png",
+     "tag": "Announcement Post"
+    },
+    {
+     "src": "goldcoin5.png",
+     "tag": "Announcement Post"
+    },
+    {
+     "src": "goldcoin6.png",
+     "tag": "Announcement Post"
+    },
+    {
+     "src": "goldcoin7.png",
+     "tag": "Announcement Post"
+    },
+    {
+     "src": "goldcoin8.png",
+     "tag": "Announcement Post"
+    },
+    {
+     "src": "goldcoin9.png",
+     "tag": "Announcement Post"
+    },
+    {
+     "src": "goldcoin10.png",
+     "tag": "Announcement Post"
+    }
+   ],
+   "steps": [
+    {
+     "t": "Research & Brief",
+     "x": "Reviewed the event requirements and corporate branding expectations to understand the tone and level of formality required."
+    },
+    {
+     "t": "Concept Development",
+     "x": "Explored clean and structured design directions that emphasized hierarchy, readability, and a sense of prestige suitable for an award ceremony."
+    },
+    {
+     "t": "Design & Execution",
+     "x": "Developed posters and invitation materials with a focus on typography, spacing, and layout to ensure clarity across both print and digital formats."
+    },
+    {
+     "t": "Refinement & Delivery",
+     "x": "Refined designs based on feedback, ensuring alignment with expectations before finalizing assets for distribution."
+    }
+   ],
+   "outcomes": [
+    {
+     "t": "Professional Execution",
+     "x": "Delivered polished, high-quality designs aligned with corporate standards and expectations."
+    },
+    {
+     "t": "Clear Communication",
+     "x": "Ensured all event information was presented with strong hierarchy and readability across formats."
+    },
+    {
+     "t": "Consistent Visual Identity",
+     "x": "Maintained a cohesive look and feel across all collateral, reinforcing the prestige of the event."
+    },
+    {
+     "t": "Client Alignment",
+     "x": "Successfully met the expectations of a high-profile corporate client, demonstrating reliability and attention to detail."
+    }
+   ]
+  },
+  "merch": {
+   "chip": "Brand & Merchandising",
+   "badge": "Jackets",
+   "year": "2025",
+   "h1": [
+    "Bringing Identity to Life",
+    "Through Merchandise Design"
+   ],
+   "desc": "Designed a range of merchandise including t-shirts and jackets, translating brand identity into wearable designs for events, membership, and personal creative exploration.",
+   "stats": [
+    {
+     "n": "Merchandise Design",
+     "l": "Apparel"
+    },
+    {
+     "n": "Brand Expression",
+     "l": "Creative Design"
+    },
+    {
+     "n": "10+",
+     "l": "Design Variations"
+    },
+    {
+     "n": "2",
+     "l": "Formats"
+    }
+   ],
+   "cover": "merchandising.png",
+   "ovtitle": "The idea behind the work",
+   "paras": [
+    "This work focused on creating merchandise for AIESEC in SLIIT, alongside a selection of personal apparel designs. The goal was to translate brand identity and ideas into wearable formats that felt both visually appealing and meaningful to the audience.",
+    "The challenge was to design graphics that worked effectively on fabric, balancing creativity with practicality. Each piece needed to be visually strong, adaptable across different apparel types, and aligned with the intended audience, whether for events, members, or personal expression."
+   ],
+   "rows": [
+    {
+     "l": "Role",
+     "v": "Designer"
+    },
+    {
+     "l": "Category",
+     "v": "Merchandise Design / Brand Application"
+    },
+    {
+     "l": "Tools",
+     "v": "Canva · Adobe Photoshop · Figma"
+    },
+    {
+     "l": "Deliverables",
+     "v": "T-shirt graphics · Jacket designs · Print-ready artwork"
+    },
+    {
+     "l": "Organisation",
+     "v": "AIESEC in SLIIT / Personal Work"
+    }
+   ],
+   "gallery": [
+    {
+     "src": "merchandising.png",
+     "tag": "Oversized T-Shirt"
+    },
+    {
+     "src": "merch1.png",
+     "tag": "Varsity Jacket"
+    },
+    {
+     "src": "merch2.png",
+     "tag": "Varsity Jacket"
+    },
+    {
+     "src": "merch3.png",
+     "tag": "Oversized T-Shirt"
+    },
+    {
+     "src": "merch4.png",
+     "tag": "Varsity Jacket"
+    },
+    {
+     "src": "merch5.png",
+     "tag": "Varsity Jacket"
+    },
+    {
+     "src": "merch6.png",
+     "tag": "Varsity Jacket"
+    },
+    {
+     "src": "merch7.png",
+     "tag": "Varsity Jacket"
+    },
+    {
+     "src": "merch8.png",
+     "tag": "Varsity Jacket"
+    },
+    {
+     "src": "merch9.png",
+     "tag": "Varsity Jacket"
+    },
+    {
+     "src": "merch10.png",
+     "tag": "Varsity Jacket"
+    },
+    {
+     "src": "merch11.png",
+     "tag": "Varsity Jacket"
+    },
+    {
+     "src": "merch12.png",
+     "tag": "Varsity Jacket"
+    },
+    {
+     "src": "merch13.png",
+     "tag": "Varsity Jacket"
+    }
+   ],
+   "steps": [
+    {
+     "t": "Research & Inspiration",
+     "x": "Explored existing merchandise trends, brand guidelines, and visual references to understand what resonates in apparel design."
+    },
+    {
+     "t": "Concept Development",
+     "x": "Developed design concepts that balanced creativity with wearability, focusing on bold visuals, typography, and placement."
+    },
+    {
+     "t": "Design & Execution",
+     "x": "Created graphics tailored for apparel, ensuring scalability, print clarity, and adaptability across different formats such as t-shirts and jackets."
+    },
+    {
+     "t": "Refinement & Delivery",
+     "x": "Iterated on designs to improve composition, readability, and overall visual impact, preparing final outputs for production."
+    }
+   ],
+   "outcomes": [
+    {
+     "t": "Brand Expression",
+     "x": "Translated brand identity into wearable designs that resonate with members and event participants."
+    },
+    {
+     "t": "Creative Exploration",
+     "x": "Showcased versatility through a mix of organizational and personal design styles."
+    },
+    {
+     "t": "Practical Design Thinking",
+     "x": "Delivered designs optimized for real-world application, considering print, placement, and material constraints."
+    },
+    {
+     "t": "Visual Impact",
+     "x": "Created bold and engaging apparel pieces that stand out while remaining cohesive and wearable."
+    }
+   ]
+  }
+ },
+ "blogs": [
+  {
+   "url": "https://medium.com/@yohanwick17/why-messy-design-is-winning-in-2026-the-rise-of-the-anti-ai-aesthetic-9c04bc798359",
+   "img": "medium1.png",
+   "title": "Why “Messy” Design is Winning in 2026: The Rise of the Anti-AI Aesthetic",
+   "excerpt": "Stop chasing the grid. Why \"Imperfect by Design\" is the top marketing trend of 2026. Read the breakdown here.",
+   "date": "Apr 2026",
+   "read": "4 min read",
+   "tags": [
+    "Design Trends",
+    "Branding",
+    "UX Design",
+    "Creativity",
+    "Digital Marketing"
+   ],
+   "badge": "Featured"
+  },
+  {
+   "url": "https://medium.com/p/75d0929265a4",
+   "img": "medium2.png",
+   "title": "The Architecture of Attention: Why Culture is Your Strongest Marketing Lever",
+   "excerpt": "Designing for the local brain. Why engineering \"human signals\" and cultural levers beats AI perfection for reach and trust in 2026.",
+   "date": "Apr 2026",
+   "read": "3 min read",
+   "tags": [
+    "Marketing Strategy",
+    "User Experience",
+    "Culture",
+    "Branding",
+    "Psychology"
+   ],
+   "badge": "Marketing"
+  },
+  {
+   "url": "https://medium.com/@yohanwick17/the-labyrinth-blueprint-why-the-funnel-is-a-20th-century-relic-660fd1f90cb6",
+   "img": "medium3.png",
+   "title": "The Labyrinth Blueprint: Why the Funnel is a 20th Century Relic",
+   "excerpt": "Ditching the pipe for the ecosystem. 🌀 Why the linear funnel is a relic and how to design \"labyrinths\" for the chaotic buyer in 2026.",
+   "date": "Apr 2026",
+   "read": "3 min read",
+   "tags": [
+    "Marketing Strategy",
+    "Psychology",
+    "User Experience",
+    "Branding",
+    "Creativity"
+   ],
+   "badge": "Personal"
+  },
+  {
+   "url": "https://medium.com/@yohanwick17/the-art-of-the-hijack-why-shot-on-faber-castell-is-a-strategic-masterpiece-591095567364",
+   "img": "medium4.png",
+   "title": "The Art of the Hijack: Why ‘Shot on Faber-Castell’ is a Strategic Masterpiece",
+   "excerpt": "How Faber-Castell hijacked the Apple aesthetic to prove that 400 hours of craft can beat a digital sensor. A study in cultural leverage. ✏️",
+   "date": "Apr 2026",
+   "read": "4 min read",
+   "tags": [
+    "Marketing Strategy",
+    "Branding",
+    "Case Study",
+    "Creative Leadership",
+    "Design Thinking"
+   ],
+   "badge": "Case Study"
+  },
+  {
+   "url": "https://medium.com/@yohanwick17/the-loophole-strategy-how-td-bank-hijacked-the-worlds-biggest-brands-b3d2fb2d8eda",
+   "img": "medium5.png",
+   "title": "The Loophole Strategy: How TD Bank Hijacked the World’s Biggest Brands",
+   "excerpt": "How Ogilvy Canada helped TD Bank hijack Nike and Apple’s brand equity without asking for permission. A study in strategic framing. 🖼️📈",
+   "date": "May 2026",
+   "read": "4 min read",
+   "tags": [
+    "Marketing Strategy",
+    "Branding",
+    "Creative Strategy",
+    "Consumer Psychology",
+    "Investment Marketing"
+   ],
+   "badge": "Case Study"
+  }
+ ],
+ "medium": {
+  "label": "All articles live on Medium",
+  "sub": "Follow along for new pieces on marketing, design, and everything in between.",
+  "url": "https://medium.com/@yohanwick17",
+  "btn": "Follow on Medium →"
+ },
+ "blogs_hero": {
+  "h1": [
+   "More than",
+   "just design"
+  ],
+  "sub": "Thoughts on marketing, leadership, and creativity, written to explore ideas that matter."
+ },
+ "about": {
+  "role": "Digital Learning Designer",
+  "h1": [
+   "Yohan",
+   "Wickramasinghe"
+  ],
+  "tagline": "I turn complex ideas into learning experiences people actually remember.",
+  "available": "Available for new roles",
+  "photo": "Yohan - Campaign Coordinator.jpg",
+  "details": [
+   {
+    "l": "Location",
+    "v": "Piliyandala, Sri Lanka",
+    "href": null
+   },
+   {
+    "l": "Email",
+    "v": "yohanwick17@gmail.com",
+    "href": "mailto:yohanwick17@gmail.com"
+   },
+   {
+    "l": "LinkedIn",
+    "v": "Yohan Wickramasinghe",
+    "href": "https://www.linkedin.com/in/yohan-wickramasinghe/"
+   },
+   {
+    "l": "Languages",
+    "v": "English, Sinhala",
+    "href": null
+   }
+  ],
+  "cv": "Yohan - Digital Marketer CV.pdf",
+  "bio": [
+   "I'm a creative designer with a passion for turning ideas into impactful visual experiences. With a background in digital design, content, and branding, I focus on creating work that is not only visually engaging but also purposeful and results-driven. From campaign design to event branding, I aim to craft solutions that connect with people and communicate with clarity.",
+   "From building campaigns to shaping event identities, I've worked across a range of creative spaces where strategy meets execution. I've developed digital content, promotional materials, and branded assets with a focus on consistency and audience engagement, aiming to create visuals that communicate effectively and leave a lasting impression."
+  ],
+  "who": [
+   "Designing visuals that communicate",
+   "and connect"
+  ],
+  "exp": [
+   {
+    "date": "Dec 2024 - Present",
+    "role": "Content Writer",
+    "company": "Hype Invention · Full-time",
+    "bullets": [
+     "Created engaging written content for digital campaigns, aligning messaging with brand voice and marketing objectives",
+     "Collaborated with design and marketing teams to develop cohesive campaign narratives across multiple platforms",
+     "Crafted compelling copy for social media and promotional materials to enhance audience engagement and communication effectiveness"
+    ]
+   },
+   {
+    "date": "Dec 2023 - Dec 2024",
+    "role": "Software Engineer",
+    "company": "ZILLIONe · Intern",
+    "bullets": [
+     "Development of applications for new clients",
+     "Bug fixing for already existing systems",
+     "Aided in Frontend Development"
+    ]
+   }
+  ],
+  "edu": [
+   {
+    "icon": "BSc",
+    "degree": "Bachelor of Science in Information Technology Specialising in Software Engineering",
+    "school": "Sri Lanka Institute of Information Technology",
+    "year": "2022 - 2027",
+    "note": "Specialised in software engineering, focusing on problem-solving, system design, and application development."
+   },
+   {
+    "icon": "GCSE",
+    "degree": "GCSE Advanced Level",
+    "school": "Saudi Arabia",
+    "year": "2021",
+    "note": "Completed Advanced Level studies in Mathematics, Physics, Information Technology, and Chemistry, building a strong analytical and problem-solving foundation."
+   },
+   {
+    "icon": "Cert",
+    "degree": "Certificate in Fundamentals of Digital Marketing",
+    "school": "Google Digital Garage",
+    "year": "2022",
+    "note": "Completed the Fundamentals of Digital Marketing certification by Google Digital Garage, covering core concepts of online marketing."
+   }
+  ],
+  "lead": [
+   {
+    "tag": "Organising Committee",
+    "title": "Organising Committee President - Benchmark 3.0",
+    "when": "Oct 2024 - Dec 2024",
+    "desc": "Led the organising committee for Benchmark 3.0, managing marketing, planning, and execution. Contributed to achieving over 600 registrations, 400+ delegates, and 100 participating teams, with the event winning the Most Outstanding Event Award at AIESEC in SLIIT's award ceremony."
+   },
+   {
+    "tag": "Leadership Role",
+    "title": "Campaign Coordinator - iGV IR & M AIESEC in SLIIT",
+    "when": "Jul 2025 - Feb 2026",
+    "desc": "Served as Campaign Coordinator for iGV IR & M at AIESEC in SLIIT, leading the planning and execution of attraction campaigns. Worked closely with the team to develop and deliver digital content aimed at increasing awareness and driving engagement for international volunteering opportunities."
+   },
+   {
+    "tag": "Volunteering",
+    "title": "Editor - Rotaract Club of SLIIT",
+    "when": "2023 - 2024",
+    "desc": "Served as Editor of the Rotaract Club of SLIIT, overseeing content creation, editing, and publication of quarterly magazines, along with managing and updating the club's website. Collaborated with contributors to curate, refine, and maintain consistent editorial quality across all published materials."
+   },
+   {
+    "tag": "Community",
+    "title": "Editor - Faculty of Computing Student Community",
+    "when": "2024 - 2025",
+    "desc": "Served as Editor of the Faculty of Computing Student Community, overseeing content creation, editing, and publication of digital materials. Worked closely with contributors to ensure consistency, clarity, and quality across all communications and published content."
+   }
+  ]
+ }
+}
