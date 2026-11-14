@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Users, Megaphone, CalendarDays, Palette, Briefcase, LayoutGrid, ArrowUpRight } from 'lucide-react';
 
 const ICONS: Record<string, any> = { all: LayoutGrid, employer: Users, campaign: Megaphone, event: CalendarDays, branding: Palette, corporate: Briefcase };
-const COLS = ['#C8FF00', '#FF5CAA', '#3DD9FF', '#FFC83D', '#8B5CFF', '#FF6B2C'];
+const COLS = ['#C8FF00', '#FF3D00'];
 export interface Card { slug: string; category: string; cat: string; year: string; title: string; desc: string; tags: string[]; img: { src: string; w: number; h: number } }
 
 export default function WorkGrid({ cards, filters }: { cards: Card[]; filters: string[][] }) {

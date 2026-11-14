@@ -4,9 +4,9 @@ import { Lightbulb, PenTool, Rocket, PartyPopper, Star, Sparkles, Heart, Zap, Ch
 import type { Job } from '../data/site';
 
 const STAGES = [
-  { key: 'ideate', word: 'Ideate', no: '01 / 03', at: 0, q: 'What is the one thing this has to make someone do?', color: '#FFC83D', Icon: Lightbulb },
-  { key: 'create', word: 'Create', no: '02 / 03', at: 0.3, q: 'What do they see first, and does it earn the next second?', color: '#FF5CAA', Icon: PenTool },
-  { key: 'exec', word: 'Execute', no: '03 / 03', at: 0.66, q: 'Does it work in two seconds, on a phone, with no explanation?', color: '#3DD9FF', Icon: Rocket },
+  { key: 'ideate', word: 'Ideate', no: '01 / 03', at: 0, q: 'What is the one thing this has to make someone do?', color: '#F2EDE4', Icon: Lightbulb },
+  { key: 'create', word: 'Create', no: '02 / 03', at: 0.3, q: 'What do they see first, and does it earn the next second?', color: '#C8FF00', Icon: PenTool },
+  { key: 'exec', word: 'Execute', no: '03 / 03', at: 0.66, q: 'Does it work in two seconds, on a phone, with no explanation?', color: '#FF3D00', Icon: Rocket },
   { key: 'pub', word: 'Published', no: 'Done', at: 0.985, q: 'What did this job teach me for the next one?', color: '#C8FF00', Icon: PartyPopper },
 ] as const;
 const PUBTEXT = 'Out the door. Most portfolios start here. The thinking above is where I would start on yours.';
@@ -14,7 +14,7 @@ const ALLTEXT = 'Every job shipped. That is how each one runs, yours included.';
 const STN = [{ label: 'Ideate', p: 0.12, go: 0.14 }, { label: 'Create', p: 0.5, go: 0.52 }, { label: 'Execute', p: 0.82, go: 0.84 }, { label: 'Published', p: 1, go: 1 }];
 const sm = (a: number, b: number, x: number) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 const BURST = [Star, Sparkles, Heart, Zap, PartyPopper];
-const BCOL = ['#C8FF00', '#FF5CAA', '#3DD9FF', '#FFC83D', '#8B5CFF', '#FF6B2C'];
+const BCOL = ['#C8FF00', '#FF3D00', '#F2EDE4'];
 
 function edges(img: HTMLImageElement, w: number, h: number): ImageData | null {
   try {
