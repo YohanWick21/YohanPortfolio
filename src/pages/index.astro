@@ -8,12 +8,13 @@ const strip = [['verdentra-movie-night.jpg', 'Verdentra movie night poster', 'Mo
 const logo = asset('Full Logo White.png');
 const me = ABOUT.photo;
 const map = [
-  { n: 'Ideate', c: 'var(--sun)', Ic: Lightbulb, t: 'Strategy and positioning', d: 'Market positioning, messaging and brand strategy that give a business a clear story to build on.' },
-  { n: 'Create', c: 'var(--pink)', Ic: PenTool, t: 'Brand and creative', d: 'Visual identity, campaign creative and content direction that make that story look and feel unmistakably yours.' },
-  { n: 'Execute', c: 'var(--sky)', Ic: Rocket, t: 'Digital and growth', d: "Websites, content, SEO and performance campaigns, built as one system and measured so we know what's working." },
+  { n: 'Ideate', c: 'var(--sun)', Ic: Lightbulb, t: 'Strategy and positioning', d: 'Positioning and messaging that give a business a clear story.' },
+  { n: 'Create', c: 'var(--pink)', Ic: PenTool, t: 'Brand and creative', d: 'Identity and campaigns that make that story look like you.' },
+  { n: 'Execute', c: 'var(--sky)', Ic: Rocket, t: 'Digital and growth', d: "Websites, content and campaigns, measured so we know what works." },
 ];
+const schema = { "@context": "https://schema.org", "@type": "Person", name: "Yohan Wickramasinghe", jobTitle: "Co-founder, Arkive Labs; Exec. Employer Branding & Comms, Verdentra", worksFor: [{ "@type": "Organization", name: "Arkive Labs", url: "https://arkivelabs.com" }, { "@type": "Organization", name: "Verdentra" }], sameAs: ["https://www.linkedin.com/in/yohan-wickramasinghe/", "https://medium.com/@yohanwick17", "https://arkivelabs.com"] };
 ---
-<Base title="Yohan Wickramasinghe | Co-founder, Arkive Labs. Employer branding, Verdentra" desc="Yohan Wickramasinghe co-founded Arkive Labs and leads employer branding and communications at Verdentra. Drag a job from rough idea to published post." total={JOBS.length}>
+<Base schema={schema} title="Yohan Wickramasinghe | Brand Strategy & Employer Branding" desc="Co-founder of Arkive Labs and employer branding lead at Verdentra. Brand, campaign and design work, from first idea to published post." total={JOBS.length}>
   <section class="id-hero" aria-labelledby="h1">
     <div class="copy">
       <h1 id="h1">I turn rough ideas into brands people remember.</h1>
@@ -33,14 +34,13 @@ const map = [
     <span class="step-tag"><Sparkles size={14} /> Try it</span>
     <h2 class="display" id="h2">From rough idea to published.</h2>
     <div class="intro">
-      <p>Here is how a job moves from my head to your feed. Real campaigns, from the first brief to the finished post.</p>
-      <p class="how"><strong>Pick a job from the queue, then drag the puck.</strong> Each stage shows what I was thinking.</p>
+      <p class="how"><strong>Pick a job, drag the puck,</strong> and see what I was thinking at each stage.</p>
     </div>
     <Machine client:load jobs={JOBS} />
   </section>
 
   <section class="sec" aria-labelledby="ak-h">
-    <Reveal client:visible><div class="sec-head"><h2 class="display" id="ak-h">Same method, your brand</h2><p>What you just dragged is how Arkive Labs works, with strategy before design and design before launch.</p></div></Reveal>
+    <Reveal client:visible><div class="sec-head"><h2 class="display" id="ak-h">Same method, your brand</h2><p>The same three stages run every Arkive Labs project.</p></div></Reveal>
     <div class="map">
       {map.map((m, i) => <Reveal client:visible delay={i * 0.1}><article><span class="ico" style={`background:${m.c}`}><m.Ic size={24} strokeWidth={2.4} /></span><br /><span class="n">0{i + 1} {m.n}</span><h3 class="display">{m.t}</h3><p>{m.d}</p></article></Reveal>)}
     </div>
@@ -48,8 +48,7 @@ const map = [
       <div class="ak">
         <div class="ak-logo"><img src={logo.src} alt="Arkive Labs logo" width={logo.w} height={logo.h} /></div>
         <div>
-          <p class="lead">A strategy-led creative and digital studio that turns what a business is genuinely good at into something the market can understand and trust.</p>
-          <p>I co-founded Arkive Labs with Akesh Chandrasiri, who leads AI engineering and compliance. I lead brand strategy, visual identity, content and digital experience for founders, startups and growing SMEs, mostly Sri Lankan and regional brands.</p>
+          <p class="lead">A strategy-led creative and digital studio, co-founded with Akesh Chandrasiri.</p>
           <div class="btns"><a class="btn" href="/arkive-labs/"><Sparkles size={18} /> The studio</a><a class="btn line" href="https://arkivelabs.com" target="_blank" rel="noopener"><Globe size={18} /> Visit arkivelabs.com</a></div>
         </div>
       </div>
@@ -58,7 +57,7 @@ const map = [
 
   <section class="sec paper" aria-labelledby="v-h">
     <Reveal client:visible><div class="sec-head"><h2 class="display" id="v-h">Inside Verdentra</h2><p>The same press, running every week on a live employer brand.</p></div></Reveal>
-    <ul class="roles"><li>Exec. Employer Branding &amp; Comms</li><li>Social media</li><li>Campaigns</li><li>Internal comms</li><li>Verdentra Waves, CSR</li></ul>
+    <ul class="roles"><li>Exec. Employer Branding &amp; Comms</li><li>Social media</li><li>Internal comms</li></ul>
     <div class="v-grid">
       {strip.map(([s, a, c]) => <figure><a class="proof" href="/work/verdentra/"><img src={A(s)} alt={a} width={dims(s).w} height={dims(s).h} loading="lazy" /></a><figcaption class="mono">{c}</figcaption></figure>)}
     </div>

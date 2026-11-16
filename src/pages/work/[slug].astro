@@ -12,7 +12,7 @@ const cover = asset(p.cover);
 const items = p.gallery.map((g: any) => ({ ...asset(g.src), tag: g.tag }));
 const SC = ['var(--sun)', 'var(--pink)', 'var(--sky)', 'var(--electric)'];
 ---
-<Base title={`${h1} | Yohan Wickramasinghe`} desc={p.desc} current="work" og={cover.src}>
+<Base title={`${p.title ?? h1} | Yohan Wickramasinghe`} desc={p.desc} current="work" og={cover.src}>
   <section class="p-head">
     <p class="crumb mono"><a href="/work/">Work</a><span>/</span><span>{p.chip}</span></p>
     <div class="chips"><span class="pill fill">{p.badge}</span><span class="mono">{p.year}</span></div>
@@ -27,10 +27,11 @@ const SC = ['var(--sun)', 'var(--pink)', 'var(--sky)', 'var(--electric)'];
       <dl class="facts">{p.rows.map((x: any) => <div><dt>{x.l}</dt><dd>{x.v}</dd></div>)}</dl>
     </div></Reveal>
   </section>
+  {p.steps.length > 0 && (
   <section class="sec" aria-labelledby="pr">
     <Reveal client:visible><div class="sec-head"><h2 class="display" id="pr">Process</h2><p>How the work moved from brief to finished.</p></div></Reveal>
     <div class="steps">{p.steps.map((x: any, n: number) => <Reveal client:visible delay={n * 0.08}><article><span class="n">0{n + 1}</span><h3 class="display">{x.t}</h3><p>{x.x}</p></article></Reveal>)}</div>
-  </section>
+  </section>)}
   <section class="sec paper" aria-labelledby="gl">
     <div class="sec-head"><h2 class="display" id="gl">The work</h2><p>Select any piece to view it full size.</p></div>
     <Gallery client:visible items={items} />

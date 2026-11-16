@@ -168,3 +168,12 @@ html.lenis,html.lenis body{height:auto}
   .top{backdrop-filter:none;background:var(--ink)}
   .top nav{z-index:39;overflow-y:auto}
 }
+
+.faq{display:grid;gap:0;border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule);padding:1.1rem 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::after{content:"+";color:var(--electric);font-family:var(--mono)}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin:.7rem 0 0;color:var(--mute);max-width:56ch}
+.split>h2{font-size:clamp(2.2rem,4.4vw,4.8rem);overflow-wrap:anywhere;min-width:0}
+.split>*{min-width:0}

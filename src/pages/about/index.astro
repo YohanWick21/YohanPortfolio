@@ -5,16 +5,16 @@ import { FileText, BookOpen, GraduationCap, Briefcase, Users } from 'lucide-reac
 import { ABOUT } from '../../data/site';
 const a = ABOUT;
 const CC = ['var(--electric)', 'var(--pink)', 'var(--sky)', 'var(--sun)', 'var(--violet)', 'var(--orange)'];
+const schema = { "@context": "https://schema.org", "@type": "Person", name: "Yohan Wickramasinghe", jobTitle: "Co-founder, Arkive Labs; Exec. Employer Branding & Comms, Verdentra", worksFor: [{ "@type": "Organization", name: "Arkive Labs", url: "https://arkivelabs.com" }, { "@type": "Organization", name: "Verdentra" }], sameAs: ["https://www.linkedin.com/in/yohan-wickramasinghe/", "https://medium.com/@yohanwick17", "https://arkivelabs.com"] };
 ---
-<Base title="About | Yohan Wickramasinghe" desc="Yohan Wickramasinghe is the co-founder of Arkive Labs and leads employer branding and communications at Verdentra." current="about" og={a.photo.src}>
+<Base schema={schema} title="About Yohan Wickramasinghe | Co-founder, Arkive Labs" desc="Yohan Wickramasinghe co-founded Arkive Labs and leads employer branding and communications at Verdentra. Background in design and AIESEC in SLIIT." current="about" og={a.photo.src}>
   <section class="page-head">
     <div class="about">
       <div class="portrait"><img src={a.photo.src} alt="Yohan Wickramasinghe" width={a.photo.w} height={a.photo.h} /></div>
       <div>
         <h1 class="display" style="margin-bottom:1.2rem">Yohan Wickramasinghe</h1>
         <p class="lead">Co-founder of Arkive Labs. Exec. Employer Branding &amp; Comms at Verdentra.</p>
-        <p>I'm a co-founder and employer branding specialist. I co-founded Arkive Labs, and at Verdentra I lead employer branding and communications, from social campaigns to internal engagement to our CSR programme, Verdentra Waves.</p>
-        <p>I started in design, building campaigns and event brands with AIESEC in SLIIT, and I still make the work myself. That background is why I care about how a company looks and sounds as much as what it says: clarity, consistency and people at the centre.</p>
+        <p>I'm Yohan, co-founder of Arkive Labs and employer branding lead at Verdentra. I started in design with AIESEC in SLIIT, and I still make the work myself, from the idea to the published post.</p>
         <dl class="dl">{a.details.map((d: any) => <div><dt>{d.l}</dt><dd>{d.href ? <a href={d.href} target={d.href.startsWith('http') ? '_blank' : undefined} rel="noopener">{d.v}</a> : d.v}</dd></div>)}</dl>
         <div class="btns" style="margin-top:1.6rem"><a class="btn" href="/assets/yohan-cv.pdf" target="_blank" rel="noopener"><FileText size={18} /> View CV</a><a class="btn line" href="/blog/"><BookOpen size={18} /> Read my writing</a></div>
       </div>

@@ -4,8 +4,10 @@ import Smooth from '../components/Smooth';
 import { Link2, BookOpen, Globe, ArrowUpRight, Send } from 'lucide-react';
 import '../styles/site.css';
 import '../styles/fun.css';
-interface Props { title: string; desc: string; current?: string; og?: string; total?: number; footer?: boolean }
-const { title, desc, current, og, total, footer = true } = Astro.props;
+interface Props { title: string; desc: string; current?: string; og?: string; total?: number; footer?: boolean; schema?: object; noindex?: boolean }
+const { title, desc, current, og, total, footer = true, schema, noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImg = new URL(og ?? '/assets/yohan-campaign-coordinator.webp', Astro.site).href;
 const WORDS = ['Ideate', 'Create', 'Execute', 'Published', 'Brand', 'Campaigns', 'Culture', 'Craft. Code. Conquer.'];
 const COLS = ['#C8FF00', '#F2EDE4', '#FF3D00'];
 ---
@@ -18,7 +20,11 @@ const COLS = ['#C8FF00', '#F2EDE4', '#FF3D00'];
   <meta name="description" content={desc} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={desc} />
-  {og && <meta property="og:image" content={og} />}
+  <link rel="canonical" href={canonical} />
+  <meta property="og:url" content={canonical} /><meta property="og:type" content="website" /><meta property="og:image" content={ogImg} />
+  <meta name="twitter:card" content="summary_large_image" />
+  {noindex && <meta name="robots" content="noindex" />}
+  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23C8FF00'/%3E%3Ctext x='32' y='42' font-family='Impact,sans-serif' font-size='30' font-style='italic' text-anchor='middle' fill='%23070707'%3EYW%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />

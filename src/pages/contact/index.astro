@@ -3,8 +3,8 @@ import Base from '../../layouts/Base.astro';
 import { Send, Mail, Link2, Globe } from 'lucide-react';
 const kinds = ['Brand and strategy', 'A campaign', 'Employer branding', 'A website', 'Something else'];
 ---
-<Base title="Contact | Yohan Wickramasinghe" desc="Send Yohan Wickramasinghe a rough idea and get a first take on how to take it to published." current="contact" footer={false}>
-  <section class="page-head"><h1 class="display">Got something rough?</h1><p class="sub">Send me the rough version. I read every brief, and I will come back with a first idea of how I would take it from here to published.</p></section>
+<Base title="Contact | Start a Brand or Campaign Project" desc="Send Yohan Wickramasinghe a brief for a brand, campaign or employer branding project. A sentence is enough to start." current="contact" footer={false}>
+  <section class="page-head"><h1 class="display">Got something rough?</h1><p class="sub">Send me the rough version. A sentence is enough, and I will come back with a first idea of how I would take it to published.</p></section>
   <section class="sec paper" aria-label="Send a brief">
     <form class="form" name="brief" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="brief" />

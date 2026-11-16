@@ -66,17 +66,17 @@ export const P: Record<string, any> = { ...L.projects };
 export const CARDS: Record<string, any> = Object.fromEntries(L.cards.map((c: any) => [c.slug, c]));
 CARDS.verdentra = { slug: 'verdentra', category: 'employer', img: 'verdentra-cover.jpg', cat: 'Employer Branding', badge: 'Current',
   title: 'Building an Employer Brand From the Inside Out',
-  desc: 'Running social media, internal communications and the Verdentra Waves CSR programme, with campaigns owned from first idea to published post.',
+  desc: 'x',
   tags: ['Employer Branding', 'Social Media', 'Internal Comms', 'CSR'] };
 P.verdentra = {
+  title: 'Employer Branding Case Study: Verdentra',
   chip: 'Verdentra', badge: 'Current', year: '2026', h1: ['Building an Employer', 'Brand From the Inside Out'], desc: CARDS.verdentra.desc,
-  stats: [{ n: 'Exec.', l: 'Employer Branding & Comms' }, { n: '5', l: 'Interns in one series' }, { n: '3 years', l: 'Of Verdentra celebrated' }, { n: 'Waves', l: 'CSR programme' }],
+  stats: [{ n: 'Exec.', l: 'Employer Branding & Comms' }, { n: '5', l: 'Interns in one series' }, { n: '1', l: 'Owner from idea to post' }],
   cover: 'verdentra-cover.jpg', ovtitle: 'The idea behind the work',
   paras: [
-    'Verdentra is a cloud, data and AI consultancy working with software vendors. My job is to make the company easy to understand, easy to trust and a place people want to work.',
-    'I own the social media output, and I take every campaign from the first idea through to creation and publishing. I also run internal communications and engagement activities, so the way Verdentra talks to its own team matches the way it talks to the world. The work below includes Interns, Unfiltered, a series built on interns’ own words, recruitment calls for the blog team, a welcome template for new joiners, and celebration pieces such as the third anniversary wallpaper and the annual office trip.',
-    'Outside the channels, I lead Verdentra Waves, the company’s CSR programme, planning and running the events that put its values into practice.'],
-  rows: [{ l: 'Role', v: 'Exec. Employer Branding & Comms' }, { l: 'Company', v: 'Verdentra' }, { l: 'Scope', v: 'Social media, internal comms, engagement, CSR' }, { l: 'Programme', v: 'Verdentra Waves' }],
+    'Verdentra is a cloud, data and AI consultancy that works with software vendors. I lead its employer branding and communications, so the company is easy to understand and a place people want to join.',
+    'I own the social media output and take every campaign from first idea to published post. I also run the internal communications that keep the team connected. The work below includes Interns, Unfiltered, a five-post series in the interns’ own words, recruitment calls for the blog team, a new joiner welcome template, and celebration pieces like the third anniversary wallpaper and the annual office trip.'],
+  rows: [{ l: 'Role', v: 'Exec. Employer Branding & Comms' }, { l: 'Company', v: 'Verdentra' }, { l: 'Scope', v: 'Social media, internal comms, engagement' }],
   gallery: [
     ['verdentra-cover.jpg', 'Third anniversary wallpaper'], ['verdentra-interns-akalanka.jpg', 'Interns, Unfiltered: Akalanka'],
     ['verdentra-blog-team.jpg', 'Blog team recruitment'], ['verdentra-office-trip.jpg', 'Annual office trip'],
@@ -91,24 +91,100 @@ P.verdentra = {
     { t: 'Create', x: 'Produce the posts, carousels, graphics and event materials myself, so the idea and the finished piece stay connected.' },
     { t: 'Execute', x: 'Publish on a steady calendar, run the events, then look at what worked and adjust the next round.' }],
   outcomes: [
-    { t: 'Idea to published', x: 'One person owns each campaign from concept to post, which keeps the message consistent.' },
-    { t: 'A series, not one-offs', x: 'Interns, Unfiltered runs one layout across five people, so each post builds on the last.' },
+    { t: 'A series, not one-offs', x: 'Interns, Unfiltered ran one layout across five people, so each post built on the last.' },
     { t: 'One voice, inside and out', x: 'Internal communications and external content follow the same brand and tone.' },
-    { t: 'Values in action', x: 'Verdentra Waves turns the company’s CSR intent into events people take part in.' }],
+    { t: 'Idea to published', x: 'One person carries each campaign from concept to post, which keeps the message consistent.' }],
 };
+CARDS.verdentra.tags = ['Employer Branding', 'Social Media', 'Internal Comms'];
+CARDS.verdentra.desc = 'Owning social media, internal comms and campaigns for a cloud and AI consultancy, from first idea to published post.';
+P.verdentra.desc = CARDS.verdentra.desc;
+
+/* ---------- other projects: tighter copy, facts only ---------- */
+const patch = (slug: string, o: any) => { Object.assign(P[slug], o); if (o.desc) CARDS[slug].desc = o.desc; };
+patch('igvirnm', {
+  title: 'iGV Campaign Design: AIESEC in SLIIT',
+  desc: 'Attraction campaigns for AIESEC in SLIIT’s iGV programme, built as a six-format poster system.',
+  stats: [{ n: 'iGV', l: 'AIESEC in SLIIT' }, { n: '15+', l: 'Assets created' }, { n: '3', l: 'Platforms' }],
+  paras: [
+    'iGV (Incoming Global Volunteer) is a flagship programme at AIESEC in SLIIT. As Campaign Coordinator for IR & M, from July 2025 to February 2026, I planned and designed the campaigns that drove applications and event attendance.',
+    'The brief was to stand out in a crowded feed while staying inside AIESEC’s global brand rules and sounding local and personal. I answered it with one poster system: a single idea per post, a shared footer, and a different object each time, such as a ringing phone, a tear-off flyer, a clock, a megaphone and an advent calendar.'],
+  rows: [{ l: 'Programme', v: 'iGV, AIESEC in SLIIT' }, { l: 'Team', v: 'IR & M' }, { l: 'Role', v: 'Campaign Coordinator' }, { l: 'Period', v: 'Jul 2025 to Feb 2026' }],
+  outcomes: [
+    { t: 'A repeatable system', x: 'Six poster formats sharing one footer, so new posts could be made quickly.' },
+    { t: 'One idea per post', x: 'Each design carries a single action: apply, choose, attend or celebrate.' },
+    { t: 'Across channels', x: '15+ assets built for 3 platforms.' }],
+});
+patch('nlds', {
+  title: 'NLDS Application Design: Case Study',
+  desc: 'A five-piece creative application for the NLDS Organising Committee, built to show how I approach a campaign.',
+  stats: [{ n: 'NLDS', l: 'AIESEC seminar' }, { n: '5', l: 'Assets created' }, { n: '3', l: 'Platforms' }],
+  paras: [
+    'The National Leadership Development Seminar (NLDS) is a flagship AIESEC seminar for developing leaders across the country. For my Organising Committee application I designed five creatives that explained my ideas and showed how I approach a campaign.',
+    'Each one had to be clear at a glance and still sit inside AIESEC’s brand guidelines.'],
+  rows: [{ l: 'Event', v: 'NLDS, AIESEC' }, { l: 'Context', v: 'Organising Committee application' }, { l: 'Assets', v: '5 creatives' }],
+  steps: [],
+  outcomes: [{ t: 'One visual language', x: 'Five creatives sharing a single look across 3 platforms.' }, { t: 'Inside the brand rules', x: 'Built to AIESEC’s guidelines while still standing out.' }],
+});
+patch('catalyst', {
+  title: 'Catalyst 5.0 Event Marketing: AIESEC in SLIIT',
+  desc: 'Marketing direction for a leadership seminar, built on an Avatar: The Last Airbender theme.',
+  stats: [{ n: 'Catalyst 5.0', l: 'Leadership seminar' }, { n: '10+', l: 'Assets created' }, { n: '3', l: 'Platforms' }],
+  paras: [
+    'Catalyst 5.0 is AIESEC in SLIIT’s flagship leadership seminar. As Organising Committee Vice President for Marketing, I led the marketing direction and execution.',
+    'The campaign used an Avatar: The Last Airbender theme to give a leadership event a story people wanted to follow, while staying inside AIESEC’s brand guidelines.'],
+  rows: [{ l: 'Event', v: 'Catalyst 5.0' }, { l: 'Role', v: 'OC Vice President, Marketing' }, { l: 'Theme', v: 'Avatar: The Last Airbender' }],
+  steps: [],
+  outcomes: [{ t: 'One theme, every asset', x: '10+ assets across 3 platforms shared the same world.' }, { t: 'Led end to end', x: 'Marketing direction and execution led as OC Vice President.' }],
+});
+patch('goldcoin', {
+  title: 'Corporate Awards Event Design: Gold Coin',
+  desc: 'Flyers and email banners for an apparel-industry awards ceremony, designed so the agenda reads at a glance.',
+  stats: [{ n: 'Gold Coin', l: 'Awards ceremony' }, { n: '10+', l: 'Assets created' }, { n: '2', l: 'Platforms' }],
+  paras: [
+    'Flyers, posters and email banners for a large awards ceremony hosted by a leading apparel-industry organisation. The job was to show the prestige of the event while keeping the agenda and announcements easy to read.',
+    'Everything had to meet corporate standards and work in print and digital, so hierarchy and consistency came first.'],
+  rows: [{ l: 'Event', v: 'Gold Coin Award Ceremony' }, { l: 'Client', v: 'Apparel-industry organisation' }, { l: 'Formats', v: 'Print and digital' }],
+  steps: [],
+  outcomes: [{ t: 'Clear hierarchy', x: 'Agenda and announcements readable at a glance.' }, { t: 'Print and digital', x: '10+ assets across 2 platforms in one visual identity.' }],
+});
+patch('merch', {
+  title: 'Merchandise Design: AIESEC in SLIIT',
+  desc: 'T-shirt and jacket graphics that turn a brand or an idea into something people wear.',
+  stats: [{ n: '10+', l: 'Design variations' }, { n: '2', l: 'Formats' }],
+  paras: [
+    'Merchandise for AIESEC in SLIIT, plus a set of personal apparel designs: t-shirts and jackets that turn a brand or an idea into something people wear.',
+    'Fabric changes the brief. The graphics had to stay strong at garment scale and work across different apparel types.'],
+  rows: [{ l: 'Client', v: 'AIESEC in SLIIT, plus personal work' }, { l: 'Products', v: 'T-shirts and jackets' }],
+  steps: [],
+  outcomes: [{ t: 'Built for fabric', x: '10+ variations across 2 formats, designed for how graphics print on apparel.' }],
+});
+for (const k of ['nlds', 'catalyst', 'goldcoin', 'merch']) P[k].title ??= CARDS[k].title;
+
 export const FILTERS = [['all', 'All'], ['employer', 'Employer brand'], ['campaign', 'Campaigns'], ['event', 'Events'], ['branding', 'Branding'], ['corporate', 'Corporate']];
 
 /* ---------- blog: Medium articles (full text lives on Medium) ---------- */
-export const BLOG = (L.blogs as any[]).map((b, i) => ({ ...b, asset: asset(b.img), slug: i }));
+const EXCERPTS = [
+  'Why imperfect, human-looking design is beating polished AI-era visuals.',
+  'How cultural cues and human signals earn attention that generic content can\u2019t.',
+  'Why the linear funnel no longer matches how buyers behave, and what to design instead.',
+  'How Faber-Castell borrowed the Apple look to make 400 hours of craft the story.',
+  'How Ogilvy Canada helped TD Bank borrow Nike and Apple\u2019s brand equity without asking permission.',
+];
+export const BLOG = (L.blogs as any[]).map((b, i) => ({ ...b, excerpt: EXCERPTS[i] ?? b.excerpt, asset: asset(b.img), slug: i }));
 
 /* ---------- about ---------- */
 const a = L.about;
 export const ABOUT = {
   photo: asset(a.photo),
-  details: a.details, edu: a.edu, lead: a.lead,
+  details: a.details, edu: a.edu,
+  lead: a.lead.map((x: any, i: number) => ({ ...x, desc: [
+    'Led the committee behind Benchmark 3.0: 600+ registrations, 400+ delegates, 100 teams, and the Most Outstanding Event Award at AIESEC in SLIIT.',
+    'Led planning and execution of attraction campaigns for iGV IR & M.',
+    'Edited the quarterly magazine and managed the club website.',
+    'Edited and published digital materials for the faculty community.'][i] ?? x.desc })),
   exp: [
     { date: 'Sep 2026 - Present', role: 'Co-founder & Creative Director', company: 'Arkive Labs', bullets: ['Lead brand strategy, visual identity, content and digital experience at a strategy-led creative and digital studio', 'Built the studio with co-founder Akesh Chandrasiri, keeping strategy, design and technology under one roof'] },
-    { date: 'Jun 2026 - Present', role: 'Exec. Employer Branding & Comms', company: 'Verdentra', bullets: ['Own social media end to end, taking each campaign from ideation to creation and execution', 'Lead internal communications and engagement activities that keep the team connected', 'Run Verdentra Waves, the company’s CSR programme and events'] },
-    ...a.exp.map((x: any) => x.company.startsWith('Hype') ? { ...x, date: x.date.replace('- Present', '- Jun 2026') } : x),
+    { date: 'Jun 2026 - Present', role: 'Exec. Employer Branding & Comms', company: 'Verdentra', bullets: ['Own social media end to end, from first idea to published post', 'Lead the internal communications and engagement that keep the team connected'] },
+    ...a.exp.map((x: any) => ({ ...(x.company.startsWith('Hype') ? { ...x, date: x.date.replace('- Present', '- Jun 2026') } : x), bullets: x.bullets.slice(0, 2) })),
   ],
 };
