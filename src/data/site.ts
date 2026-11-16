@@ -71,7 +71,7 @@ CARDS.verdentra = { slug: 'verdentra', category: 'employer', img: 'verdentra-cov
 P.verdentra = {
   title: 'Employer Branding Case Study: Verdentra',
   chip: 'Verdentra', badge: 'Current', year: '2026', h1: ['Building an Employer', 'Brand From the Inside Out'], desc: CARDS.verdentra.desc,
-  stats: [{ n: '259K', l: 'LinkedIn impressions, 1 Jul to 14 Nov' }, { n: '2.1K', l: 'LinkedIn reactions' }, { n: '32.5K', l: 'Instagram views' }, { n: '2,500', l: 'Website visits from the Oct intern series' }],
+  stats: [{ n: '259K', l: 'LinkedIn impressions, 1 Jul to 14 Nov' }, { n: '32.5K', l: 'Instagram views' }, { n: '15.8K', l: 'Website sessions, same period' }, { n: '2,500', l: 'Visits from the Oct intern series' }],
   cover: 'verdentra-cover.jpg', ovtitle: 'The idea behind the work',
   paras: [
     'Verdentra is a cloud, data and AI consultancy that works with software vendors. I lead its employer branding and communications, so the company is easy to understand and a place people want to join.',
@@ -91,7 +91,7 @@ P.verdentra = {
     { t: 'Create', x: 'Produce the posts, carousels, graphics and event materials myself, so the idea and the finished piece stay connected.' },
     { t: 'Execute', x: 'Publish on a steady calendar, run the events, then look at what worked and adjust the next round.' }],
   outcomes: [
-    { t: 'Growth since I started posting', x: 'From 1 July to 14 November: 259,018 LinkedIn impressions (up 132% on the previous period) and 2,107 reactions (up 184%), plus 32,524 Instagram views (up 162%).' },
+    { t: 'Growth since I started posting', x: 'From 1 July to 14 November: 259,018 LinkedIn impressions (up 132% on the previous period) and 2,107 reactions (up 184%), plus 32,524 Instagram views (up 162%). Over the same period the website had 15,807 sessions from 10,180 users.' },
     { t: 'A series that drove visits', x: 'In October, the five Interns, Unfiltered posts drew nearly 90,000 LinkedIn impressions and 6,000 Instagram views, and drove 2,500 visits to the website. One layout ran across five people, so each post built on the last.' },
     { t: 'One voice, inside and out', x: 'Internal communications and external content follow the same brand and tone.' },
     { t: 'Idea to published', x: 'One person carries each campaign from concept to post, which keeps the message consistent.' }],
