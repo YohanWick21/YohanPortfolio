@@ -41,3 +41,19 @@ body{background-image:none}
 .paper .btn.line{color:#F2EDE4;border-color:#F2EDE4}
 .paper .btn{--ink:#070707}
 .top .nav-cta[aria-current="page"]{background:#070707;border-color:#070707;color:#F2EDE4}
+
+/* ---- contrast fixes ---- */
+.btn.line{color:#070707;border-color:#070707}
+.paper .btn.line,.hero.press .btn.line{color:#F2EDE4;border-color:#F2EDE4}
+.foot .btn.line{color:#070707;border-color:#070707}
+.pills li.fill,.pills li:nth-child(1){color:#070707}
+.exp .date span{color:#070707}
+.edu.on-ink{--mute-paper:#5B574E}
+.edu.on-ink p,.edu.on-ink .year{color:#5B574E}
+.hero.press .rail-hint{color:#A9A395}
+.paper .statband-cap a{color:#F2EDE4}
+.paper .statband-cap{color:#A9A395}
+.sb b{color:var(--electric);text-shadow:none}
+.sb span{color:#F2EDE4}
+.lead-card .pill{color:#070707!important}
+.statband .sb b,.statband .sb:nth-child(n) b{color:var(--electric);text-shadow:none}
