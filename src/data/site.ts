@@ -71,12 +71,12 @@ CARDS.verdentra = { slug: 'verdentra', category: 'employer', img: 'verdentra-cov
 P.verdentra = {
   title: 'Employer Branding Case Study: Verdentra',
   chip: 'Verdentra', badge: 'Current', year: '2026', h1: ['Building an Employer', 'Brand From the Inside Out'], desc: CARDS.verdentra.desc,
-  stats: [{ n: '~90K', l: 'LinkedIn impressions in October' }, { n: '6K', l: 'Instagram views in October' }, { n: '2,500', l: 'Website visits driven in October' }, { n: '5', l: 'Interns in one series' }],
+  stats: [{ n: '259K', l: 'LinkedIn impressions, 1 Jul to 14 Nov' }, { n: '2.1K', l: 'LinkedIn reactions' }, { n: '32.5K', l: 'Instagram views' }, { n: '2,500', l: 'Website visits from the Oct intern series' }],
   cover: 'verdentra-cover.jpg', ovtitle: 'The idea behind the work',
   paras: [
     'Verdentra is a cloud, data and AI consultancy that works with software vendors. I lead its employer branding and communications, so the company is easy to understand and a place people want to join.',
     'I own the social media output and take every campaign from first idea to published post. I also run the internal communications that keep the team connected. The work below includes Interns, Unfiltered, a five-post series in the interns’ own words, recruitment calls for the blog team, a new joiner welcome template, and celebration pieces like the third anniversary wallpaper and the annual office trip.'],
-  rows: [{ l: 'Role', v: 'Exec. Employer Branding & Comms' }, { l: 'Company', v: 'Verdentra' }, { l: 'Scope', v: 'Social media, internal comms, engagement' }],
+  rows: [{ l: 'Role', v: 'Exec. Employer Branding & Comms' }, { l: 'Company', v: 'Verdentra' }, { l: 'Scope', v: 'Social media, internal comms, engagement' }, { l: 'Period', v: 'Since June 2026, posting from 1 July' }],
   gallery: [
     ['verdentra-cover.jpg', 'Third anniversary wallpaper'], ['verdentra-interns-akalanka.jpg', 'Interns, Unfiltered: Akalanka'],
     ['verdentra-blog-team.jpg', 'Blog team recruitment'], ['verdentra-office-trip.jpg', 'Annual office trip'],
@@ -91,13 +91,13 @@ P.verdentra = {
     { t: 'Create', x: 'Produce the posts, carousels, graphics and event materials myself, so the idea and the finished piece stay connected.' },
     { t: 'Execute', x: 'Publish on a steady calendar, run the events, then look at what worked and adjust the next round.' }],
   outcomes: [
-    { t: 'Reach that led somewhere', x: 'In October, the five Interns, Unfiltered posts drew nearly 90,000 impressions on LinkedIn and 6,000 views on Instagram, and drove 2,500 visits to the website.' },
-    { t: 'A series, not one-offs', x: 'One layout ran across five people, so each post built on the last.' },
+    { t: 'Growth since I started posting', x: 'From 1 July to 14 November: 259,018 LinkedIn impressions (up 132% on the previous period) and 2,107 reactions (up 184%), plus 32,524 Instagram views (up 162%).' },
+    { t: 'A series that drove visits', x: 'In October, the five Interns, Unfiltered posts drew nearly 90,000 LinkedIn impressions and 6,000 Instagram views, and drove 2,500 visits to the website. One layout ran across five people, so each post built on the last.' },
     { t: 'One voice, inside and out', x: 'Internal communications and external content follow the same brand and tone.' },
     { t: 'Idea to published', x: 'One person carries each campaign from concept to post, which keeps the message consistent.' }],
 };
 CARDS.verdentra.tags = ['Employer Branding', 'Social Media', 'Internal Comms'];
-CARDS.verdentra.desc = 'Owning social media, internal comms and campaigns for a cloud and AI consultancy. In October, one intern series drove 2,500 website visits.';
+CARDS.verdentra.desc = 'Owning social media, internal comms and campaigns for a cloud and AI consultancy. 259,000 LinkedIn impressions since July, and one intern series drove 2,500 website visits.';
 P.verdentra.desc = CARDS.verdentra.desc;
 
 /* ---------- other projects: tighter copy, facts only ---------- */
