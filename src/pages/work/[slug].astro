@@ -33,10 +33,9 @@ const SC = ['var(--sun)', 'var(--pink)', 'var(--sky)', 'var(--electric)'];
     <div class="steps">{p.steps.map((x: any, n: number) => <Reveal client:visible delay={n * 0.08}><article><span class="n">0{n + 1}</span><h3 class="display">{x.t}</h3><p>{x.x}</p></article></Reveal>)}</div>
     {p.concept && (
       <Reveal client:visible>
-        <div class="concept">
-          <div class="concept-head"><h3 class="display">{p.concept.title}</h3><p>{p.concept.intro}</p></div>
-          <ul class="pillars">{p.concept.pillars.map((x: any) => <li><b>{x.t}</b><span>{x.x}</span></li>)}</ul>
-          <div class="cnotes">{p.concept.notes.map((x: any) => <div><b>{x.t}</b><span>{x.x}</span></div>)}</div>
+        <div class="pillar-row">
+          <p>{p.concept.label}. {p.concept.note}</p>
+          <ul>{p.concept.pillars.map((x: string) => <li>{x}</li>)}</ul>
         </div>
       </Reveal>)}
   </section>)}

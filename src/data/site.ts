@@ -90,22 +90,13 @@ P.verdentra = {
     ['verdentra-interns-umasha.jpg', 'Interns, Unfiltered: Umasha']].map(([src, tag]) => ({ src, tag })),
   steps: [
     { t: 'Understand', x: 'Get clear on the audience, whether that is a prospective client, a candidate or the team, and on what the company needs them to feel.' },
-    { t: 'Ideate', x: 'Turn that into campaign ideas, content pillars and creative directions before anything is designed.' },
-    { t: 'Create', x: 'Produce the posts, carousels, graphics and event materials myself, so the idea and the finished piece stay connected.' },
-    { t: 'Execute', x: 'Publish on a steady calendar, run the events, then look at what worked and adjust the next round.' }],
+    { t: 'Ideate', x: 'Turn that into a monthly content calendar and campaign ideas before anything is designed.' },
+    { t: 'Create', x: 'Make the posts, carousels and event materials myself, so the idea and the finished piece stay connected. A job post shows the future, not a list of requirements.' },
+    { t: 'Execute', x: 'Publish on a steady calendar, then see what worked. One layout can run across a whole series, as it did for Interns, Unfiltered.' }],
   concept: {
-    title: 'How the ideas get made',
-    intro: 'Each month starts with a content calendar built on five pillars. It keeps the feed varied and gives every post one clear job.',
-    pillars: [
-      { t: 'Technical point of view', x: 'Thought leadership in the voice of the people who do the work, led by the CTO.' },
-      { t: 'Proof of work', x: 'Case studies that show what Verdentra delivers.' },
-      { t: 'Partners and ecosystem', x: 'Spotlights on the partners and technology the team builds with.' },
-      { t: 'Careers and culture', x: 'The people, the office and the roles, told honestly. Interns, Unfiltered lives here.' },
-      { t: 'Community and knowledge', x: 'Useful things shared back, like the technical blog.' }],
-    notes: [
-      { t: 'A steady rhythm', x: 'LinkedIn on Monday, Wednesday and Friday. Instagram on Tuesday and Thursday.' },
-      { t: 'A story, not a list', x: 'Job posts show the applicant a future state instead of listing requirements.' },
-      { t: 'One layout, many people', x: 'Interns, Unfiltered used a single design across five interns, so each post built on the last.' }] },
+    label: 'Every idea sits inside one of five content pillars',
+    pillars: ['Technical point of view', 'Proof of work', 'Partners and ecosystem', 'Careers and culture', 'Community and knowledge'],
+    note: 'Technical thought leadership is led by our COO.' },
   outcomes: [
     { t: 'Reach grew on both platforms', x: 'LinkedIn impressions are up 132% on the previous period and reactions are up 184%. Instagram views are up 162%.' },
     { t: 'One series did the heavy lifting', x: 'In October the five Interns, Unfiltered posts reached nearly 90,000 people on LinkedIn and 6,000 on Instagram, and sent 2,500 visits to the website.' },
