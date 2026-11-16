@@ -4,6 +4,7 @@ import Smooth from '../components/Smooth';
 import { Link2, BookOpen, Globe, ArrowUpRight, Send } from 'lucide-react';
 import '../styles/site.css';
 import '../styles/fun.css';
+import '../styles/theme-light.css';
 interface Props { title: string; desc: string; current?: string; og?: string; total?: number; footer?: boolean; schema?: object; noindex?: boolean }
 const { title, desc, current, og, total, footer = true, schema, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;

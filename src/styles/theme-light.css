@@ -1,0 +1,59 @@
+/* LIGHT THEME TEST. Swaps ink and stock at the root so every default (dark) surface turns cream
+   and every .paper section turns ink. Regions that must keep the original meaning re-swap locally. */
+:root{--sky:#FFFFFF;--ink:#F2EDE4;--stock:#070707;--ink2:#E8E1D4;--mute:#5B574E;--mute-paper:#A9A395;--rule:rgba(7,7,7,.2);--rule-paper:rgba(242,237,228,.22);color-scheme:light}
+.paper,.paper .sec-head{--mute:#A9A395;--rule:rgba(242,237,228,.22)}
+/* things that live on lime or must stay dark keep the original palette */
+.hero.press,.foot,.btn,.mark,.skip,.pill.fill,.stage-no,.step-tag,.stamp,.n,.ico,.badge,.nav-cta,.tally,.sticker,.pub-pill,.note,.badge-spin,.statband-cap a{--ink:#070707;--stock:#F2EDE4;--mute:#A9A395;--rule:rgba(242,237,228,.22);--mute-paper:#5B574E}
+.hero.press{background:#070707;color:#F2EDE4;margin-inline:0}
+.foot{--mute-paper:#5B574E}
+.btn.line{color:var(--stock);border-color:var(--stock)}
+.foot .btn.line,.hero.press .btn.line{color:var(--ink);border-color:var(--ink)}
+.hero.press .btn.line{color:#F2EDE4;border-color:#F2EDE4}
+/* header */
+.top{background:rgba(242,237,228,.9);border-bottom-color:rgba(7,7,7,.15)}
+.top nav a,.top .links a{color:#070707}
+.top .links a{background-image:linear-gradient(#070707,#070707)}
+.mark:hover{background:#070707;color:var(--electric)}
+.tally{border-color:#070707;color:#070707;background:transparent}
+.menu-btn{border-color:#070707}
+@media (max-width:720px){.top{background:#F2EDE4}.top nav{background:#F2EDE4}}
+/* hero */
+.id-hero{background:radial-gradient(circle at 80% 20%,rgba(200,255,0,.35),transparent 55%)}
+.id-hero::before{background-image:radial-gradient(rgba(7,7,7,.12) 1px,transparent 1.4px)}
+.id-hero .tagline{border-color:#070707;color:#070707}
+.id-hero .lede{color:#070707}
+.portrait-hero img{border-color:#070707}
+.collage .t2 img{border-color:#070707}
+/* page heads and dark-bg gradients */
+.page-head,.p-head{background:none}
+.p-head h1,.page-head h1{color:#070707}
+.stat b{text-shadow:2px 2px 0 var(--electric)}
+.stat b{color:#070707!important}
+.hl{background:linear-gradient(90deg,var(--acid),var(--electric))!important;-webkit-background-clip:text!important;background-clip:text!important}
+/* lime text that would vanish on cream */
+.crumb a,.faq summary::after,.rail-hint{color:#070707}
+.id-hero .roles2 svg{color:#070707}
+.intro .how strong{color:#070707;background:var(--electric);padding:0 .25em}
+::selection{background:var(--electric);color:#070707}
+/* sections: soften the dot texture */
+body{background-image:none}
+.paper{background:#0B0B0B;color:#F2EDE4}
+.paper .btn.line{color:#F2EDE4;border-color:#F2EDE4}
+.paper .btn{--ink:#070707}
+.top .nav-cta[aria-current="page"]{background:#070707;border-color:#070707;color:#F2EDE4}
+
+/* ---- contrast fixes ---- */
+.btn.line{color:#070707;border-color:#070707}
+.paper .btn.line,.hero.press .btn.line{color:#F2EDE4;border-color:#F2EDE4}
+.foot .btn.line{color:#070707;border-color:#070707}
+.pills li.fill,.pills li:nth-child(1){color:#070707}
+.exp .date span{color:#070707}
+.edu.on-ink{--mute-paper:#5B574E}
+.edu.on-ink p,.edu.on-ink .year{color:#5B574E}
+.hero.press .rail-hint{color:#A9A395}
+.paper .statband-cap a{color:#F2EDE4}
+.paper .statband-cap{color:#A9A395}
+.sb b{color:var(--electric);text-shadow:none}
+.sb span{color:#F2EDE4}
+.lead-card .pill{color:#070707!important}
+.statband .sb b,.statband .sb:nth-child(n) b{color:var(--electric);text-shadow:none}
