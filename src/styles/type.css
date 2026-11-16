@@ -10,3 +10,6 @@ body{font-family:var(--body);line-height:1.62}
   .top .cta-group{font-family:var(--body);font-style:normal;text-transform:none;font-size:1rem}
 }
 @media (max-width:900px){.id-hero h1{font-size:clamp(2.6rem,12vw,4rem)}}
+/* current job in the queue: always lime with dark text so it never disappears */
+.job[aria-pressed="true"]{background:var(--electric);border-color:var(--electric);color:#070707}
+.job[aria-pressed="true"] i{border-color:#070707}

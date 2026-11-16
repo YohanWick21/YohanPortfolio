@@ -14,7 +14,7 @@ interface Props { title: string; desc: string; current?: string; og?: string; to
 const { title, desc, current, og, total, footer = true, schema, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const ogImg = new URL(og ?? '/assets/yohan-campaign-coordinator.webp', Astro.site).href;
-const WORDS = ['Ideate', 'Create', 'Execute', 'Published', 'Brand', 'Campaigns', 'Culture', 'Craft. Code. Conquer.'];
+const WORDS = ['Ideate', 'Create', 'Execute', 'Published', 'Brand', 'Campaigns', 'Culture'];
 const COLS = ['#C8FF00', '#F2EDE4', '#FF3D00'];
 ---
 <!doctype html>
