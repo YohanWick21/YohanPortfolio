@@ -10,14 +10,14 @@ const faq = [
   ['How does a project run?', 'We start by understanding the business, clarify the story, then build the presence that carries it, in that order.'],
   ['How do I start?', 'Send a short brief through the contact form. A sentence is enough.'],
 ];
-const schema = { "@context": "https://schema.org", "@type": "Organization", name: "Arkive Labs", url: "https://arkivelabs.com", description: "A strategy-led creative and digital studio for founders, startups and growing SMEs.", founder: [{ "@type": "Person", name: "Yohan Wickramasinghe" }, { "@type": "Person", name: "Akesh Chandrasiri" }] };
+const schema = { "@context": "https://schema.org", "@type": "Organization", name: "Arkive Labs", url: "https://arkivelabs.com", description: "A strategy-led creative and digital studio for founders, startups and growing SMEs.", address: { "@type": "PostalAddress", addressLocality: "Colombo", addressCountry: "LK" }, founder: [{ "@type": "Person", name: "Yohan Wickramasinghe" }, { "@type": "Person", name: "Akesh Chandrasiri" }] };
 const offers = [
   { n: 'Ideate', c: 'var(--sun)', Ic: Lightbulb, t: 'Strategy and positioning', d: 'Market positioning, messaging and brand strategy that give a business a clear story to build on.' },
   { n: 'Create', c: 'var(--pink)', Ic: PenTool, t: 'Brand and creative', d: 'Visual identity, campaign creative and content direction that make that story look and feel unmistakably yours.' },
   { n: 'Execute', c: 'var(--sky)', Ic: Rocket, t: 'Digital and growth', d: 'Websites, content, SEO and performance campaigns, built as one system and measured so we know what’s working.' },
 ];
 ---
-<Base title="Arkive Labs | Brand Strategy and Creative Studio" desc="Arkive Labs is a strategy-led creative and digital studio for founders, startups and growing SMEs: positioning, brand, websites, content and campaigns." current="arkive" schema={schema}>
+<Base title="Arkive Labs | Brand Strategy and Creative Studio, Colombo" desc="Arkive Labs is a strategy-led creative and digital studio in Colombo for founders, startups and growing SMEs: positioning, brand, websites, content and campaigns." current="arkive" schema={schema}>
   <section class="page-head">
     <div class="ak-hero">
       <div>
@@ -31,7 +31,7 @@ const offers = [
   <section class="sec paper" aria-labelledby="w"><Reveal client:visible>
     <div class="split"><h2 class="display" id="w">What we do</h2><div>
       <p class="lead-p">We help capable businesses explain themselves clearly: positioning, brand, websites, content and campaigns, built from what the company actually does.</p>
-      <p>We work with founders, startups and growing SMEs, mostly Sri Lankan and regional brands, and with technical businesses whose value needs plain, confident language.</p>
+      <p>We are based in Colombo and work with founders, startups and growing SMEs, mostly Sri Lankan and regional brands, and with technical businesses whose value needs plain, confident language.</p>
     </div></div></Reveal>
   </section>
   <section class="sec paper" aria-labelledby="o">
