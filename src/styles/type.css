@@ -1,36 +1,12 @@
-/* Type: Montserrat for reading, Archivo (width axis) for headings. Loaded last on purpose. */
-:root{--body:"Montserrat Variable","Montserrat",system-ui,sans-serif;--display:"Archivo Variable","Archivo",system-ui,sans-serif;--mono:"Space Mono",ui-monospace,monospace}
+/* Type: Montserrat for reading, Barlow Condensed (heavy italic caps) for headings. Loaded last on purpose. */
+:root{--body:"Montserrat Variable","Montserrat",system-ui,sans-serif;--display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--mono:"Space Mono",ui-monospace,monospace}
 body{font-family:var(--body);line-height:1.62}
-.display,.mark,.stamp,.ribbon-track,.sb b,.stat b,.edu .badge,.id-hero h1{font-family:var(--display);font-style:normal;text-transform:none;font-variation-settings:"wdth" 108}
-.display{font-weight:800;letter-spacing:-.03em;line-height:1.02;text-wrap:balance}
-.stamp{text-transform:uppercase;font-weight:800;letter-spacing:.02em}
-.mark{font-weight:800;font-size:1.05rem;letter-spacing:-.04em}
-.id-hero h1{font-weight:800;letter-spacing:-.04em;line-height:1.02;font-size:clamp(2.3rem,5.2vw,5.4rem);max-width:15ch}
-.page-head h1{font-size:clamp(2.8rem,8vw,7.6rem);line-height:.98}
-.p-head h1{font-size:clamp(2.2rem,5.6vw,5.4rem);max-width:18ch;line-height:1}
-.sec-head h2{font-size:clamp(2.2rem,5.6vw,5.4rem)}
-.split h2,.split>h2{font-size:clamp(2rem,3.8vw,3.6rem)}
-.foot h2{font-size:clamp(2.8rem,8vw,8rem);max-width:12ch;line-height:.98}
-.hero.press h2{font-size:clamp(2.2rem,4.4vw,4.4rem)}
-.stage-word{font-size:clamp(2.6rem,6.4vw,5.8rem);line-height:1}
-.note .idea{font-size:clamp(1.2rem,2.1vw,1.55rem);line-height:1.15;letter-spacing:-.02em}
-.map h3,.pcard h3{font-size:clamp(1.6rem,2.7vw,2.4rem);line-height:1.05}
-.overview h2{font-size:clamp(2rem,4vw,3.6rem)}
-.steps h3,.outcomes h3,.exp h3,.edu h3{font-size:clamp(1.35rem,2.1vw,1.8rem);line-height:1.1}
-.pn .display{font-size:clamp(1.8rem,3.4vw,3rem)}
-.about h1{font-size:clamp(2.4rem,5vw,4.8rem)!important}
-.lead-card h3{font-size:1.5rem;line-height:1.1}
-.post h3{font-size:clamp(1.25rem,1.7vw,1.5rem);line-height:1.12}
-.feature h2{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.05}
-.sb b{font-size:clamp(2.4rem,5.2vw,4.8rem);line-height:1;font-weight:800}
-.stat b{font-size:clamp(1.6rem,3.6vw,3.4rem);line-height:1;font-weight:800}
-.ribbon-track{font-weight:800;font-size:1.35rem;letter-spacing:-.01em}
-.edu .badge{font-size:1.3rem;font-weight:800}
+.id-hero h1{font-family:var(--display);font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:0;line-height:.9;font-size:clamp(2.8rem,6.4vw,7rem);max-width:14ch}
 .btn,.chip,.job,.tally{font-weight:700}
 .top nav a,.top .links a{font-weight:600;letter-spacing:-.005em}
 .lead,.lead-p{line-height:1.5}
 @media (max-width:720px){
-  .top nav{font-family:var(--display);font-style:normal;text-transform:none;font-weight:800;font-size:clamp(2.2rem,10vw,3.4rem);line-height:1.08;letter-spacing:-.03em;gap:.9rem}
-  .top .cta-group{font-family:var(--body);font-size:1rem}
-  .page-head h1{font-size:clamp(2.4rem,11vw,3.6rem)}
+  .top nav{font-family:var(--display);font-style:italic;text-transform:uppercase;font-weight:900;font-size:clamp(2.4rem,11vw,3.6rem);line-height:.95}
+  .top .cta-group{font-family:var(--body);font-style:normal;text-transform:none;font-size:1rem}
 }
+@media (max-width:900px){.id-hero h1{font-size:clamp(2.6rem,12vw,4rem)}}
