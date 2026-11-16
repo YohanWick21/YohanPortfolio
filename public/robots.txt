@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yohanwickramasinghe.vercel.app/sitemap-index.xml
+Sitemap: https://yohansportfolio.vercel.app/sitemap-index.xml
