@@ -39,3 +39,28 @@ body{font-family:var(--body);line-height:1.62}
 .outcomes p{max-width:36ch}
 @media (max-width:860px){.outcomes{grid-template-columns:1fr!important}.outcomes article,.outcomes article:not(:first-child){padding:1.4rem 0!important;border-left:0!important}}
 .outcomes article{border-bottom:0!important}.outcomes{border-bottom:1px solid var(--rule)}
+/* Articles */
+.a-head{padding:clamp(2.4rem,6vw,5rem) var(--pad) clamp(1.4rem,3vw,2.4rem);max-width:1100px}
+.a-head h1{font-size:clamp(2.4rem,6vw,5.2rem);line-height:.95;margin:.6rem 0 1.2rem;text-wrap:balance}
+.a-head .desc{font-size:clamp(1.05rem,1.5vw,1.3rem);max-width:56ch;color:var(--mute);margin:0 0 1.2rem}
+.a-meta{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:0;color:var(--mute)}
+.a-cover{margin:0;padding:0 var(--pad) clamp(1.6rem,4vw,3rem);max-width:1100px}
+.a-cover img{width:100%;height:auto;display:block;border:1.5px solid var(--stock)}
+.a-body-wrap{padding-top:clamp(2rem,5vw,4rem);padding-bottom:clamp(2rem,5vw,4rem)}
+.prose{max-width:68ch;margin:0 auto;font-size:1.08rem;line-height:1.75;color:var(--ink)}
+.prose p{margin:0 0 1.35rem}
+.prose h2{font-family:var(--display);font-style:italic;text-transform:uppercase;font-weight:900;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:.98;margin:2.6rem 0 1rem}
+.prose img{width:100%;height:auto;display:block;margin:2rem 0;border:1.5px solid var(--ink)}
+.prose a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px}
+.prose ul,.prose ol{margin:0 0 1.35rem;padding-left:1.3rem}
+.prose li{margin:.4rem 0}
+.prose blockquote{margin:1.8rem 0;padding-left:1.2rem;border-left:6px solid var(--electric);font-weight:600}
+.a-end{display:grid;gap:2rem}
+.a-cta{display:grid;gap:.8rem;max-width:56ch}
+.a-cta h2{font-size:clamp(2rem,4vw,3.4rem);margin:0}
+.a-cta p{margin:0;color:var(--mute)}
+.a-med{margin:0;color:var(--mute)}
+.nocover{display:grid;place-items:center;text-align:center;padding:1.4rem;aspect-ratio:4/5;font-size:clamp(1.8rem,3vw,2.6rem);line-height:.95;color:#070707;background:var(--electric)}
+.feature .nocover{aspect-ratio:16/10;background:var(--electric)}
+.post .thumb .nocover{height:100%}
+.a-end{border-top:1px solid var(--rule)}

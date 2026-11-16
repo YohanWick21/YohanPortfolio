@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+import { ArrowLeft, ArrowRight, Clock } from 'lucide-react';
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog')).sort((a, b) => a.data.order - b.data.order);
+  return posts.map((post, i) => ({ params: { slug: post.id }, props: { post, prev: posts[(i + posts.length - 1) % posts.length], next: posts[(i + 1) % posts.length] } }));
+}
+const { post, prev, next } = Astro.props;
+const { Content } = await render(post);
+const d = post.data;
+const stamp = d.published ? new Date(d.published + '-01').toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }) : '';
+const url = new URL(`/blog/${post.id}/`, Astro.site).href;
+const schema = {
+  "@context": "https://schema.org", "@type": "Article", headline: d.title, description: d.description, mainEntityOfPage: url,
+  author: { "@type": "Person", name: "Yohan Wickramasinghe", url: new URL('/about/', Astro.site).href },
+  publisher: { "@type": "Person", name: "Yohan Wickramasinghe" },
+  keywords: d.tags.join(', '), ...(d.published ? { datePublished: d.published } : {}),
+  ...(d.cover ? { image: new URL(d.cover, Astro.site).href } : {}),
+};
+---
+<Base title={`${d.title} | Yohan Wickramasinghe`} desc={d.description} current="blog" og={d.cover} schema={schema}>
+  <article>
+    <header class="a-head">
+      <p class="crumb mono"><a href="/blog/">Writing</a><span>/</span><span>{d.badge}</span></p>
+      <h1 class="display">{d.title}</h1>
+      <p class="desc">{d.description}</p>
+      <p class="mono a-meta">By Yohan Wickramasinghe{stamp && <> / {stamp}</>} / <Clock size={13} /> {d.minutes} min read</p>
+    </header>
+    {d.cover && <figure class="a-cover"><img src={d.cover} alt={d.coverAlt ?? ''} /></figure>}
+    <div class="sec a-body-wrap"><div class="prose"><Content /></div></div>
+    <section class="sec a-end">
+      <ul class="tag-row">{d.tags.map((t: string) => <li>{t}</li>)}</ul>
+      <div class="a-cta">
+        <h2 class="display">Got something rough?</h2>
+        <p>I turn rough ideas into brands people remember. Send me yours and I will come back with a first idea.</p>
+        <div class="btns"><a class="btn" href="/contact/">Start a project</a><a class="btn line" href="/work/">See the work</a></div>
+      </div>
+      {d.medium && <p class="mono a-med">Also published on <a href={d.medium} target="_blank" rel="noopener">Medium</a>.</p>}
+    </section>
+    <nav class="pn paper" aria-label="More articles">
+      <a href={`/blog/${prev.id}/`}><span class="mono">Previous</span><span class="display">{prev.data.title.split(':')[0]}</span></a>
+      <a href={`/blog/${next.id}/`}><span class="mono">Next</span><span class="display">{next.data.title.split(':')[0]}</span></a>
+    </nav>
+  </article>
+</Base>

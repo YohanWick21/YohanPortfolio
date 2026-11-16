@@ -2,41 +2,44 @@
 import Base from '../../layouts/Base.astro';
 import Reveal from '../../components/Reveal';
 import { ArrowUpRight, BookOpen, Clock, Pencil } from 'lucide-react';
-import { BLOG } from '../../data/site';
-const [first, ...rest] = BLOG;
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog')).sort((a, b) => a.data.order - b.data.order);
+const stamp = (p?: string) => p ? new Date(p + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' }) : '';
+const [first, ...rest] = posts;
 const BC = ['var(--electric)', 'var(--pink)', 'var(--sky)', 'var(--sun)', 'var(--violet)'];
+const schema = { "@context": "https://schema.org", "@type": "Blog", name: "Writing by Yohan Wickramasinghe", url: new URL('/blog/', Astro.site).href, author: { "@type": "Person", name: "Yohan Wickramasinghe" } };
 ---
-<Base title="Writing on Branding, Marketing and Design | Yohan Wickramasinghe" desc="Articles by Yohan Wickramasinghe on branding, marketing and design, published on Medium." current="blog">
+<Base title="Writing on Branding, Marketing and Design | Yohan Wickramasinghe" desc="Articles by Yohan Wickramasinghe on branding, culture, funnels and personal brands." current="blog" schema={schema}>
   <section class="page-head">
     <h1 class="display">Writing</h1>
     <p class="sub">Notes on branding, marketing and design.</p>
-    <div class="btns" style="margin-top:1.6rem"><a class="btn" href="https://medium.com/@yohanwick17" target="_blank" rel="noopener"><BookOpen size={18} /> Follow on Medium</a></div>
+    <div class="btns" style="margin-top:1.6rem"><a class="btn line" href="https://medium.com/@yohanwick17" target="_blank" rel="noopener"><BookOpen size={18} /> Also on Medium</a></div>
   </section>
   <section class="sec paper" aria-label="Latest article">
     <Reveal client:visible>
-      <a class="feature" href={first.url} target="_blank" rel="noopener">
-        <div class="proof" style="--c:var(--pink)"><img src={first.asset.src} alt="" width={first.asset.w} height={first.asset.h} style="width:100%;height:auto;display:block" /></div>
+      <a class="feature" href={`/blog/${first.id}/`}>
+        <div class="proof" style="--c:var(--pink)">{first.data.cover ? <img src={first.data.cover} alt="" style="width:100%;height:auto;display:block" /> : <div class="nocover display">{first.data.title.split(':')[0]}</div>}</div>
         <div>
-          <span class="post"><span class="meta"><span class="badge" style={`background:${BC[0]}`}><Pencil size={12} /> {first.badge}</span></span></span>
-          <h2 class="display">{first.title}</h2>
-          <p>{first.excerpt}</p>
-          <p class="mono" style="margin:1rem 0"><Clock size={14} /> {first.date} / {first.read}</p>
-          <ul class="tag-row">{first.tags.map((t: string) => <li>{t}</li>)}</ul>
-          <p style="margin-top:1.4rem;font-weight:700">Read on Medium <ArrowUpRight size={18} /></p>
+          <span class="post"><span class="meta"><span class="badge" style={`background:${BC[0]}`}><Pencil size={12} /> {first.data.badge}</span></span></span>
+          <h2 class="display">{first.data.title}</h2>
+          <p>{first.data.description}</p>
+          <p class="mono" style="margin:1rem 0"><Clock size={14} /> {stamp(first.data.published) && stamp(first.data.published) + ' / '}{first.data.minutes} min read</p>
+          <ul class="tag-row">{first.data.tags.map((t: string) => <li>{t}</li>)}</ul>
+          <p style="margin-top:1.4rem;font-weight:700">Read the article <ArrowUpRight size={18} /></p>
         </div>
       </a>
     </Reveal>
   </section>
   <section class="sec paper" style="padding-top:0" aria-label="More articles">
     <div class="posts">
-      {rest.map((b: any, i: number) => (
+      {rest.map((b, i) => (
         <Reveal client:visible delay={(i % 3) * 0.08}>
-          <a class="post" href={b.url} target="_blank" rel="noopener">
-            <div class="proof"><div class="thumb"><img src={b.asset.src} alt="" width={b.asset.w} height={b.asset.h} loading="lazy" style="border:1.5px solid var(--ink)" /></div></div>
-            <div class="meta"><span class="badge" style={`background:${BC[(i + 1) % BC.length]}`}>{b.badge}</span><span class="mono"><Clock size={12} /> {b.read}</span></div>
-            <h3 class="display">{b.title}</h3>
-            <p>{b.excerpt}</p>
-            <span class="read">Read on Medium <ArrowUpRight size={16} /></span>
+          <a class="post" href={`/blog/${b.id}/`}>
+            <div class="proof"><div class="thumb">{b.data.cover ? <img src={b.data.cover} alt="" loading="lazy" style="border:1.5px solid var(--ink)" /> : <div class="nocover display" style={`background:${BC[(i + 1) % BC.length]}`}>{b.data.title.split(':')[0]}</div>}</div></div>
+            <div class="meta"><span class="badge" style={`background:${BC[(i + 1) % BC.length]}`}>{b.data.badge}</span><span class="mono"><Clock size={12} /> {b.data.minutes} min read</span></div>
+            <h3 class="display">{b.data.title}</h3>
+            <p>{b.data.description}</p>
+            <span class="read">Read the article <ArrowUpRight size={16} /></span>
           </a>
         </Reveal>
       ))}
