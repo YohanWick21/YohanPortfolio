@@ -5,6 +5,8 @@ tags: ["Digital Identity", "Culture", "Personal Branding"]
 badge: "Reflection"
 order: 8
 minutes: 5
+cover: "/assets/blog/ghosts-in-our-pockets-cover.webp"
+coverAlt: "The Ghosts in Our Pockets cover: glitched title in a retro terminal style"
 ---
 The device at the bottom of the drawer is always dead. It usually has a cracked screen, a layer of fine dust, and a battery that has slightly swollen over the years, forcing the cheap plastic casing to pop open at the seams. If you find the right cable, plug it in, and wait for the screen to flicker to life, you are not just turning on a piece of discarded hardware. You are waking up a ghost.
 

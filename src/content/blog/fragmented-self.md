@@ -5,6 +5,8 @@ tags: ["Business", "Psychology", "Marketing Strategy", "Media", "Creativity"]
 badge: "Strategy"
 order: 6
 minutes: 3
+cover: "/assets/blog/fragmented-self-cover.webp"
+coverAlt: "The Fragmented Self cover: bold title over angular, fractured colour shapes"
 ---
 Every digital marketer has done it. You sit in a boardroom and build a fictional avatar. You give them a name, an age, a specific coffee preference, and a list of hobbies. You treat this avatar like a holy text, designing every script, visual asset, and landing page to appeal to this single, predictable human being.
 

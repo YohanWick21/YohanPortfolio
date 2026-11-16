@@ -5,6 +5,8 @@ tags: ["Marketing Psychology", "Consumer Behaviour", "Brand Strategy", "Content 
 badge: "Strategy"
 order: 7
 minutes: 3
+cover: "/assets/blog/friction-paradox-cover.webp"
+coverAlt: "The Friction Paradox cover: a brass padlock on an orange background labelled earned access only"
 ---
 We have been conditioned to believe that friction is the enemy. For a decade, the mandate for every content writer and digital marketer has been the same. Remove every bump in the road. Make the click easier. Make the checkout faster. Make the content snackable.
 

@@ -5,6 +5,8 @@ tags: ["Personal Branding", "Digital Marketing", "Authenticity"]
 badge: "Personal brand"
 order: 9
 minutes: 3
+cover: "/assets/blog/personal-brand-isnt-optimized-cover.webp"
+coverAlt: "Your personal brand isn't optimized. It's just boring. A split dark poster with a jagged dividing line"
 ---
 Open up LinkedIn. Scroll through your feed for thirty seconds. Look at the personal websites, the design portfolios, and the creator profiles cluttering the digital landscape.
 
