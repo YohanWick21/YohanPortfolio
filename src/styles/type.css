@@ -76,3 +76,12 @@ body{font-family:var(--body);line-height:1.62}
 .toc a:hover{color:var(--stock)}
 .toc a[aria-current="true"]{color:var(--stock);border-left-color:#C8FF00;font-weight:800}
 @media (max-width:980px){.a-layout.has-toc{grid-template-columns:1fr}.toc{position:static;border:1.5px solid var(--rule);padding:1rem 1.2rem}.toc ol{border-left:0}.toc a{padding:.35rem 0;border-left:0;margin:0}}
+
+/* Article header: smaller cover on the left, intro on the right */
+.a-head{max-width:none;padding:clamp(2.4rem,6vw,5rem) var(--pad) clamp(1.6rem,3vw,3rem)}
+.a-head.with-cover{display:grid;grid-template-columns:minmax(0,23rem) minmax(0,1fr);gap:clamp(1.6rem,4vw,4rem);align-items:center}
+.a-head .a-cover{margin:0;padding:0;max-width:none}
+.a-head .a-cover img{box-shadow:10px 10px 0 #C8FF00}
+.a-intro{max-width:46rem}
+.a-head h1{font-size:clamp(2rem,4.2vw,3.8rem);line-height:.96}
+@media (max-width:820px){.a-head.with-cover{grid-template-columns:1fr}.a-head .a-cover{max-width:17rem}}

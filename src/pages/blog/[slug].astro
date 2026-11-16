@@ -22,13 +22,15 @@ const schema = {
 ---
 <Base title={`${d.title} | Yohan Wickramasinghe`} desc={d.description} current="blog" og={d.cover} schema={schema}>
   <article>
-    <header class="a-head">
-      <p class="crumb mono"><a href="/blog/">Writing</a><span>/</span><span>{d.badge}</span></p>
-      <h1 class="display">{d.title}</h1>
-      <p class="desc">{d.description}</p>
-      <p class="mono a-meta">By Yohan Wickramasinghe{stamp && <> / {stamp}</>} / <Clock size={13} /> {d.minutes} min read</p>
+    <header class={`a-head${d.cover ? ' with-cover' : ''}`}>
+      {d.cover && <figure class="a-cover"><img src={d.cover} alt={d.coverAlt ?? ''} /></figure>}
+      <div class="a-intro">
+        <p class="crumb mono"><a href="/blog/">Writing</a><span>/</span><span>{d.badge}</span></p>
+        <h1 class="display">{d.title}</h1>
+        <p class="desc">{d.description}</p>
+        <p class="mono a-meta">By Yohan Wickramasinghe{stamp && <> / {stamp}</>} / <Clock size={13} /> {d.minutes} min read</p>
+      </div>
     </header>
-    {d.cover && <figure class="a-cover"><img src={d.cover} alt={d.coverAlt ?? ''} /></figure>}
     <div class="sec a-body-wrap">
       <div class={`a-layout${toc.length > 1 ? ' has-toc' : ''}`}>
         {toc.length > 1 && (
