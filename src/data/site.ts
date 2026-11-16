@@ -55,7 +55,7 @@ export const JOBS: Job[] = [
     'Introduce the interns in their own words.', 'One layout, five voices.',
     'Interns say more about a workplace than a company page can. The post leads with their own quote, and the same layout runs across five people so it reads as a series.',
     'A torn-paper quote card beside the intern’s photo under the headline Interns, Unfiltered, with the key words of each quote picked out in colour so it scans in a second.',
-    'Name and role sit under the photo, and an Applications are open pill carries the call to action. The series drew nearly 90,000 LinkedIn impressions and drove 2,500 website visits.'),
+    'Name and role sit under the photo, and an Applications are open pill carries the call to action. In October the five posts drew nearly 90,000 LinkedIn impressions and drove 2,500 website visits.'),
 ];
 
 /* ---------- projects ---------- */
@@ -71,7 +71,7 @@ CARDS.verdentra = { slug: 'verdentra', category: 'employer', img: 'verdentra-cov
 P.verdentra = {
   title: 'Employer Branding Case Study: Verdentra',
   chip: 'Verdentra', badge: 'Current', year: '2026', h1: ['Building an Employer', 'Brand From the Inside Out'], desc: CARDS.verdentra.desc,
-  stats: [{ n: '~90K', l: 'LinkedIn impressions, Interns, Unfiltered' }, { n: '6K', l: 'Instagram views' }, { n: '2,500', l: 'Website visits driven' }, { n: '5', l: 'Interns in one series' }],
+  stats: [{ n: '~90K', l: 'LinkedIn impressions in October' }, { n: '6K', l: 'Instagram views in October' }, { n: '2,500', l: 'Website visits driven in October' }, { n: '5', l: 'Interns in one series' }],
   cover: 'verdentra-cover.jpg', ovtitle: 'The idea behind the work',
   paras: [
     'Verdentra is a cloud, data and AI consultancy that works with software vendors. I lead its employer branding and communications, so the company is easy to understand and a place people want to join.',
@@ -91,13 +91,13 @@ P.verdentra = {
     { t: 'Create', x: 'Produce the posts, carousels, graphics and event materials myself, so the idea and the finished piece stay connected.' },
     { t: 'Execute', x: 'Publish on a steady calendar, run the events, then look at what worked and adjust the next round.' }],
   outcomes: [
-    { t: 'Reach that led somewhere', x: 'Interns, Unfiltered drew nearly 90,000 impressions on LinkedIn and 6,000 views on Instagram, and drove 2,500 visits to the website.' },
+    { t: 'Reach that led somewhere', x: 'In October, the five Interns, Unfiltered posts drew nearly 90,000 impressions on LinkedIn and 6,000 views on Instagram, and drove 2,500 visits to the website.' },
     { t: 'A series, not one-offs', x: 'One layout ran across five people, so each post built on the last.' },
     { t: 'One voice, inside and out', x: 'Internal communications and external content follow the same brand and tone.' },
     { t: 'Idea to published', x: 'One person carries each campaign from concept to post, which keeps the message consistent.' }],
 };
 CARDS.verdentra.tags = ['Employer Branding', 'Social Media', 'Internal Comms'];
-CARDS.verdentra.desc = 'Owning social media, internal comms and campaigns for a cloud and AI consultancy. One intern series drove 2,500 website visits.';
+CARDS.verdentra.desc = 'Owning social media, internal comms and campaigns for a cloud and AI consultancy. In October, one intern series drove 2,500 website visits.';
 P.verdentra.desc = CARDS.verdentra.desc;
 
 /* ---------- other projects: tighter copy, facts only ---------- */
