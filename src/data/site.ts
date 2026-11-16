@@ -187,7 +187,7 @@ export const ABOUT = {
     'Edited the quarterly magazine and managed the club website.',
     'Edited and published digital materials for the faculty community.'][i] ?? x.desc })),
   exp: [
-    { date: 'Sep 2026 - Present', role: 'Co-founder & Creative Director', company: 'Arkive Labs', bullets: ['Lead brand strategy, visual identity, content and digital experience at a strategy-led creative and digital studio', 'Built the studio with co-founder Akesh Chandrasiri, keeping strategy, design and technology under one roof'] },
+    { date: 'Sep 2026 - Present', role: 'Co-founder & Creative Director', company: 'Arkive Labs', bullets: ['Lead brand strategy, visual identity, content and digital experience at a strategy-led creative and digital studio', 'Built the studio with my co-founder, keeping strategy, design and technology under one roof'] },
     { date: 'Jun 2026 - Present', role: 'Exec. Employer Branding & Comms', company: 'Verdentra', bullets: ['Own social media end to end, from first idea to published post', 'Lead the internal communications and engagement that keep the team connected'] },
     ...a.exp.map((x: any) => ({ ...(x.company.startsWith('Hype') ? { ...x, date: x.date.replace('- Present', '- Jun 2026') } : x), bullets: x.bullets.slice(0, 2) })),
   ],
