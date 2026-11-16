@@ -6,8 +6,10 @@ const kinds = ['Brand and strategy', 'A campaign', 'Employer branding', 'A websi
 <Base title="Contact | Start a Brand or Campaign Project" desc="Send Yohan Wickramasinghe a brief for a brand, campaign or employer branding project. A sentence is enough to start." current="contact" footer={false}>
   <section class="page-head"><h1 class="display">Got something rough?</h1><p class="sub">Send me the rough version. A sentence is enough, and I will come back with a first idea of how I would take it to published.</p></section>
   <section class="sec paper" aria-label="Send a brief">
-    <form class="form" name="brief" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="brief" />
+    <form class="form" id="brief" name="brief" method="POST" action="https://api.web3forms.com/submit" data-key={import.meta.env.PUBLIC_WEB3FORMS_KEY || ''}>
+      <input type="hidden" name="access_key" value={import.meta.env.PUBLIC_WEB3FORMS_KEY || ''} />
+      <input type="hidden" name="subject" value="New brief from yohan's portfolio" />
+      <input type="hidden" name="from_name" value="Portfolio contact form" />
       <p class="hp"><label>Leave this empty <input name="bot-field" /></label></p>
       <div class="field"><label for="name">Your name</label><input class="in" id="name" name="name" type="text" autocomplete="name" required /></div>
       <div class="field"><label for="email">Your email</label><input class="in" id="email" name="email" type="email" autocomplete="email" required /></div>
@@ -15,10 +17,36 @@ const kinds = ['Brand and strategy', 'A campaign', 'Employer branding', 'A websi
       <div class="field"><label for="idea">The rough idea</label><textarea class="in" id="idea" name="idea" required placeholder="A sentence is enough. Who is it for, and what should they do?"></textarea></div>
       <div class="field"><label for="where">Where should it end up? (optional)</label><input class="in" id="where" name="where" type="text" placeholder="Instagram, a website, a careers page, print" /></div>
       <button class="btn" type="submit"><Send size={18} /> Send the brief</button>
+      <p class="mono" id="brief-msg" role="status" aria-live="polite" style="margin:.8rem 0 0"></p>
     </form>
     <div class="direct"><p class="mono">Or reach me directly</p>
       <a href="mailto:yohanwick17@gmail.com"><Mail size={16} /> yohanwick17@gmail.com</a>
       <a href="https://www.linkedin.com/in/yohan-wickramasinghe/" target="_blank" rel="noopener"><Link2 size={16} /> LinkedIn</a>
       <a href="https://arkivelabs.com" target="_blank" rel="noopener"><Globe size={16} /> arkivelabs.com</a></div>
   </section>
+<script>
+  const f = document.getElementById('brief') as HTMLFormElement | null;
+  const msg = document.getElementById('brief-msg');
+  f?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const d = new FormData(f);
+    if (d.get('bot-field')) { location.href = '/contact/thanks/'; return; }
+    const mail = () => {
+      const body = ['Name: ' + d.get('name'), 'Email: ' + d.get('email'), 'What: ' + d.get('kind'), 'Idea: ' + d.get('idea'), 'Where: ' + d.get('where')].join('\n');
+      location.href = 'mailto:yohanwick17@gmail.com?subject=' + encodeURIComponent('New brief') + '&body=' + encodeURIComponent(body);
+    };
+    if (!f.dataset.key) { mail(); return; }
+    const btn = f.querySelector('button[type=submit]') as HTMLButtonElement; btn.disabled = true;
+    if (msg) msg.textContent = 'Sending...';
+    try {
+      const r = await fetch(f.action, { method: 'POST', headers: { Accept: 'application/json' }, body: d });
+      const j = await r.json();
+      if (j.success) { location.href = '/contact/thanks/'; return; }
+      throw new Error('fail');
+    } catch {
+      btn.disabled = false;
+      if (msg) msg.innerHTML = 'That did not send. Please email <a href="mailto:yohanwick17@gmail.com">yohanwick17@gmail.com</a> instead.';
+    }
+  });
+</script>
 </Base>

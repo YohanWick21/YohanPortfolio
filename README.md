@@ -1,16 +1,8 @@
 # Yohan Wickramasinghe, portfolio
 
-Astro + React + Motion + lucide icons. Static output, deployed on Netlify.
+Astro + React + Motion + lucide icons. Static output, deployed on Vercel.
 
-## Deploy as a second Netlify site
-1. Netlify > Add new site > Import from GitHub > pick this repo.
-2. Build command `npm run build`, publish directory `dist` (already set in `netlify.toml`).
-3. Contact form uses Netlify Forms (form name `brief`). Turn on notifications under Site settings > Forms.
-
-## Where things live
-- `src/data/site.ts`: homepage queue copy (JOBS, marked DRAFT), project data, blog list, About.
-- `src/components/Machine.tsx`: the idea-to-published press.
-- `src/pages/`: one file per page. `src/styles/site.css` base, `fun.css` colour and motion layer.
-- `public/assets/`: optimised images and the CV.
-
-Local: `npm install`, `npm run dev`.
+## Deploy on Vercel
+1. Vercel > Add New > Project > import this repo. Astro is detected automatically (build `npm run build`, output `dist`).
+2. Contact form: create a free access key at web3forms.com using your email, then add it in Vercel > Settings > Environment Variables as `PUBLIC_WEB3FORMS_KEY` and redeploy. Until it is set, the form opens the visitor's email app instead.
+3. Once the final domain is connected, set `SITE_URL` (for example `https://yourdomain.com`) so the sitemap and canonical links use it, and update the Sitemap line in `public/robots.txt`.
