@@ -110,16 +110,16 @@ P.verdentra.desc = CARDS.verdentra.desc;
 const patch = (slug: string, o: any) => { Object.assign(P[slug], o); if (o.desc) CARDS[slug].desc = o.desc; };
 patch('igvirnm', {
   title: 'iGV Campaign Design: AIESEC in SLIIT',
-  desc: 'Attraction campaigns for AIESEC in SLIIT’s iGV programme, built as a six-format poster system.',
-  stats: [{ n: 'iGV', l: 'AIESEC in SLIIT' }, { n: '15+', l: 'Assets created' }, { n: '3', l: 'Platforms' }],
+  desc: 'Campaigns that attracted foreign volunteers to Sri Lanka through AIESEC in SLIIT’s iGV programme: 1,000+ signups, 500+ applications and 100+ approvals.',
+  stats: [{ n: '1,000+', l: 'Signups' }, { n: '500+', l: 'Applications' }, { n: '100+', l: 'Approvals' }],
   paras: [
-    'iGV (Incoming Global Volunteer) is a flagship programme at AIESEC in SLIIT. As Campaign Coordinator for IR & M, from July 2025 to February 2026, I planned and designed the campaigns that drove applications and event attendance.',
+    'iGV (Incoming Global Volunteer) is a flagship programme at AIESEC in SLIIT that brings foreign volunteers to Sri Lanka. As Campaign Coordinator for IR & M, from July 2025 to February 2026, I planned and designed the campaigns that attracted them.',
     'The brief was to stand out in a crowded feed while staying inside AIESEC’s global brand rules and sounding local and personal. I answered it with one poster system: a single idea per post, a shared footer, and a different object each time, such as a ringing phone, a tear-off flyer, a clock, a megaphone and an advent calendar.'],
   rows: [{ l: 'Programme', v: 'iGV, AIESEC in SLIIT' }, { l: 'Team', v: 'IR & M' }, { l: 'Role', v: 'Campaign Coordinator' }, { l: 'Period', v: 'Jul 2025 to Feb 2026' }],
   outcomes: [
     { t: 'A repeatable system', x: 'Six poster formats sharing one footer, so new posts could be made quickly.' },
     { t: 'One idea per post', x: 'Each design carries a single action: apply, choose, attend or celebrate.' },
-    { t: 'Across channels', x: '15+ assets built for 3 platforms.' }],
+    { t: 'Volunteers for Sri Lanka', x: 'The campaigns brought in 1,000+ signups, 500+ applications and 100+ approvals, with 15+ assets across 3 platforms.' }],
 });
 patch('nlds', {
   title: 'NLDS Application Design: Case Study',
