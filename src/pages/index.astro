@@ -2,11 +2,11 @@
 import Base from '../layouts/Base.astro';
 import Machine from '../components/Machine';
 import Reveal from '../components/Reveal';
-import { Lightbulb, PenTool, Rocket, ArrowRight, Globe, Sparkles, Building2, Megaphone, ArrowDown, Send, Layers } from 'lucide-react';
+import { Lightbulb, PenTool, Rocket, ArrowRight, Globe, Sparkles, ArrowDown, Send } from 'lucide-react';
 import { JOBS, A, dims, asset, ABOUT } from '../data/site';
 const strip = [['verdentra-movie-night.jpg', 'Verdentra movie night poster', 'Movie night'], ['verdentra-poson.jpg', 'Verdentra Poson greeting post', 'Poson'], ['verdentra-interns-thesara.jpg', 'Interns, Unfiltered post', 'Interns, Unfiltered'], ['verdentra-new-joiner.jpg', 'Verdentra new joiner welcome template', 'New joiner template']];
 const logo = asset('Full Logo Black.png');
-const me = ABOUT.photo, t1 = asset('4 weeks GV v2.png'), t3 = asset('verdentra-interns-akalanka.jpg');
+const me = ABOUT.photo;
 const map = [
   { n: 'Ideate', c: 'var(--sun)', Ic: Lightbulb, t: 'Strategy and positioning', d: 'Market positioning, messaging and brand strategy that give a business a clear story to build on.' },
   { n: 'Create', c: 'var(--pink)', Ic: PenTool, t: 'Brand and creative', d: 'Visual identity, campaign creative and content direction that make that story look and feel unmistakably yours.' },
@@ -15,23 +15,15 @@ const map = [
 ---
 <Base title="Yohan Wickramasinghe | Co-founder, Arkive Labs. Employer branding, Verdentra" desc="Yohan Wickramasinghe co-founded Arkive Labs and leads employer branding and communications at Verdentra. Drag a job from rough idea to published post." total={JOBS.length}>
   <section class="id-hero" aria-labelledby="h1">
-    <div>
-      <span class="tagline"><i></i> Portfolio, 2026</span>
-      <h1 class="display" id="h1"><span>Yohan</span><span class="l2">Wickramasinghe</span></h1>
-      <ul class="roles2">
-        <li><Layers size={20} /><span><b>Co-founder</b> and creative director, Arkive Labs</span></li>
-        <li><Building2 size={20} /><span><b>Exec. Employer Branding &amp; Comms</b>, Verdentra</span></li>
-        <li><Megaphone size={20} /><span>Campaigns, brand and design, made by hand</span></li>
-      </ul>
-      <p class="lede">I turn rough ideas into brands, campaigns and posts people notice. This site is how I work, not just what it looks like.</p>
+    <div class="copy">
+      <h1 id="h1">I turn rough ideas into brands people remember.</h1>
+      <p class="lede">Co-founder at Arkive Labs. Employer branding at Verdentra.</p>
       <div class="btns"><a class="btn" href="/work/">See the work <ArrowRight size={18} /></a><a class="btn line" href="/contact/"><Send size={18} /> Start a project</a></div>
     </div>
-    <div class="collage" aria-hidden="true">
-      <figure class="tile t1"><img src={t1.src} alt="" width={t1.w} height={t1.h} /></figure>
-      <figure class="tile t3"><img src={t3.src} alt="" width={t3.w} height={t3.h} /></figure>
-      <figure class="tile t2"><img src={me.src} alt="" width={me.w} height={me.h} /></figure>
-      <a class="badge-spin" href="#press" tabindex="-1">
-        <svg class="ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="60" fill="#C8FF00" /><defs><path id="c" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" /></defs><text font-family="Space Mono, monospace" font-size="11.5" font-weight="700" letter-spacing="2.2" fill="#070707"><textPath href="#c">IDEA TO PUBLISHED ✦ SEE HOW ✦ </textPath></text></svg>
+    <div class="portrait-hero">
+      <div class="frame"><img src={me.src} alt="Portrait of Yohan" width={me.w} height={me.h} fetchpriority="high" /></div>
+      <a class="badge-spin" href="#press" tabindex="-1" aria-label="Jump to the press">
+        <svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="60" fill="#C8FF00" /><defs><path id="c" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" /></defs><text font-family="Space Mono, monospace" font-size="11.5" font-weight="700" letter-spacing="2.2" fill="#070707"><textPath href="#c">IDEA TO PUBLISHED ✦ SEE HOW ✦ </textPath></text></svg>
         <span class="core"><ArrowDown size={22} /></span>
       </a>
     </div>
