@@ -21,10 +21,12 @@ const schema = { "@context": "https://schema.org", "@type": "Person", name: "Yoh
     </div>
   </section>
   <section class="sec paper" aria-labelledby="ex">
-    <Reveal client:visible><div class="sec-head"><h2 class="display" id="ex"><Briefcase size={40} /> Experience</h2></div></Reveal>
-    <ol class="exp" style="list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink)">
-      {a.exp.map((x: any, i: number) => <Reveal client:visible><li><p class="date" style={`color:var(--ink)`}><span style={`background:${CC[i % CC.length]};padding:.15rem .6rem;border-radius:999px`}>{x.date}</span></p><div><h3 class="display">{x.role}</h3><p class="co">{x.company}</p><ul>{x.bullets.map((b: string) => <li style="display:list-item;border:0;padding:0">{b}</li>)}</ul></div></li></Reveal>)}
-    </ol>
+    <div class="xp">
+      <Reveal client:visible><h2 class="display xp-h" id="ex">Work experience</h2></Reveal>
+      <ol class="xp-list">
+        {a.exp.map((x: any) => <Reveal client:visible><li><p class="xp-date">{x.date}</p><div><h3>{x.role}</h3><p class="xp-co">{x.company}</p><ul>{x.bullets.map((b: string) => <li>{b}</li>)}</ul></div></li></Reveal>)}
+      </ol>
+    </div>
   </section>
   <section class="sec" aria-labelledby="ed">
     <Reveal client:visible><div class="sec-head"><h2 class="display" id="ed"><GraduationCap size={40} /> Education</h2></div></Reveal>
