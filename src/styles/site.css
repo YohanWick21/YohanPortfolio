@@ -141,7 +141,7 @@ button{font:inherit;color:inherit}
 .station:hover,.station.on{color:var(--electric)}
 .belt{position:absolute;left:0;right:0;top:calc(3.2rem + 1.6rem - 7px);height:14px;border:1.5px solid var(--rule);border-radius:99px;overflow:hidden;pointer-events:none;background:repeating-linear-gradient(115deg,#1b1b19 0 10px,#0c0c0b 10px 20px);background-size:28px 100%;animation:belt 1.4s linear infinite}
 @keyframes belt{to{background-position:-28px 0}}
-.fill{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--electric)}
+.belt .fill{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--electric)}
 #run{position:relative;display:block;width:100%;height:3.2rem;margin:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:grab}
 #run::-webkit-slider-runnable-track{background:transparent;height:3.2rem}
 #run::-moz-range-track{background:transparent;height:3.2rem}
