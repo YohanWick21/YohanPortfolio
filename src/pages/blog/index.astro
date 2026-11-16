@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Reveal from '../../components/Reveal';
-import { ArrowUpRight, BookOpen, Clock, Pencil } from 'lucide-react';
+import { ArrowUpRight, Clock, Pencil } from 'lucide-react';
 import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog')).sort((a, b) => a.data.order - b.data.order);
 const stamp = (p?: string) => p ? new Date(p + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' }) : '';
@@ -11,9 +11,8 @@ const schema = { "@context": "https://schema.org", "@type": "Blog", name: "Writi
 ---
 <Base title="Writing on Branding, Marketing and Design | Yohan Wickramasinghe" desc="Articles by Yohan Wickramasinghe on branding, culture, funnels and personal brands." current="blog" schema={schema}>
   <section class="page-head">
-    <h1 class="display">Writing</h1>
-    <p class="sub">Notes on branding, marketing and design.</p>
-    <div class="btns" style="margin-top:1.6rem"><a class="btn line" href="https://medium.com/@yohanwick17" target="_blank" rel="noopener"><BookOpen size={18} /> Also on Medium</a></div>
+    <h1 class="display">Ideas worth arguing with</h1>
+    <p class="sub">{posts.length} pieces on branding, culture and why perfect is boring.</p>
   </section>
   <section class="sec paper" aria-label="Latest article">
     <Reveal client:visible>
