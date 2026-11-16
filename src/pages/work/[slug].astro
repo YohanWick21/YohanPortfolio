@@ -31,6 +31,14 @@ const SC = ['var(--sun)', 'var(--pink)', 'var(--sky)', 'var(--electric)'];
   <section class="sec" aria-labelledby="pr">
     <Reveal client:visible><div class="sec-head"><h2 class="display" id="pr">Process</h2><p>How the work moved from brief to finished.</p></div></Reveal>
     <div class="steps">{p.steps.map((x: any, n: number) => <Reveal client:visible delay={n * 0.08}><article><span class="n">0{n + 1}</span><h3 class="display">{x.t}</h3><p>{x.x}</p></article></Reveal>)}</div>
+    {p.concept && (
+      <Reveal client:visible>
+        <div class="concept">
+          <div class="concept-head"><h3 class="display">{p.concept.title}</h3><p>{p.concept.intro}</p></div>
+          <ul class="pillars">{p.concept.pillars.map((x: any) => <li><b>{x.t}</b><span>{x.x}</span></li>)}</ul>
+          <div class="cnotes">{p.concept.notes.map((x: any) => <div><b>{x.t}</b><span>{x.x}</span></div>)}</div>
+        </div>
+      </Reveal>)}
   </section>)}
   <section class="sec paper" aria-labelledby="gl">
     <div class="sec-head"><h2 class="display" id="gl">The work</h2><p>Select any piece to view it full size.</p></div>

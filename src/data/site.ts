@@ -93,11 +93,23 @@ P.verdentra = {
     { t: 'Ideate', x: 'Turn that into campaign ideas, content pillars and creative directions before anything is designed.' },
     { t: 'Create', x: 'Produce the posts, carousels, graphics and event materials myself, so the idea and the finished piece stay connected.' },
     { t: 'Execute', x: 'Publish on a steady calendar, run the events, then look at what worked and adjust the next round.' }],
+  concept: {
+    title: 'How the ideas get made',
+    intro: 'Each month starts with a content calendar built on five pillars. It keeps the feed varied and gives every post one clear job.',
+    pillars: [
+      { t: 'Technical point of view', x: 'Thought leadership in the voice of the people who do the work, led by the CTO.' },
+      { t: 'Proof of work', x: 'Case studies that show what Verdentra delivers.' },
+      { t: 'Partners and ecosystem', x: 'Spotlights on the partners and technology the team builds with.' },
+      { t: 'Careers and culture', x: 'The people, the office and the roles, told honestly. Interns, Unfiltered lives here.' },
+      { t: 'Community and knowledge', x: 'Useful things shared back, like the technical blog.' }],
+    notes: [
+      { t: 'A steady rhythm', x: 'LinkedIn on Monday, Wednesday and Friday. Instagram on Tuesday and Thursday.' },
+      { t: 'A story, not a list', x: 'Job posts show the applicant a future state instead of listing requirements.' },
+      { t: 'One layout, many people', x: 'Interns, Unfiltered used a single design across five interns, so each post built on the last.' }] },
   outcomes: [
-    { t: 'Growth since I started posting', x: 'From 1 July to 14 November: 259,018 LinkedIn impressions (up 132% on the previous period) and 2,107 reactions (up 184%), plus 32,524 Instagram views (up 162%). Over the same period the website had 15,807 sessions from 10,180 users.' },
-    { t: 'A series that drove visits', x: 'In October, the five Interns, Unfiltered posts drew nearly 90,000 LinkedIn impressions and 6,000 Instagram views, and drove 2,500 visits to the website. One layout ran across five people, so each post built on the last.' },
-    { t: 'One voice, inside and out', x: 'Internal communications and external content follow the same brand and tone.' },
-    { t: 'Idea to published', x: 'One person carries each campaign from concept to post, which keeps the message consistent.' }],
+    { t: 'Reach grew on both platforms', x: 'LinkedIn impressions are up 132% on the previous period and reactions are up 184%. Instagram views are up 162%.' },
+    { t: 'One series did the heavy lifting', x: 'In October the five Interns, Unfiltered posts reached nearly 90,000 people on LinkedIn and 6,000 on Instagram, and sent 2,500 visits to the website.' },
+    { t: 'Traffic followed', x: '15,807 website sessions from 10,180 users between 1 July and 14 November.' }],
 };
 CARDS.verdentra.tags = ['Employer Branding', 'Social Media', 'Internal Comms'];
 CARDS.verdentra.desc = 'Owning social media, internal comms and campaigns for a cloud and AI consultancy. 259,000 LinkedIn impressions since July, and one intern series drove 2,500 website visits.';
