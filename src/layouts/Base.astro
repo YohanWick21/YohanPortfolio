@@ -1,5 +1,6 @@
 ---
 import Nav from '../components/Nav';
+import Smooth from '../components/Smooth';
 import { Link2, BookOpen, Globe, ArrowUpRight, Send } from 'lucide-react';
 import '../styles/site.css';
 import '../styles/fun.css';
@@ -25,6 +26,7 @@ const COLS = ['#C8FF00', '#F2EDE4', '#FF3D00'];
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <Smooth client:load />
   <Nav client:load current={current} total={total} />
   <main id="main"><slot /></main>
   {footer && (

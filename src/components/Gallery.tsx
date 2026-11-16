@@ -25,7 +25,7 @@ export default function Gallery({ items }: { items: Item[] }) {
       </div>
       <AnimatePresence>
         {it && (
-          <motion.div className="lb open" role="dialog" aria-modal="true" aria-label="Image viewer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setI(null)}>
+          <motion.div className="lb open" data-lenis-prevent role="dialog" aria-modal="true" aria-label="Image viewer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setI(null)}>
             <button className="x" type="button" aria-label="Close" onClick={() => setI(null)}><X size={20} /></button>
             <button className="pv" type="button" aria-label="Previous image" onClick={e => { e.stopPropagation(); step(-1); }}><ChevronLeft size={22} /></button>
             <motion.img key={it.src} src={it.src} alt={it.tag} initial={{ scale: 0.94, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: 'spring', stiffness: 300, damping: 28 }} onClick={e => e.stopPropagation()} />

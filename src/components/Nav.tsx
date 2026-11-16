@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Trophy } from 'lucide-react';
+import { Menu, X, Trophy, ArrowUpRight } from 'lucide-react';
 
-const LINKS = [['Work', '/work/', 'work'], ['Writing', '/blog/', 'blog'], ['Arkive Labs', '/arkive-labs/', 'arkive'], ['About', '/about/', 'about'], ['Contact', '/contact/', 'contact']];
+const LINKS = [['Work', '/work/', 'work'], ['Writing', '/blog/', 'blog'], ['Arkive Labs', '/arkive-labs/', 'arkive'], ['About', '/about/', 'about']];
 
 export default function Nav({ current, total }: { current?: string; total?: number }) {
   const [open, setOpen] = useState(false);
@@ -19,9 +19,14 @@ export default function Nav({ current, total }: { current?: string; total?: numb
       <button className="menu-btn" type="button" aria-expanded={open} aria-controls="nav" onClick={() => setOpen(o => !o)}>
         {open ? <X size={16} /> : <Menu size={16} />} {open ? 'Close' : 'Menu'}
       </button>
-      <nav id="nav" aria-label="Main" onClick={() => setOpen(false)}>
-        {LINKS.map(([name, href, key]) => <a key={key} href={href} aria-current={current === key ? 'page' : undefined}>{name}</a>)}
-        {total ? <span className="tally" aria-live="polite"><Trophy size={13} /> {n} of {total} shipped</span> : null}
+      <nav id="nav" aria-label="Main" data-lenis-prevent onClick={() => setOpen(false)}>
+        <div className="links">
+          {LINKS.map(([name, href, key]) => <a key={key} href={href} aria-current={current === key ? 'page' : undefined}>{name}</a>)}
+        </div>
+        <div className="cta-group">
+          {total ? <span className="tally" aria-live="polite"><Trophy size={13} /> {n} of {total} shipped</span> : null}
+          <a className="btn nav-cta" href="/contact/" aria-current={current === 'contact' ? 'page' : undefined}>Contact <ArrowUpRight size={16} /></a>
+        </div>
       </nav>
     </header>
   );
