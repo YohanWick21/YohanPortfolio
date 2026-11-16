@@ -7,7 +7,7 @@ export default function Nav({ current, total }: { current?: string; total?: numb
   const [open, setOpen] = useState(false);
   const [n, setN] = useState(0);
   useEffect(() => {
-    try { setN(Object.keys(JSON.parse(sessionStorage.getItem('ywShipped') || '{}')).length); } catch {}
+    try { setN(Object.keys(JSON.parse(sessionStorage.getItem('ywShipped2') || '{}')).length); } catch {}
     const h = (e: Event) => setN((e as CustomEvent).detail);
     window.addEventListener('yw:ship', h); return () => window.removeEventListener('yw:ship', h);
   }, []);

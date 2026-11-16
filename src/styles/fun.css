@@ -177,3 +177,15 @@ html.lenis,html.lenis body{height:auto}
 .faq p{margin:.7rem 0 0;color:var(--mute);max-width:56ch}
 .split>h2{font-size:clamp(2.2rem,4.4vw,4.8rem);overflow-wrap:anywhere;min-width:0}
 .split>*{min-width:0}
+
+/* ---- stat band (home, Inside Verdentra) ---- */
+.statband{margin:0 0 2.4rem;color:var(--ink)}
+.statband-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.sb{padding:1.3rem 1.4rem 1.3rem 0;display:grid;gap:.3rem}
+.sb+.sb{padding-left:1.4rem;border-left:2px solid var(--ink)}
+.sb b{font-family:var(--display);font-style:italic;font-weight:900;font-size:clamp(2.6rem,6.5vw,6rem);line-height:.9;font-variant-numeric:tabular-nums}
+.sb:nth-child(1) b{text-shadow:3px 3px 0 var(--electric)}.sb:nth-child(2) b{text-shadow:3px 3px 0 var(--acid)}.sb:nth-child(3) b{text-shadow:3px 3px 0 var(--electric)}
+.sb span{font-weight:600}
+.statband-cap{margin:.9rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;font-size:.78rem;color:var(--mute-paper)}
+.statband-cap a{display:inline-flex;align-items:center;gap:.3rem;color:var(--ink);font-weight:700}
+@media (max-width:640px){.statband-grid{grid-template-columns:1fr}.sb+.sb{padding-left:0;border-left:0;border-top:2px solid var(--ink)}}

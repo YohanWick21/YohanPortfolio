@@ -54,7 +54,7 @@ export default function Machine({ jobs }: { jobs: Job[] }) {
 
   useEffect(() => {
     reduce.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    try { const s = JSON.parse(sessionStorage.getItem('ywShipped') || '{}'); if (s && typeof s === 'object') setShipped(s); } catch {}
+    try { const s = JSON.parse(sessionStorage.getItem('ywShipped2') || '{}'); if (s && typeof s === 'object') setShipped(s); } catch {}
   }, []);
 
   /* announce shipped count to the nav */
@@ -99,7 +99,7 @@ export default function Machine({ jobs }: { jobs: Job[] }) {
     setShipped(s => {
       if (s[cur]) return s;
       const n = { ...s, [cur]: true };
-      try { sessionStorage.setItem('ywShipped', JSON.stringify(n)); } catch {}
+      try { sessionStorage.setItem('ywShipped2', JSON.stringify(n)); } catch {}
       return n;
     });
   }, [on, cur]);

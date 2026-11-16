@@ -15,7 +15,7 @@ export const accent = (i: number) => ACC[i % ACC.length];
 export interface Job { name: string; tag: string; img: string; w: number; h: number; href: string; meta: string; brief: string; idea: string; ideate: string; create: string; exec: string; }
 const IGV = 'iGV, AIESEC in SLIIT, 2025/26';
 const job = (name: string, tag: string, old: string, href: string, meta: string, brief: string, idea: string, ideate: string, create: string, exec: string): Job => ({ name, tag, img: A(old), ...dims(old), href, meta, brief, idea, ideate, create, exec });
-export const JOBS: Job[] = [
+const ALL_JOBS: Job[] = [
   job('4 Week GV', 'Attraction', '4 weeks GV v2.png', '/work/igvirnm/', IGV,
     'Get students to apply for the 4 week volunteer programme.', 'Make it feel like a call you have to pick up.',
     'A volunteering trip is a big ask on a feed. A ringing phone is something nobody ignores, so the opportunity arrives as a call from AIESEC in SLIIT.',
@@ -57,6 +57,9 @@ export const JOBS: Job[] = [
     'A torn-paper quote card beside the intern’s photo under the headline Interns, Unfiltered, with the key words of each quote picked out in colour so it scans in a second.',
     'Name and role sit under the photo, and an Applications are open pill carries the call to action. In October the five posts drew nearly 90,000 LinkedIn impressions and drove 2,500 website visits.'),
 ];
+/* Five jobs in the press, alternating iGV and Verdentra. */
+const PICK = ['4 Week GV', 'Blog Team Is Back', 'Choose Your Impact', 'Interns, Unfiltered', 'Hackathon Workspace'];
+export const JOBS: Job[] = PICK.map(n => ALL_JOBS.find(j => j.name === n)!);
 
 /* ---------- projects ---------- */
 export const ORDER = ['verdentra', 'igvirnm', 'nlds', 'catalyst', 'goldcoin', 'merch'] as const;
