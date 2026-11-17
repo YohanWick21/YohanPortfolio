@@ -151,9 +151,9 @@
 
 /* footer on this page */
 .foot.ar-foot{background:#000;color:#fff}
-.foot.ar-foot .ribbon{background:#E8D8A0;border-color:#E8D8A0}
-.foot.ar-foot .ribbon-track span{color:#000!important}
-.foot.ar-foot .ribbon-track b{color:#5A563C}
+.foot.ar-foot .ribbon{background:#000;border-color:#000}
+.foot.ar-foot .ribbon-track span{color:#E8D8A0!important}
+.foot.ar-foot .ribbon-track b{color:#B4C6E4}
 .foot.ar-foot h2{color:#fff}
 .foot.ar-foot .btn{background:#E8D8A0;border-color:#E8D8A0;color:#000}
 .foot.ar-foot .btn.line{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
