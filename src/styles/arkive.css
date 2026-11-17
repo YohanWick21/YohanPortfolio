@@ -152,7 +152,8 @@
 /* footer on this page */
 .foot.ar-foot{background:#B4C6E4;color:#000}
 .foot.ar-foot .ribbon{background:#000;border-color:#000}
-.foot.ar-foot .ribbon-track span{color:#E8D8A0!important}
+.foot.ar-foot .ribbon-track span{color:#fff!important}
+.foot.ar-foot .ribbon-track span:nth-child(3n+2){color:#E8D8A0!important}
 .foot.ar-foot .ribbon-track b{color:#B4C6E4}
 .foot.ar-foot h2{color:#000}
 .foot.ar-foot .btn{background:#000;border-color:#000;color:#fff}
