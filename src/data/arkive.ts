@@ -40,11 +40,11 @@ export const AK = {
   philosophy: {
     title: 'The standard for the bold.',
     body: 'Boldness is not about being loud, looking different or challenging conventions for the sake of it. It is the conviction to think differently, make deliberate decisions and create work that moves things forward.',
-    reach: [
-      ['How we approach brands', 'Start with the business, then build the presence around its strongest advantage.'],
-      ['How we make creative work', 'Choose deliberately, and keep only what earns its place.'],
-      ['How we use technology', 'As infrastructure under the thinking, never as the pitch.'],
-      ['How we run the business', 'Held to the same standard as the work we make for others.'],
+    values: [
+      ['Integrity', 'We do not cut corners, chase trends, or say yes to things we cannot deliver. Everything we build is something we would stand behind publicly.'],
+      ['Efficiency', 'We obsess over systems, tools and processes that let us do more with less, because speed and precision together compound.'],
+      ['Elevation', 'We are here to raise the ceiling on what people can achieve themselves, and leave every client more capable than before.'],
+      ['Service', 'We build for more than profit: real opportunities, investing in youth, and giving back to the communities we come from.'],
     ],
   },
   identity: {
@@ -52,14 +52,12 @@ export const AK = {
     body: [
       'The identity was shaped around a few clear intentions: minimal, with a premium and almost luxurious feel, distinctive enough to work across digital and physical applications, and confident without being complicated.',
       'The name was chosen deliberately too. Arkive borrows from the idea of an ark: a vessel that brings valuable things together and gives them a place to be carried forward and developed. For us, that vessel holds ideas, potential and possibilities.',
+      'I designed the identity and set it down in a brand guidelines document, so the system holds up in other hands: how the logo is placed, how much room it needs, which colours it lives on, and the one typeface behind it.',
     ],
-    note: 'Brand direction led by Yohan, developed collaboratively with Akesh.',
-    palette: [
-      ['Ink', '#090A0C', '#F2F0E9'],
-      ['Bone', '#F2F0E9', '#090A0C'],
-      ['Gold', '#E0BD67', '#090A0C'],
-      ['Deep gold', '#806523', '#F2F0E9'],
-    ],
+    voice: ['Direct', 'Ambitious', 'Grounded', 'Empowering'],
+    voiceNote: 'The guidelines also set the voice.',
+    palette: [['White', '#FFFFFF', '255, 255, 255', '#000'], ['Black', '#000000', '0, 0, 0', '#fff'], ['Slate', '#B4C6E4', '180, 198, 228', '#000'], ['Gold', '#E8D8A0', '232, 216, 160', '#000']],
+    note: 'Pages from the Arkive Labs brand guidelines, version 2.0. Brand direction led by Yohan, developed collaboratively with Akesh.',
   },
   digital: {
     title: 'Giving the brand a digital home.',
@@ -96,10 +94,10 @@ export const AK = {
   },
   founders: {
     title: 'Two founders, one direction.',
-    lead: 'Arkive was built by two people bringing their strengths into one studio, with strategy, creative and technology kept close together.',
+    lead: 'Arkive was founded by two people who believe that doing great work and doing right by people are the same idea. Strategy, creative and technology stay close together.',
     people: [
-      { n: 'Yohan Wickramasinghe', r: 'Co-founder, strategy and creative', items: ['Brand identity and creative direction', 'Brand positioning and messaging', 'Business development and outreach', 'Internal business systems and workflows'] },
-      { n: 'Akesh Chandrasiri', r: 'Co-founder, AI, engineering and development', items: ['Applied AI and engineering', 'Builds the technology the work ships on', 'The wider development of the venture'] },
+      { n: 'Yohan Wickramasinghe', r: 'Co-founder, creative direction', items: ['Brand identity and creative direction', 'Brand positioning and messaging', 'Graphic design and content strategy', 'Business development and outreach', 'Internal business systems and workflows'] },
+      { n: 'Akesh Chandrasiri', r: 'Co-founder, partnerships and AI engineering', items: ['Client communication and partnerships', 'AI engineering and compliance', 'The tooling that accelerates production'] },
     ],
     shared: 'Built together: the website, and the venture itself.',
   },
@@ -117,4 +115,15 @@ export const AK = {
     ],
   },
   closing: { title: 'Built with intention. Ready for what\'s next.' },
+  plates: {
+    logomark: ['guide-logomark', 'Logomark', 'The standalone mark.'],
+    logotype: ['guide-logotype', 'Logotype', 'The wordmark, in a bold wide-spaced sans.'],
+    lockup: ['guide-lockup', 'Lockup', 'The primary mark, with a fixed proportion.'],
+    clear: ['guide-clearspace', 'Clear space', 'Room measured from the height of the A.'],
+    min: ['guide-minsize', 'Minimum size', 'Never smaller than 50px.'],
+    palette: ['guide-palette', 'Palette', 'Four colours, each with tints.'],
+    combos: ['guide-combos', 'Combinations', 'Approved logo and colour pairings.'],
+    type: ['guide-type', 'Typeface', 'Montserrat, throughout.'],
+    weights: ['guide-weights', 'Weights', 'Regular, medium, semi-bold and bold.'],
+  },
 };

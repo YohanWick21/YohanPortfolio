@@ -4,11 +4,11 @@ import Reveal from '../../components/Reveal';
 import { ArrowUpRight } from 'lucide-react';
 import { AK, akSrc } from '../../data/arkive';
 import { asset } from '../../data/site';
-import '@fontsource-variable/fraunces/wght-italic.css';
-import '@fontsource/jetbrains-mono/400.css';
 import '../../styles/arkive.css';
 const logoW = asset('Full Logo White.png');
-const logoB = asset('Full Logo Black.png');
+const PL = AK.plates;
+const RATIO: Record<string,string> = { 'guide-logomark':'2187 / 918','guide-logotype':'2187 / 918','guide-lockup':'1058 / 1297','guide-clearspace':'2187 / 918','guide-minsize':'2187 / 918','guide-palette':'1824 / 1289','guide-combos':'2191 / 938','guide-type':'2187 / 1018','guide-weights':'2187 / 1042' };
+const plate = (k: string[]) => ({ src: `/assets/arkive/${k[0]}.webp`, ratio: RATIO[k[0]], t: k[1], x: k[2] });
 const shots = { hero: akSrc('arkive-site-hero'), system: akSrc('arkive-site-system'), approach: akSrc('arkive-site-approach') };
 const schema = {
   "@context": "https://schema.org", "@type": "CreativeWork", name: 'Building Arkive Labs', description: AK.seo.desc,
@@ -20,9 +20,9 @@ const schema = {
 <Base title={AK.seo.title} desc={AK.seo.desc} current="arkive" schema={schema} footerClass="ar-foot">
 <div class="ar">
 
-  <header class="ar-hero">
+  <header class="ar-top ar-dark"><div class="ar-hero">
     <div class="ar-in">
-      <p class="ar-mono ar-kicker">Case study</p>
+      <p class="ar-ch"><b>Case study</b><span>Arkive Labs</span></p>
       <h1>Building<br />Arkive Labs</h1>
       <p class="ar-sub">From an idea to a founder-led creative and technology studio.</p>
       <dl class="ar-meta">
@@ -31,60 +31,67 @@ const schema = {
     </div>
     <div class="ar-plate" role="img" aria-label="The Arkive Labs logo">
       <i class="ar-c ar-tl"></i><i class="ar-c ar-tr"></i><i class="ar-c ar-bl"></i><i class="ar-c ar-br"></i>
-      <img src={logoW.src} alt="" width={logoW.w} height={logoW.h} />
-      <span class="ar-mono">The finished identity</span>
+      <img src="/assets/arkive/logomark-white.png" alt="" width="326" height="418" />
+      <span class="ar-cap">The finished identity</span>
     </div>
-  </header>
+  </div></header>
 
-  <section class="ar-sec ar-opp" aria-labelledby="ar-opp">
-    <div class="ar-in ar-split">
-      <div><p class="ar-mono ar-ch">01 / The opportunity</p><Reveal client:visible><h2 id="ar-opp" class="ar-h2">{AK.opportunity.title}</h2></Reveal></div>
-      <div>
-        {AK.opportunity.body.map((t: string) => <Reveal client:visible><p class="ar-p">{t}</p></Reveal>)}
-        <Reveal client:visible><p class="ar-pull">{AK.opportunity.pull}</p></Reveal>
+  <section class="ar-sec ar-light ar-opp" aria-labelledby="ar-opp">
+    <div class="ar-in">
+      <p class="ar-ch"><b>Topic — 01</b><span>The opportunity</span></p>
+      <div class="ar-split">
+        <Reveal client:visible><h2 id="ar-opp" class="ar-h2">{AK.opportunity.title}</h2></Reveal>
+        <div>
+          {AK.opportunity.body.map((t: string) => <Reveal client:visible><p class="ar-p">{t}</p></Reveal>)}
+          <Reveal client:visible><p class="ar-pull">{AK.opportunity.pull}</p></Reveal>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="ar-phil" aria-labelledby="ar-phil">
+  <section class="ar-phil ar-gold" aria-labelledby="ar-phil">
     <div class="ar-in">
-      <p class="ar-mono ar-ch">02 / The philosophy</p>
+      <p class="ar-ch"><b>Topic — 02</b><span>The philosophy</span></p>
       <Reveal client:visible y={40}><h2 id="ar-phil" class="ar-giant">{AK.philosophy.title}</h2></Reveal>
       <div class="ar-rule"></div>
       <div class="ar-phil-grid">
         <Reveal client:visible><p class="ar-lede">{AK.philosophy.body}</p></Reveal>
         <ul class="ar-reach">
-          {AK.philosophy.reach.map(([t, x]) => <li><b>{t}</b><span>{x}</span></li>)}
+          {AK.philosophy.values.map(([t, x]) => <li><b>{t}</b><span>{x}</span></li>)}
         </ul>
       </div>
     </div>
   </section>
 
-  <section class="ar-sec ar-id" aria-labelledby="ar-id">
+  <section class="ar-sec ar-light ar-id" aria-labelledby="ar-id">
     <div class="ar-in">
-      <p class="ar-mono ar-ch">03 / The identity</p>
+      <p class="ar-ch"><b>Topic — 03</b><span>The identity</span></p>
       <div class="ar-split">
         <Reveal client:visible><h2 id="ar-id" class="ar-h2">{AK.identity.title}</h2></Reveal>
         <div>{AK.identity.body.map((t: string) => <Reveal client:visible><p class="ar-p">{t}</p></Reveal>)}</div>
       </div>
-      <div class="ar-spec">
-        <figure class="ar-logo ar-dark"><img src={logoW.src} alt="Arkive Labs logo, light on dark" width={logoW.w} height={logoW.h} loading="lazy" /><figcaption class="ar-mono">On ink</figcaption></figure>
-        <figure class="ar-logo ar-light"><img src={logoB.src} alt="Arkive Labs logo, dark on light" width={logoB.w} height={logoB.h} loading="lazy" /><figcaption class="ar-mono">On bone</figcaption></figure>
-        <div class="ar-swatches">
-          {AK.identity.palette.map(([n, h, t]) => <div class="ar-sw" style={`background:${h};color:${t}`}><b>{n}</b><span class="ar-mono">{h}</span></div>)}
-        </div>
-        <div class="ar-type">
-          <div><span class="ar-aa ar-sans">Aa</span><span class="ar-mono">Montserrat. The wordmark, interface and body.</span></div>
-          <div><span class="ar-aa ar-serif">Aa</span><span class="ar-mono">Fraunces italic. Statements and emphasis.</span></div>
+      <div class="ar-plates">
+        {[[PL.logomark],[PL.logotype],[PL.lockup],[PL.clear],[PL.min],['SWATCH'],[PL.combos],[PL.type],[PL.weights]].map(([k]: any, i: number) => { if (k === 'SWATCH') return (
+          <Reveal client:visible className={`ar-plate-w ar-g${i}`}>
+            <figure class="ar-pl"><div class="ar-pal">{AK.identity.palette.map(([n, h, r, t]: string[]) => <div style={`background:${h};color:${t}`}><b>{n}</b><span>{h}</span><span>RGB {r}</span></div>)}</div><figcaption><b>Palette</b><span>Four colours.</span></figcaption></figure>
+          </Reveal>
+        ); const p = plate(k); return (
+          <Reveal client:visible className={`ar-plate-w ar-g${i}`}>
+            <figure class="ar-pl"><div class="fr" style={`aspect-ratio:${p.ratio}`}><img src={p.src} alt={`${p.t}: ${p.x}`} loading="lazy" /></div><figcaption><b>{p.t}</b><span>{p.x}</span></figcaption></figure>
+          </Reveal>
+        ); })}
+        <div class="ar-voice ar-g9">
+          <p class="ar-vl">{AK.identity.voiceNote}</p>
+          <ul>{AK.identity.voice.map((v: string) => <li>{v}</li>)}</ul>
         </div>
       </div>
       <p class="ar-note">{AK.identity.note}</p>
     </div>
   </section>
 
-  <section class="ar-sec ar-web" aria-labelledby="ar-web">
+  <section class="ar-sec ar-slate ar-web" aria-labelledby="ar-web">
     <div class="ar-in">
-      <p class="ar-mono ar-ch">04 / The digital experience</p>
+      <p class="ar-ch"><b>Topic — 04</b><span>The digital experience</span></p>
       <div class="ar-split">
         <Reveal client:visible><h2 id="ar-web" class="ar-h2">{AK.digital.title}</h2></Reveal>
         <div>{AK.digital.body.map((t: string) => <Reveal client:visible><p class="ar-p">{t}</p></Reveal>)}</div>
@@ -152,9 +159,9 @@ const schema = {
     </div>
   </section>
 
-  <section class="ar-sec ar-sys" aria-labelledby="ar-sys">
+  <section class="ar-sec ar-dark ar-sys" aria-labelledby="ar-sys">
     <div class="ar-in">
-      <p class="ar-mono ar-ch">05 / The operating system</p>
+      <p class="ar-ch"><b>Topic — 05</b><span>The operating system</span></p>
       <div class="ar-split">
         <Reveal client:visible><h2 id="ar-sys" class="ar-h2">{AK.system.title}</h2></Reveal>
         <Reveal client:visible><p class="ar-p">{AK.system.lead}</p></Reveal>
@@ -182,9 +189,9 @@ const schema = {
     </div>
   </section>
 
-  <section class="ar-sec ar-founders" aria-labelledby="ar-fd">
+  <section class="ar-sec ar-light ar-founders" aria-labelledby="ar-fd">
     <div class="ar-in">
-      <p class="ar-mono ar-ch">06 / The people</p>
+      <p class="ar-ch"><b>Topic — 06</b><span>The people</span></p>
       <div class="ar-split">
         <Reveal client:visible><h2 id="ar-fd" class="ar-h2">{AK.founders.title}</h2></Reveal>
         <Reveal client:visible><p class="ar-p">{AK.founders.lead}</p></Reveal>
@@ -203,9 +210,9 @@ const schema = {
     </div>
   </section>
 
-  <section class="ar-sec ar-next" aria-labelledby="ar-next">
+  <section class="ar-sec ar-dark ar-next" aria-labelledby="ar-next">
     <div class="ar-in">
-      <p class="ar-mono ar-ch">07 / Where we are</p>
+      <p class="ar-ch"><b>Topic — 07</b><span>Where we are</span></p>
       <Reveal client:visible><h2 id="ar-next" class="ar-h2 ar-wide">{AK.next.title}</h2></Reveal>
       <div class="ar-split">
         <div>{AK.next.body.map((t: string) => <Reveal client:visible><p class="ar-p">{t}</p></Reveal>)}</div>
@@ -218,7 +225,7 @@ const schema = {
     </div>
   </section>
 
-  <section class="ar-close" aria-labelledby="ar-close">
+  <section class="ar-close ar-gold" aria-labelledby="ar-close">
     <div class="ar-in">
       <Reveal client:visible y={40}><h2 id="ar-close" class="ar-giant sm">{AK.closing.title}</h2></Reveal>
       <div class="ar-btns">
