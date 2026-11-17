@@ -27,6 +27,7 @@ export const BM = {
   org: 'AIESEC in SLIIT',
   role: 'Organising Committee President',
   dates: 'Oct 2024 - Dec 2024',
+  venue: 'SLIIT Malabe',
   eventDays: '30 Nov and 7 Dec 2024',
   award: 'Most Outstanding Event Award, AIESEC in SLIIT',
   eyebrow: 'Leadership & event execution',
@@ -79,7 +80,7 @@ export const BM = {
 
   event: {
     title: 'And then, it all *came together*.',
-    note: 'Under the theme "Designing the Next Revolution", Benchmark 3.0 brought together 400+ delegates across two days and 100 hackathon teams.',
+    note: 'At SLIIT Malabe, under the tagline "Designing the Next Revolution", Benchmark 3.0 brought together 400+ delegates across two days and 100 hackathon teams.',
     timeline: [
       { when: '30 Nov 2024', t: 'Day 1', x: 'The bootcamp for delegates.' },
       { when: 'In between', t: 'Hackathon stages', x: '100 teams competed across the stages, and 25 were shortlisted.' },
