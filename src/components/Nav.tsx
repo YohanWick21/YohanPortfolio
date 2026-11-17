@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Menu, X, Trophy, ArrowUpRight } from 'lucide-react';
 
-const LINKS = [['Work', '/work/', 'work'], ['Writing', '/blog/', 'blog'], ['Arkive Labs', '/arkive-labs/', 'arkive'], ['About', '/about/', 'about']];
+const LINKS = [['Work', '/work/', 'work'], ['Writing', '/blog/', 'blog'], ['Arkive Labs', '/work/arkive-labs/', 'arkive'], ['About', '/about/', 'about']];
 
 export default function Nav({ current, total }: { current?: string; total?: number }) {
   const [open, setOpen] = useState(false);

@@ -1,0 +1,238 @@
+---
+import Base from '../../layouts/Base.astro';
+import Reveal from '../../components/Reveal';
+import { ArrowUpRight } from 'lucide-react';
+import { AK, akSrc } from '../../data/arkive';
+import { asset } from '../../data/site';
+import '../../styles/arkive.css';
+const logoW = asset('Full Logo White.png');
+const PL = AK.plates;
+const RATIO: Record<string,string> = { 'guide-logomark':'2187 / 918','guide-logotype':'2187 / 918','guide-lockup':'1058 / 1297','guide-clearspace':'2187 / 918','guide-minsize':'2187 / 918','guide-palette':'1824 / 1289','guide-combos':'2191 / 938','guide-type':'2187 / 1018' };
+const plate = (k: string[]) => ({ src: `/assets/arkive/${k[0]}.webp`, ratio: RATIO[k[0]], t: k[1], x: k[2] });
+const shots = { hero: akSrc('arkive-site-hero'), system: akSrc('arkive-site-system'), approach: akSrc('arkive-site-approach') };
+const schema = {
+  "@context": "https://schema.org", "@type": "CreativeWork", name: 'Building Arkive Labs', description: AK.seo.desc,
+  url: new URL('/work/arkive-labs/', Astro.site).href,
+  creator: { "@type": "Person", name: "Yohan Wickramasinghe", url: new URL('/about/', Astro.site).href },
+  about: { "@type": "Organization", name: "Arkive Labs", url: AK.url, founder: [{ "@type": "Person", name: "Yohan Wickramasinghe" }, { "@type": "Person", name: "Akesh Chandrasiri" }] },
+};
+---
+<Base title={AK.seo.title} desc={AK.seo.desc} current="arkive" schema={schema} footerClass="ar-foot">
+<div class="ar">
+
+  <header class="ar-top ar-dark"><div class="ar-hero">
+    <div class="ar-in">
+      <p class="ar-ch"><b>Case study</b><span>Arkive Labs</span></p>
+      <h1>Building<br />Arkive Labs</h1>
+      <p class="ar-sub">From an idea to a founder-led creative and technology studio.</p>
+      <dl class="ar-meta">
+        {AK.meta.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+      </dl>
+    </div>
+    <div class="ar-plate" role="img" aria-label="The Arkive Labs logo">
+      <i class="ar-c ar-tl"></i><i class="ar-c ar-tr"></i><i class="ar-c ar-bl"></i><i class="ar-c ar-br"></i>
+      <img src="/assets/arkive/logomark-white.png" alt="" width="326" height="418" />
+      <span class="ar-cap">The finished identity</span>
+    </div>
+  </div></header>
+
+  <section class="ar-sec ar-light ar-opp" aria-labelledby="ar-opp">
+    <div class="ar-in">
+      <p class="ar-ch"><b>Topic 01</b><span>The opportunity</span></p>
+      <div class="ar-split">
+        <Reveal client:visible><h2 id="ar-opp" class="ar-h2">{AK.opportunity.title}</h2></Reveal>
+        <div>
+          {AK.opportunity.body.map((t: string) => <Reveal client:visible><p class="ar-p">{t}</p></Reveal>)}
+          <Reveal client:visible><p class="ar-pull">{AK.opportunity.pull}</p></Reveal>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ar-phil ar-gold" aria-labelledby="ar-phil">
+    <div class="ar-in">
+      <p class="ar-ch"><b>Topic 02</b><span>The philosophy</span></p>
+      <Reveal client:visible y={40}><h2 id="ar-phil" class="ar-giant">{AK.philosophy.title}</h2></Reveal>
+      <div class="ar-rule"></div>
+      <div class="ar-phil-grid">
+        <Reveal client:visible><p class="ar-lede">{AK.philosophy.body}</p></Reveal>
+        <div>
+          <p class="ar-rl">{AK.philosophy.reachLabel}</p>
+          <ul class="ar-reach">
+            {AK.philosophy.reach.map((x: string) => <li>{x}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ar-sec ar-light ar-id" aria-labelledby="ar-id">
+    <div class="ar-in">
+      <p class="ar-ch"><b>Topic 03</b><span>The identity</span></p>
+      <div class="ar-split">
+        <Reveal client:visible><h2 id="ar-id" class="ar-h2">{AK.identity.title}</h2></Reveal>
+        <div>{AK.identity.body.map((t: string) => <Reveal client:visible><p class="ar-p">{t}</p></Reveal>)}</div>
+      </div>
+      <div class="ar-plates">
+        {[[PL.logomark],[PL.logotype],[PL.lockup],[PL.clear],[PL.min],['SWATCH'],[PL.combos],[PL.type]].map(([k]: any, i: number) => { if (k === 'SWATCH') return (
+          <Reveal client:visible className={`ar-plate-w ar-g${i}`}>
+            <figure class="ar-pl"><div class="ar-pal">{AK.identity.palette.map(([n, h, r, t]: string[]) => <div style={`background:${h};color:${t}`}><b>{n}</b><span>{h}</span><span>RGB {r}</span></div>)}</div><figcaption><b>Palette</b><span>Four colours.</span></figcaption></figure>
+          </Reveal>
+        ); const p = plate(k); return (
+          <Reveal client:visible className={`ar-plate-w ar-g${i}`}>
+            <figure class="ar-pl"><div class="fr" style={`aspect-ratio:${p.ratio}`}><img src={p.src} alt={`${p.t}: ${p.x}`} loading="lazy" /></div><figcaption><b>{p.t}</b><span>{p.x}</span></figcaption></figure>
+          </Reveal>
+        ); })}
+      </div>
+      <p class="ar-note">{AK.identity.note}</p>
+    </div>
+  </section>
+
+  <section class="ar-sec ar-slate ar-web" aria-labelledby="ar-web">
+    <div class="ar-in">
+      <p class="ar-ch"><b>Topic 04</b><span>The digital experience</span></p>
+      <div class="ar-split">
+        <Reveal client:visible><h2 id="ar-web" class="ar-h2">{AK.digital.title}</h2></Reveal>
+        <div>{AK.digital.body.map((t: string) => <Reveal client:visible><p class="ar-p">{t}</p></Reveal>)}</div>
+      </div>
+      <ol class="ar-order" aria-label="Order of sections on the Arkive Labs homepage">
+        {AK.digital.order.map((s: string) => <li>{s}</li>)}
+      </ol>
+
+      <div class="ar-row">
+        <Reveal client:visible className="ar-frame-wrap">
+          {shots.hero ? <img class="ar-shot" src={shots.hero} alt="Arkive Labs homepage hero" loading="lazy" /> :
+          <div class="ar-win" role="img" aria-label="Recreation of the Arkive Labs homepage hero">
+            <div class="ar-bar"><i></i><i></i><i></i><span class="ar-mono">arkivelabs.com</span></div>
+            <div class="ar-body ar-rhero">
+              <div class="ar-nav"><img src={logoW.src} alt="" /><span class="ar-links">Work&nbsp;&nbsp;Capabilities&nbsp;&nbsp;About&nbsp;&nbsp;Packages&nbsp;&nbsp;FAQ&nbsp;&nbsp;Blog</span><span class="ar-cta">Start a project ↗</span></div>
+              <h3>Marketing and technology, engineered as one.</h3>
+              <p>One founder-led studio for strategy, creative and engineering, so your brand doesn't just look the part, it performs.</p>
+              <div class="ar-btns"><span class="ar-cta">Start a project ↗</span><span class="ar-ghost">How we work ↓</span></div>
+            </div>
+          </div>}
+          <span class="ar-recreated ar-mono">Recreated from arkivelabs.com</span>
+        </Reveal>
+        <div class="ar-note-b"><h3>{AK.digital.notes[0][0]}</h3><p>{AK.digital.notes[0][1]}</p></div>
+      </div>
+
+      <div class="ar-row ar-flip">
+        <div class="ar-note-b"><h3>{AK.digital.notes[1][0]}</h3><p>{AK.digital.notes[1][1]}</p></div>
+        <Reveal client:visible className="ar-frame-wrap">
+          {shots.system ? <img class="ar-shot" src={shots.system} alt="Arkive Labs studio system diagram" loading="lazy" /> :
+          <div class="ar-win" role="img" aria-label="Recreation of the Arkive Labs studio system figure">
+            <div class="ar-bar"><i></i><i></i><i></i><span class="ar-mono">arkivelabs.com</span></div>
+            <div class="ar-body ar-rsys">
+              <p class="ar-fig ar-mono">Fig. 02.1 · Studio system · V2026</p>
+              <div class="ar-cols">
+                <div><em class="ar-mono">Input</em><span>Brief</span><span>Research</span><span>Brand context</span></div>
+                <div class="ar-mid"><em class="ar-mono">Layer</em><span>Human strategy</span><span>AI acceleration</span><span>Quality review</span></div>
+                <div><em class="ar-mono">Output</em><span>Production-ready</span><span>On brand</span><span>Documented</span></div>
+              </div>
+              <p class="ar-foot ar-mono">Same two minds, from first question to final result.</p>
+            </div>
+          </div>}
+          <span class="ar-recreated ar-mono">Recreated from arkivelabs.com</span>
+        </Reveal>
+      </div>
+
+      <div class="ar-row">
+        <Reveal client:visible className="ar-frame-wrap">
+          {shots.approach ? <img class="ar-shot" src={shots.approach} alt="Arkive Labs approach section" loading="lazy" /> :
+          <div class="ar-win" role="img" aria-label="Recreation of the Arkive Labs approach section">
+            <div class="ar-bar"><i></i><i></i><i></i><span class="ar-mono">arkivelabs.com</span></div>
+            <div class="ar-body ar-appr">
+              <h3>Clarity before output.</h3>
+              <div class="ar-steps">
+                <div><b>01</b><strong>Discover</strong><span>We study the business, buyer, category and current signal before prescribing output.</span></div>
+                <div><b>02</b><strong>Define</strong><span>We identify the sharpest opportunity and build one clear strategic direction around it.</span></div>
+                <div><b>03</b><strong>Build</strong><span>Strategy, creative and technology move together under one accountable founding team.</span></div>
+                <div><b>04</b><strong>Measure</strong><span>We learn from real response, improve the system and scale what earns attention.</span></div>
+              </div>
+            </div>
+          </div>}
+          <span class="ar-recreated ar-mono">Recreated from arkivelabs.com</span>
+        </Reveal>
+        <div class="ar-note-b"><h3>{AK.digital.notes[2][0]}</h3><p>{AK.digital.notes[2][1]}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ar-sec ar-dark ar-sys" aria-labelledby="ar-sys">
+    <div class="ar-in">
+      <p class="ar-ch"><b>Topic 05</b><span>The operating system</span></p>
+      <div class="ar-split">
+        <Reveal client:visible><h2 id="ar-sys" class="ar-h2">{AK.system.title}</h2></Reveal>
+        <Reveal client:visible><p class="ar-p">{AK.system.lead}</p></Reveal>
+      </div>
+      <div class="ar-lanes">
+        {AK.system.lanes.map((l: any) => (
+          <div class="ar-lane">
+            <p class="ar-lane-k ar-mono">{l.k}</p>
+            <div class="ar-lane-items" style={`--n:${l.items.length}`}>
+              {l.items.map(([t, x]: string[]) => <Reveal client:visible><article class="ar-node"><h3>{t}</h3><p>{x}</p></article></Reveal>)}
+            </div>
+          </div>
+        ))}
+        <div class="ar-lane ar-base">
+          <p class="ar-lane-k ar-mono">The foundation</p>
+          <Reveal client:visible>
+            <article class="ar-node ar-wide">
+              <h3>{AK.system.base.t}</h3><p>{AK.system.base.x}</p>
+              <ul>{AK.system.base.chips.map((c: string) => <li>{c}</li>)}</ul>
+            </article>
+          </Reveal>
+        </div>
+      </div>
+      <p class="ar-note">{AK.system.note}</p>
+    </div>
+  </section>
+
+  <section class="ar-sec ar-light ar-founders" aria-labelledby="ar-fd">
+    <div class="ar-in">
+      <p class="ar-ch"><b>Topic 06</b><span>The people</span></p>
+      <div class="ar-split">
+        <Reveal client:visible><h2 id="ar-fd" class="ar-h2">{AK.founders.title}</h2></Reveal>
+        <Reveal client:visible><p class="ar-p">{AK.founders.lead}</p></Reveal>
+      </div>
+      <div class="ar-duo">
+        {AK.founders.people.map((p: any) => (
+          <Reveal client:visible>
+            <div class="ar-person">
+              <h3>{p.n}</h3><p class="ar-mono">{p.r}</p>
+              <ul>{p.items.map((i: string) => <li>{i}</li>)}</ul>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+      <p class="ar-shared">{AK.founders.shared}</p>
+    </div>
+  </section>
+
+  <section class="ar-sec ar-dark ar-next" aria-labelledby="ar-next">
+    <div class="ar-in">
+      <p class="ar-ch"><b>Topic 07</b><span>Where we are</span></p>
+      <Reveal client:visible><h2 id="ar-next" class="ar-h2 ar-wide">{AK.next.title}</h2></Reveal>
+      <div class="ar-split">
+        <div>{AK.next.body.map((t: string) => <Reveal client:visible><p class="ar-p">{t}</p></Reveal>)}</div>
+        <ol class="ar-stages">
+          {AK.next.stages.map(([t, items, done]: any) => (
+            <li class={done ? 'ar-done' : 'ar-todo'}><b>{t}</b><ul>{items.map((i: string) => <li>{i}</li>)}</ul></li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="ar-close ar-gold" aria-labelledby="ar-close">
+    <div class="ar-in">
+      <Reveal client:visible y={40}><h2 id="ar-close" class="ar-giant sm">{AK.closing.title}</h2></Reveal>
+      <div class="ar-btns">
+        <a class="ar-btn" href={AK.url} target="_blank" rel="noopener">Visit arkivelabs.com <ArrowUpRight size={18} /></a>
+        <a class="ar-btn line" href="/work/">Back to my work</a>
+        <a class="ar-btn line" href="/contact/">Start a conversation</a>
+      </div>
+    </div>
+  </section>
+</div>
+</Base>

@@ -6,5 +6,6 @@ export default defineConfig({
   site: process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'https://yohansportfolio.vercel.app'),
   integrations: [react(), sitemap({ filter: (p) => !p.includes('/thanks/') })],
   vite: { ssr: { noExternal: ['lucide-react', 'motion'] } },
+  redirects: { '/arkive-labs': '/work/arkive-labs/' },
   build: { format: 'directory' }, trailingSlash: 'always',
 });

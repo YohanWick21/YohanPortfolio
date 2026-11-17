@@ -1,3 +1,7 @@
 {
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/arkive-labs", "destination": "/work/arkive-labs/", "permanent": true },
+    { "source": "/arkive-labs/", "destination": "/work/arkive-labs/", "permanent": true }
+  ]
 }
