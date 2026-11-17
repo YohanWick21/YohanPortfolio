@@ -3,6 +3,8 @@ import Base from '../../layouts/Base.astro';
 import Reveal from '../../components/Reveal';
 import { FileText, BookOpen, GraduationCap, Briefcase, Users } from 'lucide-react';
 import { ABOUT } from '../../data/site';
+import { ArrowRight } from 'lucide-react';
+import '../../styles/benchmark.css';
 const a = ABOUT;
 const CC = ['var(--electric)', 'var(--pink)', 'var(--sky)', 'var(--sun)', 'var(--violet)', 'var(--orange)'];
 const schema = { "@context": "https://schema.org", "@type": "Person", name: "Yohan Wickramasinghe", jobTitle: "Co-founder, Arkive Labs; Exec. Employer Branding & Comms, Verdentra", worksFor: [{ "@type": "Organization", name: "Arkive Labs", url: "https://arkivelabs.com" }, { "@type": "Organization", name: "Verdentra" }], sameAs: ["https://www.linkedin.com/in/yohan-wickramasinghe/", "https://www.instagram.com/_.exacdaktylos._/", "https://arkivelabs.com"] };
@@ -36,6 +38,19 @@ const schema = { "@context": "https://schema.org", "@type": "Person", name: "Yoh
   </section>
   <section class="sec paper" aria-labelledby="ld">
     <Reveal client:visible><div class="sec-head"><h2 class="display" id="ld"><Users size={40} /> Leadership and volunteering</h2><p>The work I do outside the day job, mostly with AIESEC in SLIIT.</p></div></Reveal>
-    <div class="lead-grid">{a.lead.map((x: any, i: number) => <Reveal client:visible delay={(i % 3) * 0.08}><article class="lead-card"><span class="pill" style={`background:${CC[i % CC.length]};color:var(--ink);border-color:var(--ink)`}>{x.tag}</span><h3 class="display">{x.title}</h3><p class="mono">{x.when}</p><p>{x.desc}</p></article></Reveal>)}</div>
+    <Reveal client:visible>
+      <article class="bm-feature">
+        <div>
+          <span class="tag">AIESEC in SLIIT</span>
+          <h3>Organising Committee President | Benchmark 3.0</h3>
+          <p class="when">Oct 2024 - Dec 2024</p>
+          <p>Led an 18-member organising committee in planning and delivering Benchmark 3.0, bringing together hundreds of participants for a multi-faceted event experience.</p>
+          <p>From coordinating cross-functional teams and overseeing event operations to aligning people around shared goals, I was responsible for turning an ambitious event concept into a successfully delivered experience.</p>
+          <a class="bm-btn" href="/work/benchmark-3/">Explore the Experience <ArrowRight size={18} /></a>
+        </div>
+        <ul aria-label="Benchmark 3.0 in numbers"><li><b>18</b><span>Committee members led</span></li><li><b>600+</b><span>Registrations</span></li><li><b>400+</b><span>Delegates</span></li><li><b>100+</b><span>Hackathon teams</span></li></ul>
+      </article>
+    </Reveal>
+    <div class="lead-grid">{a.lead.filter((x: any) => !/Benchmark/.test(x.title)).map((x: any, i: number) => <Reveal client:visible delay={(i % 3) * 0.08}><article class="lead-card"><span class="pill" style={`background:${CC[i % CC.length]};color:var(--ink);border-color:var(--ink)`}>{x.tag}</span><h3 class="display">{x.title}</h3><p class="mono">{x.when}</p><p>{x.desc}</p></article></Reveal>)}</div>
   </section>
 </Base>
