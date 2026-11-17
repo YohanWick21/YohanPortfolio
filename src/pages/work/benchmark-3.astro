@@ -1,0 +1,152 @@
+---
+import Base from '../../layouts/Base.astro';
+import Reveal from '../../components/Reveal';
+import BmStats from '../../components/BmStats';
+import BmImage from '../../components/BmImage.astro';
+import { Users, Compass, Network, Rocket, Quote, ArrowRight, Award } from 'lucide-react';
+import { BM, bmSrc, bmVideo } from '../../data/benchmark';
+import '../../styles/benchmark.css';
+const ICON: Record<string, any> = { users: Users, compass: Compass, network: Network, rocket: Rocket };
+const hl = (x: string) => x.replace(/\*(.+?)\*/g, '<em class="hl">$1</em>');
+const video = bmVideo(BM.event.video.id);
+const poster = bmSrc(BM.event.video.poster) ?? undefined;
+const schema = {
+  "@context": "https://schema.org", "@type": "CreativeWork", name: BM.title, description: BM.seo.desc,
+  url: new URL('/work/benchmark-3/', Astro.site).href,
+  creator: { "@type": "Person", name: "Yohan Wickramasinghe", url: new URL('/about/', Astro.site).href },
+  about: { "@type": "Event", name: BM.title, organizer: { "@type": "Organization", name: BM.org } },
+};
+---
+<Base title={BM.seo.title} desc={BM.seo.desc} current="work" schema={schema} footerClass="bm-foot">
+  <div class="bm">
+    <header class="bm-hero">
+      <div class="bm-in">
+        <p class="bm-eyebrow mono">{BM.eyebrow}</p>
+        <h1><span>Benchmark</span> <em>3.0</em></h1>
+        <p class="bm-headline" set:html={hl(BM.headline)} />
+        <div class="bm-hero-grid">
+          <p class="bm-intro">{BM.intro}</p>
+          <dl class="bm-meta">
+            <div><dt>Role</dt><dd>{BM.role}</dd></div>
+            <div><dt>Organisation</dt><dd>{BM.org}</dd></div>
+            <div><dt>Event days</dt><dd>{BM.eventDays}</dd></div>
+            <div><dt>Venue</dt><dd>{BM.venue}</dd></div>
+          </dl>
+        </div>
+        <p class="bm-award"><Award size={16} /> {BM.award}</p>
+        <BmImage {...BM.hero} eager class="bm-hero-img" />
+      </div>
+    </header>
+
+    <section class="bm-sec bm-impact" aria-labelledby="bm-impact">
+      <div class="bm-in">
+        <Reveal client:visible><h2 id="bm-impact" class="bm-h2" set:html={hl('The *impact*')} /></Reveal>
+        <BmStats client:visible stats={BM.stats} />
+      </div>
+    </section>
+
+    <section class="bm-sec" aria-labelledby="bm-challenge">
+      <div class="bm-in bm-split">
+        <div>
+          <Reveal client:visible><h2 id="bm-challenge" class="bm-h2" set:html={hl(BM.challenge.title)} /></Reveal>
+          {BM.challenge.body.map((t: string) => <Reveal client:visible><p class="bm-p">{t}</p></Reveal>)}
+          <Reveal client:visible><p class="bm-pull" set:html={hl(BM.challenge.pull)} /></Reveal>
+        </div>
+        <Reveal client:visible><BmImage {...BM.challenge.image} /></Reveal>
+      </div>
+    </section>
+
+    <section class="bm-sec bm-alt" aria-labelledby="bm-roles">
+      <div class="bm-in">
+        <Reveal client:visible><h2 id="bm-roles" class="bm-h2" set:html={hl(BM.roles.title)} /></Reveal>
+        <div class="bm-roles">
+          {BM.roles.items.map((r: any, i: number) => { const Ic = ICON[r.icon]; return (
+            <Reveal client:visible delay={(i % 2) * 0.08}>
+              <article class={`bm-role${i === 3 ? ' pink' : ''}`}>
+                <span class="bm-ico"><Ic size={26} /></span>
+                <h3>{r.t}</h3>
+                <p>{r.x}</p>
+              </article>
+            </Reveal>
+          ); })}
+        </div>
+        <Reveal client:visible>
+          <div class="bm-fn">
+            <p class="bm-fn-l mono">{BM.roles.functionsLabel}</p>
+            <ul>{BM.roles.functions.map((f: string) => <li>{f}</li>)}</ul>
+            <p class="bm-p bm-fn-b">{BM.roles.build}</p>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+
+    <section class="bm-sec" aria-labelledby="bm-people">
+      <div class="bm-in">
+        <Reveal client:visible><h2 id="bm-people" class="bm-h2" set:html={hl(BM.gallery.title)} /></Reveal>
+        <div class="bm-gallery">
+          {BM.gallery.items.map((g: any, i: number) => (
+            <Reveal client:visible delay={(i % 3) * 0.06} className={`g g${g.span}`}><BmImage {...g} /></Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bm-sec bm-alt" aria-labelledby="bm-event">
+      <div class="bm-in">
+        <Reveal client:visible><h2 id="bm-event" class="bm-h2" set:html={hl(BM.event.title)} /></Reveal>
+        {BM.event.note && <Reveal client:visible><p class="bm-p bm-lede">{BM.event.note}</p></Reveal>}
+        <ol class="bm-tl">
+          {BM.event.timeline.map((x: any) => <Reveal client:visible><li><span class="mono">{x.when}</span><h3>{x.t}</h3><p>{x.x}</p></li></Reveal>)}
+        </ol>
+        <Reveal client:visible><BmImage {...BM.event.main} /></Reveal>
+        <div class="bm-event-more">
+          {BM.event.more.map((g: any) => <Reveal client:visible><BmImage {...g} /></Reveal>)}
+        </div>
+        {BM.event.credit && <p class="bm-credit">{BM.event.credit}</p>}
+        {video && <Reveal client:visible><video class="bm-video" controls playsinline preload="none" poster={poster} src={video}></video></Reveal>}
+      </div>
+    </section>
+
+    <section class="bm-sec" aria-labelledby="bm-reflect">
+      <div class="bm-in bm-reflect">
+        <Reveal client:visible><h2 id="bm-reflect" class="bm-h2" set:html={hl(BM.reflection.title)} /></Reveal>
+        <div>{BM.reflection.body.map((t: string) => <Reveal client:visible><p class="bm-p" set:html={hl(t)} /></Reveal>)}</div>
+      </div>
+    </section>
+
+    {BM.testimonials.show && (
+    <section class="bm-sec bm-alt" aria-labelledby="bm-quotes">
+      <div class="bm-in">
+        <Reveal client:visible><h2 id="bm-quotes" class="bm-h2" set:html={hl(BM.testimonials.title)} /></Reveal>
+        <div class="bm-quotes">
+          {BM.testimonials.items.map((t: any, i: number) => { const ph = bmSrc(t.id); return (
+            <Reveal client:visible delay={(i % 2) * 0.08}>
+              <figure class="bm-quote">
+                <Quote size={28} class="bm-q" aria-hidden="true" />
+                <blockquote>{t.quote}</blockquote>
+                <figcaption>
+                  {ph ? <img src={ph} alt={`Portrait of ${t.name}`} loading="lazy" /> : <span class="bm-av" aria-hidden="true">?</span>}
+                  <span><b>{t.name}</b><small>{t.role}</small></span>
+                </figcaption>
+              </figure>
+            </Reveal>
+          ); })}
+        </div>
+      </div>
+    </section>
+    )}
+
+    <section class="bm-sec bm-close" aria-labelledby="bm-close">
+      <div class="bm-in">
+        <Reveal client:visible><h2 id="bm-close" class="bm-h2 big" set:html={hl(BM.closing.title)} /></Reveal>
+        <Reveal client:visible><p class="bm-p bm-lede">{BM.closing.body}</p></Reveal>
+        <Reveal client:visible>
+          <div class="bm-btns">
+            <a class="bm-btn" href="/work/">See my other work <ArrowRight size={18} /></a>
+            <a class="bm-btn line" href="/about/">About me</a>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  </div>
+</Base>

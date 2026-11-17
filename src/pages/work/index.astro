@@ -2,7 +2,11 @@
 import Base from '../../layouts/Base.astro';
 import WorkGrid from '../../components/WorkGrid';
 import { ORDER, CARDS, P, FILTERS, asset } from '../../data/site';
-const cards = ORDER.map(s => { const c = CARDS[s]; return { slug: s, category: c.category, cat: c.cat, year: P[s].year, title: c.title, desc: c.desc, tags: c.tags, img: asset(c.img) }; });
+import { bmSrc } from '../../data/benchmark';
+import '../../styles/benchmark.css';
+const cards = ORDER.map(s => { const c = CARDS[s]; return { slug: s, category: c.category, cat: c.cat, year: P[s].year, title: c.title, desc: c.desc, tags: c.tags, img: asset(c.img) as any, placeholder: undefined as any }; });
+const bmImg = bmSrc('benchmark-card');
+cards.splice(2, 0, { slug: 'benchmark-3', category: 'event', cat: 'Leadership & Events', year: '2024', title: 'Benchmark 3.0', desc: 'Led an 18-person committee to deliver AIESEC in SLIIT\'s signature UI/UX event: two event days, a 100-team hackathon and 400+ delegates. Winner of the Most Outstanding Event Award at AIESEC in SLIIT.', tags: ['Leadership', 'Event Management', 'Campaign Execution'], img: bmImg ? { src: bmImg, w: 1800, h: 1083 } : null, placeholder: 'Benchmark 3.0' } as any);
 ---
 <Base title="Brand & Campaign Case Studies | Yohan Wickramasinghe" desc="Case studies in employer branding, campaigns, events and brand design by Yohan Wickramasinghe, with the thinking behind each one." current="work">
   <section class="page-head"><h1 class="display">Work</h1><p class="sub">Employer branding, campaigns, events and identity, each with the thinking behind it.</p></section>
