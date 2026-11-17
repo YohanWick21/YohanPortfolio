@@ -34,10 +34,24 @@ const schema = {
             <div><dt>Venue</dt><dd>{BM.venue}</dd></div>
           </dl>
         </div>
-        <p class="bm-award"><Award size={16} /> {BM.award}</p>
         <BmImage {...BM.hero} eager class="bm-hero-img" />
       </div>
     </header>
+
+    <section class="bm-award-band" aria-label="Award">
+      <div class="bm-in">
+        <Reveal client:visible>
+          <div class="bm-award-card">
+            <span class="bm-trophy"><Award size={44} /></span>
+            <div>
+              <p class="mono">Recognised as</p>
+              <h2>{BM.awardTitle}</h2>
+              <p class="bm-award-org">{BM.awardOrg}</p>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
 
     <section class="bm-sec bm-impact" aria-labelledby="bm-impact">
       <div class="bm-in">
@@ -78,6 +92,16 @@ const schema = {
             <p class="bm-p bm-fn-b">{BM.roles.build}</p>
           </div>
         </Reveal>
+      </div>
+    </section>
+
+    <section class="bm-sec bm-moment" aria-labelledby="bm-moment">
+      <div class="bm-in">
+        <Reveal client:visible><h2 id="bm-moment" class="bm-h2" set:html={hl(BM.moment.title)} /></Reveal>
+        <Reveal client:visible><p class="bm-p bm-lede">{BM.moment.lead}</p></Reveal>
+        <div class="bm-steps">
+          {BM.moment.steps.map((x: any) => <Reveal client:visible><div class="bm-step"><h3>{x.t}</h3><p>{x.x}</p></div></Reveal>)}
+        </div>
       </div>
     </section>
 

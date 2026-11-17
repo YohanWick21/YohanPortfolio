@@ -30,6 +30,8 @@ export const BM = {
   venue: 'SLIIT Malabe',
   eventDays: '30 Nov and 7 Dec 2024',
   award: 'Most Outstanding Event Award, AIESEC in SLIIT',
+  awardTitle: 'Most Outstanding Event Award',
+  awardOrg: 'AIESEC in SLIIT',
   eyebrow: 'Leadership & event execution',
   headline: 'Leading *people*. Building *experiences*. Delivering *impact*.',
   intro: 'An ambitious event brought to life through teamwork, coordination and a shared vision.',
@@ -64,6 +66,16 @@ export const BM = {
     functionsLabel: 'Functions I guided',
     functions: ['Marketing', 'Logistics', 'Partnership development', 'Public relations', 'Delegate experience', 'Finance', 'Web development'],
     build: 'The team also built Benchmark 3.0\'s own WordPress website, SEO-optimised so that searches for "Benchmark" put it at the top.',
+  },
+
+  moment: {
+    title: 'Stepping in, *not stepping back*.',
+    lead: 'As the event came together, workloads across the committee started getting too high. The easy move would have been to tell people to push harder. I went the other way.',
+    steps: [
+      { t: 'The pressure', x: 'Workloads were climbing, and a team that was already learning new functions on the job was feeling it.' },
+      { t: 'What I did', x: 'I stepped in and took on part of the load. When partnerships needed raising, I did not just ask the team to make the calls. I made them with the team.' },
+      { t: 'What it meant', x: 'The work was shared, and nobody on the committee had to feel they were carrying it alone.' },
+    ],
   },
 
   gallery: {

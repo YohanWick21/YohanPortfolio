@@ -182,3 +182,21 @@
 .bm-quote figcaption{display:grid;gap:.1rem}
 .bm-dialog header{display:grid;gap:.15rem;margin-bottom:1.4rem;padding-right:3.2rem}
 .bm-dialog{overscroll-behavior:contain}
+
+/* award band */
+.bm-award-band{padding:clamp(1.6rem,3vw,2.6rem) 0;background:var(--bm-bg)}
+.bm-award-card{display:flex;align-items:center;gap:clamp(1.2rem,3vw,2.4rem);padding:clamp(1.4rem,3vw,2.4rem);border:1.5px solid var(--bm-pink);background:radial-gradient(30rem 14rem at 0% 50%,rgba(255,95,168,.18),transparent 70%),var(--bm-surface)}
+.bm-trophy{display:grid;place-items:center;flex:none;width:clamp(4.4rem,8vw,6.4rem);height:clamp(4.4rem,8vw,6.4rem);border-radius:50%;background:var(--bm-pink);color:#12060d}
+.bm-award-card .mono{margin:0 0 .3rem;color:var(--bm-pink);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+.bm .bm-award-card h2{font-family:var(--display);font-style:italic;text-transform:uppercase;font-weight:900;line-height:.92;font-size:clamp(2rem,5vw,4.2rem);margin:0}
+.bm-award-org{margin:.5rem 0 0;color:var(--bm-mute);font-weight:700;font-size:clamp(1rem,1.5vw,1.2rem)}
+@media (max-width:600px){.bm-award-card{flex-direction:column;align-items:flex-start}}
+
+/* leadership moment */
+.bm-moment{background:radial-gradient(44rem 22rem at 0% 0%,rgba(123,60,255,.22),transparent 70%),var(--bm-bg)}
+.bm-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.4vw,2rem);margin-top:clamp(1.4rem,3vw,2.4rem)}
+.bm-step{border-top:3px solid var(--bm-purple);padding-top:1rem;height:100%}
+.bm-step:last-child{border-top-color:var(--bm-pink)}
+.bm-step h3{font-family:var(--display);font-style:italic;text-transform:uppercase;font-weight:900;font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1;margin-bottom:.5rem}
+.bm-step p{margin:0;color:var(--bm-mute);line-height:1.65}
+@media (max-width:900px){.bm-steps{grid-template-columns:1fr}}
