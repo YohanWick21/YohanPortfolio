@@ -127,3 +127,18 @@
 @media (max-width:900px){.bm-feature{grid-template-columns:1fr}}
 .bm-feature a.bm-btn{background:#7b3cff;color:#fff;border:2px solid #7b3cff;padding:.95rem 1.5rem;width:fit-content}
 .bm-feature a.bm-btn:hover{background:#ff5fa8;border-color:#ff5fa8;color:#12060d}
+
+/* pink highlights */
+.bm em.hl{font-style:inherit;color:var(--bm-pink)}
+.bm-pull em.hl{color:var(--bm-pink)}
+
+/* footer on the Benchmark page picks up the event palette */
+.foot.bm-foot{background:#7b3cff;color:#fff}
+.foot.bm-foot .ribbon{background:#0b0a10;border-color:#0b0a10}
+.foot.bm-foot .ribbon-track span{color:#f4f2f8!important}
+.foot.bm-foot .ribbon-track span:nth-child(3n+2){color:#ff5fa8!important}
+.foot.bm-foot .ribbon-track b{color:#7b3cff}
+.foot.bm-foot h2{color:#fff}
+.foot.bm-foot .btn{background:#0b0a10;border-color:#0b0a10;color:#fff}
+.foot.bm-foot .btn.line{background:transparent;color:#fff;border-color:#fff}
+.foot.bm-foot small,.foot.bm-foot small a{color:#fff;border-top-color:rgba(255,255,255,.55)}

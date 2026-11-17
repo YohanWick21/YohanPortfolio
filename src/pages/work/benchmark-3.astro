@@ -7,6 +7,7 @@ import { Users, Compass, Network, Rocket, Quote, ArrowRight, Award } from 'lucid
 import { BM, bmSrc, bmVideo } from '../../data/benchmark';
 import '../../styles/benchmark.css';
 const ICON: Record<string, any> = { users: Users, compass: Compass, network: Network, rocket: Rocket };
+const hl = (x: string) => x.replace(/\*(.+?)\*/g, '<em class="hl">$1</em>');
 const video = bmVideo(BM.event.video.id);
 const poster = bmSrc(BM.event.video.poster) ?? undefined;
 const schema = {
@@ -16,13 +17,13 @@ const schema = {
   about: { "@type": "Event", name: BM.title, organizer: { "@type": "Organization", name: BM.org } },
 };
 ---
-<Base title={BM.seo.title} desc={BM.seo.desc} current="work" schema={schema}>
+<Base title={BM.seo.title} desc={BM.seo.desc} current="work" schema={schema} footerClass="bm-foot">
   <div class="bm">
     <header class="bm-hero">
       <div class="bm-in">
         <p class="bm-eyebrow mono">{BM.eyebrow}</p>
         <h1><span>Benchmark</span> <em>3.0</em></h1>
-        <p class="bm-headline">{BM.headline}</p>
+        <p class="bm-headline" set:html={hl(BM.headline)} />
         <div class="bm-hero-grid">
           <p class="bm-intro">{BM.intro}</p>
           <dl class="bm-meta">
@@ -38,7 +39,7 @@ const schema = {
 
     <section class="bm-sec bm-impact" aria-labelledby="bm-impact">
       <div class="bm-in">
-        <Reveal client:visible><h2 id="bm-impact" class="bm-h2">The impact</h2></Reveal>
+        <Reveal client:visible><h2 id="bm-impact" class="bm-h2" set:html={hl('The *impact*')} /></Reveal>
         <BmStats client:visible stats={BM.stats} />
       </div>
     </section>
@@ -46,9 +47,9 @@ const schema = {
     <section class="bm-sec" aria-labelledby="bm-challenge">
       <div class="bm-in bm-split">
         <div>
-          <Reveal client:visible><h2 id="bm-challenge" class="bm-h2">{BM.challenge.title}</h2></Reveal>
+          <Reveal client:visible><h2 id="bm-challenge" class="bm-h2" set:html={hl(BM.challenge.title)} /></Reveal>
           {BM.challenge.body.map((t: string) => <Reveal client:visible><p class="bm-p">{t}</p></Reveal>)}
-          <Reveal client:visible><p class="bm-pull">{BM.challenge.pull}</p></Reveal>
+          <Reveal client:visible><p class="bm-pull" set:html={hl(BM.challenge.pull)} /></Reveal>
         </div>
         <Reveal client:visible><BmImage {...BM.challenge.image} /></Reveal>
       </div>
@@ -56,7 +57,7 @@ const schema = {
 
     <section class="bm-sec bm-alt" aria-labelledby="bm-roles">
       <div class="bm-in">
-        <Reveal client:visible><h2 id="bm-roles" class="bm-h2">{BM.roles.title}</h2></Reveal>
+        <Reveal client:visible><h2 id="bm-roles" class="bm-h2" set:html={hl(BM.roles.title)} /></Reveal>
         <div class="bm-roles">
           {BM.roles.items.map((r: any, i: number) => { const Ic = ICON[r.icon]; return (
             <Reveal client:visible delay={(i % 2) * 0.08}>
@@ -73,7 +74,7 @@ const schema = {
 
     <section class="bm-sec" aria-labelledby="bm-people">
       <div class="bm-in">
-        <Reveal client:visible><h2 id="bm-people" class="bm-h2">{BM.gallery.title}</h2></Reveal>
+        <Reveal client:visible><h2 id="bm-people" class="bm-h2" set:html={hl(BM.gallery.title)} /></Reveal>
         <div class="bm-gallery">
           {BM.gallery.items.map((g: any, i: number) => (
             <Reveal client:visible delay={(i % 3) * 0.06} className={`g g${g.span}`}><BmImage {...g} /></Reveal>
@@ -84,7 +85,7 @@ const schema = {
 
     <section class="bm-sec bm-alt" aria-labelledby="bm-event">
       <div class="bm-in">
-        <Reveal client:visible><h2 id="bm-event" class="bm-h2">{BM.event.title}</h2></Reveal>
+        <Reveal client:visible><h2 id="bm-event" class="bm-h2" set:html={hl(BM.event.title)} /></Reveal>
         {BM.event.note && <Reveal client:visible><p class="bm-p bm-lede">{BM.event.note}</p></Reveal>}
         <Reveal client:visible><BmImage {...BM.event.main} /></Reveal>
         <div class="bm-event-more">
@@ -96,14 +97,14 @@ const schema = {
 
     <section class="bm-sec" aria-labelledby="bm-reflect">
       <div class="bm-in bm-reflect">
-        <Reveal client:visible><h2 id="bm-reflect" class="bm-h2">{BM.reflection.title}</h2></Reveal>
-        <div>{BM.reflection.body.map((t: string) => <Reveal client:visible><p class="bm-p">{t}</p></Reveal>)}</div>
+        <Reveal client:visible><h2 id="bm-reflect" class="bm-h2" set:html={hl(BM.reflection.title)} /></Reveal>
+        <div>{BM.reflection.body.map((t: string) => <Reveal client:visible><p class="bm-p" set:html={hl(t)} /></Reveal>)}</div>
       </div>
     </section>
 
     <section class="bm-sec bm-alt" aria-labelledby="bm-quotes">
       <div class="bm-in">
-        <Reveal client:visible><h2 id="bm-quotes" class="bm-h2">{BM.testimonials.title}</h2></Reveal>
+        <Reveal client:visible><h2 id="bm-quotes" class="bm-h2" set:html={hl(BM.testimonials.title)} /></Reveal>
         <div class="bm-quotes">
           {BM.testimonials.items.map((t: any, i: number) => { const ph = bmSrc(t.id); return (
             <Reveal client:visible delay={(i % 2) * 0.08}>
@@ -123,7 +124,7 @@ const schema = {
 
     <section class="bm-sec bm-close" aria-labelledby="bm-close">
       <div class="bm-in">
-        <Reveal client:visible><h2 id="bm-close" class="bm-h2 big">{BM.closing.title}</h2></Reveal>
+        <Reveal client:visible><h2 id="bm-close" class="bm-h2 big" set:html={hl(BM.closing.title)} /></Reveal>
         <Reveal client:visible><p class="bm-p bm-lede">{BM.closing.body}</p></Reveal>
         <Reveal client:visible>
           <div class="bm-btns">

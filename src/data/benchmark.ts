@@ -29,7 +29,7 @@ export const BM = {
   dates: 'Oct 2024 - Dec 2024',
   award: 'Most Outstanding Event Award, AIESEC in SLIIT',
   eyebrow: 'Leadership & event execution',
-  headline: 'Leading people. Building experiences. Delivering impact.',
+  headline: 'Leading *people*. Building *experiences*. Delivering *impact*.',
   intro: 'An ambitious event brought to life through teamwork, coordination and a shared vision.',
   hero: { id: 'benchmark-hero', alt: 'Benchmark 3.0 organising committee and delegates at the event', ratio: '21 / 9' },
 
@@ -42,17 +42,17 @@ export const BM = {
   ],
 
   challenge: {
-    title: 'Bringing an ambitious vision to life.',
+    title: 'Bringing an *ambitious vision* to life.',
     body: [
       'Delivering a large-scale event requires more than a good idea. It requires people working towards the same objectives, effective coordination between teams and the ability to keep multiple moving parts aligned.',
       'As Organising Committee President, my responsibility was to bring together an 18-member team, establish direction and ensure that our collective efforts translated into a successful event experience.',
     ],
-    pull: 'The challenge was not simply organising an event. It was getting an entire team to move towards one shared goal.',
+    pull: 'The challenge was not simply organising an event. It was getting an entire team to move towards *one shared goal*.',
     image: { id: 'benchmark-planning-01', alt: 'The organising committee in a planning session', ratio: '4 / 5' },
   },
 
   roles: {
-    title: 'Leading beyond the title.',
+    title: 'Leading *beyond* the title.',
     items: [
       { icon: 'users', t: 'People leadership', x: 'Led and coordinated an 18-member organising committee, ensuring team members understood their responsibilities and worked towards shared objectives.' },
       { icon: 'compass', t: 'Strategic planning', x: 'Translated event objectives into actionable plans, priorities and deliverables, helping maintain direction throughout the preparation process.' },
@@ -62,7 +62,7 @@ export const BM = {
   },
 
   gallery: {
-    title: 'The people behind the experience.',
+    title: 'The *people* behind the experience.',
     items: [
       { id: 'benchmark-planning-02', alt: 'Committee members planning behind the scenes', caption: 'Planning behind the scenes.', ratio: '16 / 10', span: 7 },
       { id: 'benchmark-team-01', alt: 'The Benchmark 3.0 organising committee together', caption: 'Bringing the team together.', ratio: '4 / 5', span: 5 },
@@ -74,7 +74,7 @@ export const BM = {
   },
 
   event: {
-    title: 'And then, it all came together.',
+    title: 'And then, it all *came together*.',
     note: 'Benchmark 3.0 brought together 400+ delegates and 100+ hackathon teams.',
     main: { id: 'benchmark-event-01', alt: 'Delegates and teams at Benchmark 3.0', ratio: '16 / 9' },
     more: [
@@ -85,21 +85,21 @@ export const BM = {
   },
 
   reflection: {
-    title: 'More than managing a team.',
+    title: 'More than *managing* a team.',
     body: [
       'Benchmark 3.0 taught me that leadership is not simply about delegating responsibilities or ensuring deadlines are met.',
-      'It is about creating clarity when things get complicated, bringing people together when priorities differ and taking ownership of the outcome even when things do not go according to plan.',
+      'It is about *creating clarity* when things get complicated, *bringing people together* when priorities differ and *taking ownership* of the outcome even when things do not go according to plan.',
       'The experience strengthened my ability to manage people, navigate challenges and turn collective effort into something tangible.',
     ],
   },
 
   testimonials: {
-    title: 'A few words from the people who were there.',
+    title: 'A few *words* from the people who were there.',
     items: [1, 2, 3, 4].map(n => ({ id: `benchmark-testimonial-0${n}`, quote: '[Testimonial to be added]', name: '[Name]', role: '[Position / Role]' })),
   },
 
   closing: {
-    title: 'Great things happen when people move together.',
+    title: 'Great things happen when people *move together*.',
     body: 'Benchmark 3.0 was a reminder of what a committed team can accomplish when people share a vision and work towards something bigger than themselves.',
   },
 

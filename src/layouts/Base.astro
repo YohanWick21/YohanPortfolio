@@ -10,8 +10,8 @@ import '@fontsource/barlow-condensed/900-italic.css';
 import '@fontsource/space-mono/400.css';
 import '@fontsource/space-mono/700.css';
 import '../styles/type.css';
-interface Props { title: string; desc: string; current?: string; og?: string; total?: number; footer?: boolean; schema?: object; noindex?: boolean }
-const { title, desc, current, og, total, footer = true, schema, noindex = false } = Astro.props;
+interface Props { title: string; desc: string; current?: string; og?: string; total?: number; footer?: boolean; schema?: object; noindex?: boolean; footerClass?: string }
+const { title, desc, current, og, total, footer = true, schema, noindex = false, footerClass = '' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const ogImg = new URL(og ?? '/assets/yohan-campaign-coordinator.webp', Astro.site).href;
 const WORDS = ['Ideate', 'Create', 'Execute', 'Published', 'Brand', 'Campaigns', 'Culture'];
@@ -40,7 +40,7 @@ const COLS = ['#C8FF00', '#F2EDE4', '#FF3D00'];
   <Nav client:load current={current} total={total} />
   <main id="main"><slot /></main>
   {footer && (
-    <footer class="foot">
+    <footer class={`foot ${footerClass}`}>
       <div class="ribbon" aria-hidden="true"><div class="ribbon-track">
         {[0, 1].map(() => WORDS.map((w, i) => <span style={`color:${COLS[i % COLS.length]}`}>{w}<b>✦</b></span>))}
       </div></div>
