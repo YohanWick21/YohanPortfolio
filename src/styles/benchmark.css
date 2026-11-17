@@ -41,10 +41,10 @@
 /* impact */
 .bm-impact{border-top:1px solid var(--bm-line);border-bottom:1px solid var(--bm-line);background:linear-gradient(180deg,var(--bm-bg),#100d1c)}
 .bm-impact .bm-h2{max-width:none}
-.bm-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1rem,3vw,3rem)}
+.bm-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(1rem,3vw,3rem)}
 .bm-stat{border-top:3px solid var(--bm-purple);padding-top:1rem;display:grid;gap:.5rem;align-content:start}
-.bm-stat:nth-child(4){border-top-color:var(--bm-pink)}
-.bm-num{font-family:var(--display);font-style:italic;font-weight:900;font-size:clamp(3.6rem,9vw,8rem);line-height:.9;letter-spacing:-.01em}
+.bm-stat:nth-child(5){border-top-color:var(--bm-pink)}
+.bm-num{font-family:var(--display);font-style:italic;font-weight:900;font-size:clamp(3.2rem,6.8vw,6.4rem);line-height:.9;letter-spacing:-.01em}
 .bm-num i{font-style:italic;color:var(--bm-pink)}
 .bm-stat span{color:var(--bm-mute);font-weight:600;line-height:1.35;max-width:18ch}
 
@@ -200,3 +200,4 @@
 .bm-step h3{font-family:var(--display);font-style:italic;text-transform:uppercase;font-weight:900;font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1;margin-bottom:.5rem}
 .bm-step p{margin:0;color:var(--bm-mute);line-height:1.65}
 @media (max-width:900px){.bm-steps{grid-template-columns:1fr}}
+@media (max-width:900px){.bm-stat:last-child:nth-child(odd){grid-column:span 2}}

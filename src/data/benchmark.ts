@@ -43,6 +43,7 @@ export const BM = {
     { value: 600, suffix: '+', label: 'Registrations generated' },
     { value: 400, suffix: '+', label: 'Delegates across two days' },
     { value: 100, suffix: '', label: 'Competing hackathon teams' },
+    { value: 15, suffix: '', label: 'Partners: 4 monetary and 11 in kind' },
   ],
 
   challenge: {
