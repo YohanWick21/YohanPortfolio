@@ -1,14 +1,14 @@
 ---
 import { bmSrc } from '../data/benchmark';
-interface Props { id: string; alt: string; ratio?: string; caption?: string; eager?: boolean; class?: string }
-const { id, alt, ratio = '4 / 3', caption, eager = false, class: cls = '' } = Astro.props;
+interface Props { id: string; alt: string; ratio?: string; caption?: string; eager?: boolean; pos?: string; class?: string }
+const { id, alt, ratio = '4 / 3', caption, eager = false, pos, class: cls = '' } = Astro.props;
 const src = bmSrc(id);
 const isPh = !src;
 ---
 <figure class={`bm-fig ${cls}`}>
   <div class={`bm-frame${isPh ? ' ph' : ''}`} style={`aspect-ratio:${ratio}`}>
     {src
-      ? <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+      ? <img src={src} style={pos ? `object-position:${pos}` : undefined} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
       : <div class="bm-ph" role="img" aria-label={`Image placeholder: ${alt}`}><span class="mono">{id}</span><small>Replace with photo</small></div>}
   </div>
   {caption && <figcaption>{caption}</figcaption>}

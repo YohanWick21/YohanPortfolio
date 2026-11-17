@@ -91,6 +91,7 @@ const schema = {
         <div class="bm-event-more">
           {BM.event.more.map((g: any) => <Reveal client:visible><BmImage {...g} /></Reveal>)}
         </div>
+        {BM.event.credit && <p class="bm-credit">{BM.event.credit}</p>}
         {video && <Reveal client:visible><video class="bm-video" controls playsinline preload="none" poster={poster} src={video}></video></Reveal>}
       </div>
     </section>

@@ -31,7 +31,7 @@ export const BM = {
   eyebrow: 'Leadership & event execution',
   headline: 'Leading *people*. Building *experiences*. Delivering *impact*.',
   intro: 'An ambitious event brought to life through teamwork, coordination and a shared vision.',
-  hero: { id: 'benchmark-hero', alt: 'Benchmark 3.0 organising committee and delegates at the event', ratio: '21 / 9' },
+  hero: { id: 'benchmark-hero', alt: 'The Benchmark 3.0 organising committee on stage behind the Benchmark letter blocks', ratio: '16 / 9', pos: '50% 78%' },
 
   /* Figures are from the existing portfolio. Edit here once final numbers are verified. */
   stats: [
@@ -48,7 +48,7 @@ export const BM = {
       'As Organising Committee President, my responsibility was to bring together an 18-member team, establish direction and ensure that our collective efforts translated into a successful event experience.',
     ],
     pull: 'The challenge was not simply organising an event. It was getting an entire team to move towards *one shared goal*.',
-    image: { id: 'benchmark-planning-01', alt: 'The organising committee in a planning session', ratio: '4 / 5' },
+    image: { id: 'benchmark-speaker-01', alt: 'A speaker addressing delegates at Benchmark 3.0', ratio: '4 / 5', pos: '50% 30%' },
   },
 
   roles: {
@@ -64,24 +64,26 @@ export const BM = {
   gallery: {
     title: 'The *people* behind the experience.',
     items: [
-      { id: 'benchmark-planning-02', alt: 'Committee members planning behind the scenes', caption: 'Planning behind the scenes.', ratio: '16 / 10', span: 7 },
-      { id: 'benchmark-team-01', alt: 'The Benchmark 3.0 organising committee together', caption: 'Bringing the team together.', ratio: '4 / 5', span: 5 },
-      { id: 'benchmark-team-02', alt: 'Committee members working on event preparation', caption: 'Turning ideas into action.', ratio: '1 / 1', span: 4 },
-      { id: 'benchmark-planning-03', alt: 'A team meeting during preparation', caption: 'A shared vision, one team.', ratio: '1 / 1', span: 4 },
-      { id: 'benchmark-team-03', alt: 'Committee members at the event', caption: 'The people who made it happen.', ratio: '4 / 5', span: 4 },
-      { id: 'benchmark-team-04', alt: 'The full organising committee group photograph', caption: '[Caption to be added]', ratio: '21 / 9', span: 12 },
+      { id: 'benchmark-team-01', alt: 'The organising committee in black, standing together', caption: 'The organising committee, one team.', ratio: '3 / 2', span: 7 },
+      { id: 'benchmark-team-02', alt: 'Committee members and partners posing in front of the Benchmark 3.0 backdrop', caption: 'In front of the Benchmark 3.0 backdrop.', ratio: '5 / 4', span: 5, pos: '50% 40%' },
+      { id: 'benchmark-delegates-01', alt: 'Delegates in a circle holding event cards', caption: 'Delegates coming together.', ratio: '1 / 1', span: 4 },
+      { id: 'benchmark-detail-01', alt: 'Benchmark 3.0 wristbands', caption: 'The little details.', ratio: '1 / 1', span: 4 },
+      { id: 'benchmark-stage-01', alt: 'A committee member in a jacket looking out at the stage', caption: 'Before the doors opened.', ratio: '1 / 1', span: 4, pos: '50% 40%' },
+      { id: 'benchmark-team-03', alt: 'Committee members and delegates celebrating on stage', caption: 'And a moment to celebrate.', ratio: '2 / 1', span: 12, pos: '50% 62%' },
     ],
   },
 
   event: {
     title: 'And then, it all *came together*.',
-    note: 'Benchmark 3.0 brought together 400+ delegates and 100+ hackathon teams.',
-    main: { id: 'benchmark-event-01', alt: 'Delegates and teams at Benchmark 3.0', ratio: '16 / 9' },
+    note: 'Under the theme "Designing the Next Revolution", Benchmark 3.0 brought together 400+ delegates and 100+ hackathon teams.',
+    main: { id: 'benchmark-event-01', alt: 'Delegates listening to speakers in the Benchmark 3.0 session hall', ratio: '16 / 9' },
     more: [
-      { id: 'benchmark-event-02', alt: 'A moment from the Benchmark 3.0 event', caption: '[Caption to be added]', ratio: '4 / 3' },
-      { id: 'benchmark-event-03', alt: 'Another moment from the Benchmark 3.0 event', caption: '[Caption to be added]', ratio: '4 / 3' },
+      { id: 'benchmark-arrival-01', alt: 'Delegates arriving at the Benchmark 3.0 venue', caption: 'Delegates arrive.', ratio: '4 / 3' },
+      { id: 'benchmark-event-02', alt: 'Delegates attentively following a session', caption: 'Full rooms, full attention.', ratio: '4 / 3' },
+      { id: 'benchmark-event-03', alt: 'A presenter receiving a token of appreciation after a session', caption: 'Closing a session with thanks.', ratio: '4 / 3' },
     ],
     video: { id: 'benchmark-video', poster: 'benchmark-event-01' },
+    credit: 'Event photography: Vivid Snaps by Rajana',
   },
 
   reflection: {
