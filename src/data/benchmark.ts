@@ -108,7 +108,7 @@ export const BM = {
   testimonials: {
     show: true,
     title: 'A few *words* from the people who were there.',
-    /* Add more by copying an entry. Photo: drop benchmark-testimonial-01.jpg (02, 03...) into public/assets/benchmark/. */
+    /* Add more by copying an entry. */
     items: [
       {
         id: 'benchmark-testimonial-01',

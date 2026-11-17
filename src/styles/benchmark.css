@@ -176,3 +176,9 @@
 .bm-dialog header small{color:var(--bm-mute)}
 .bm-dlg-body p{margin:0 0 1.1rem;line-height:1.7;color:var(--bm-ink);font-size:1.02rem}
 @media (prefers-reduced-motion:reduce){.bm-dialog[open]{animation:none}}
+
+/* four-up testimonial cards: equal height, clamped preview, no avatars */
+.bm-quote blockquote{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden;font-size:clamp(1rem,1.3vw,1.12rem)}
+.bm-quote figcaption{display:grid;gap:.1rem}
+.bm-dialog header{display:grid;gap:.15rem;margin-bottom:1.4rem;padding-right:3.2rem}
+.bm-dialog{overscroll-behavior:contain}

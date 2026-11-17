@@ -119,7 +119,7 @@ const schema = {
     <section class="bm-sec bm-alt" aria-labelledby="bm-quotes">
       <div class="bm-in">
         <Reveal client:visible><h2 id="bm-quotes" class="bm-h2" set:html={hl(BM.testimonials.title)} /></Reveal>
-        <Reveal client:visible><BmTestimonials client:visible items={BM.testimonials.items.map((q: any) => ({ name: q.name, role: q.role, preview: q.preview, paragraphs: q.paragraphs, photo: bmSrc(q.id) }))} /></Reveal>
+        <Reveal client:visible><BmTestimonials client:visible items={BM.testimonials.items.map((q: any) => ({ name: q.name, role: q.role, preview: q.preview, paragraphs: q.paragraphs }))} /></Reveal>
       </div>
     </section>
     )}
