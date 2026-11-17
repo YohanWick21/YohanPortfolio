@@ -106,6 +106,7 @@ export const BM = {
   },
 
   testimonials: {
+    show: false, // set to true once real quotes, names and roles are added below
     title: 'A few *words* from the people who were there.',
     items: [1, 2, 3, 4].map(n => ({ id: `benchmark-testimonial-0${n}`, quote: '[Testimonial to be added]', name: '[Name]', role: '[Position / Role]' })),
   },

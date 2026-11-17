@@ -114,6 +114,7 @@ const schema = {
       </div>
     </section>
 
+    {BM.testimonials.show && (
     <section class="bm-sec bm-alt" aria-labelledby="bm-quotes">
       <div class="bm-in">
         <Reveal client:visible><h2 id="bm-quotes" class="bm-h2" set:html={hl(BM.testimonials.title)} /></Reveal>
@@ -133,6 +134,7 @@ const schema = {
         </div>
       </div>
     </section>
+    )}
 
     <section class="bm-sec bm-close" aria-labelledby="bm-close">
       <div class="bm-in">
