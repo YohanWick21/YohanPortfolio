@@ -44,11 +44,11 @@ const schema = { "@context": "https://schema.org", "@type": "Person", name: "Yoh
           <span class="tag">AIESEC in SLIIT</span>
           <h3>Organising Committee President | Benchmark 3.0</h3>
           <p class="when">Oct 2024 - Dec 2024</p>
-          <p>Led an 18-member organising committee in planning and delivering Benchmark 3.0, bringing together hundreds of participants for a multi-faceted event experience.</p>
-          <p>From coordinating cross-functional teams and overseeing event operations to aligning people around shared goals, I was responsible for turning an ambitious event concept into a successfully delivered experience.</p>
+          <p>Led an 18-person committee to deliver Benchmark 3.0, AIESEC in SLIIT's signature UI/UX event, across two event days on 30 November and 7 December 2024, with a hackathon in between.</p>
+          <p>I guided the team across marketing, logistics, partnerships, public relations, delegate experience, finance and web development.</p>
           <a class="bm-btn" href="/work/benchmark-3/">Explore the Experience <ArrowRight size={18} /></a>
         </div>
-        <ul aria-label="Benchmark 3.0 in numbers"><li><b>18</b><span>Committee members led</span></li><li><b>600+</b><span>Registrations</span></li><li><b>400+</b><span>Delegates</span></li><li><b>100+</b><span>Hackathon teams</span></li></ul>
+        <ul aria-label="Benchmark 3.0 in numbers"><li><b>18</b><span>Committee members led</span></li><li><b>600+</b><span>Registrations</span></li><li><b>400+</b><span>Delegates</span></li><li><b>100</b><span>Hackathon teams</span></li></ul>
       </article>
     </Reveal>
     <div class="lead-grid">{a.lead.filter((x: any) => !/Benchmark/.test(x.title)).map((x: any, i: number) => <Reveal client:visible delay={(i % 3) * 0.08}><article class="lead-card"><span class="pill" style={`background:${CC[i % CC.length]};color:var(--ink);border-color:var(--ink)`}>{x.tag}</span><h3 class="display">{x.title}</h3><p class="mono">{x.when}</p><p>{x.desc}</p></article></Reveal>)}</div>

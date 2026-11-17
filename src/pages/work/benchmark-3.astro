@@ -29,7 +29,7 @@ const schema = {
           <dl class="bm-meta">
             <div><dt>Role</dt><dd>{BM.role}</dd></div>
             <div><dt>Organisation</dt><dd>{BM.org}</dd></div>
-            <div><dt>When</dt><dd>{BM.dates}</dd></div>
+            <div><dt>Event days</dt><dd>{BM.eventDays}</dd></div>
           </dl>
         </div>
         <p class="bm-award"><Award size={16} /> {BM.award}</p>
@@ -69,6 +69,13 @@ const schema = {
             </Reveal>
           ); })}
         </div>
+        <Reveal client:visible>
+          <div class="bm-fn">
+            <p class="bm-fn-l mono">{BM.roles.functionsLabel}</p>
+            <ul>{BM.roles.functions.map((f: string) => <li>{f}</li>)}</ul>
+            <p class="bm-p bm-fn-b">{BM.roles.build}</p>
+          </div>
+        </Reveal>
       </div>
     </section>
 
@@ -87,6 +94,9 @@ const schema = {
       <div class="bm-in">
         <Reveal client:visible><h2 id="bm-event" class="bm-h2" set:html={hl(BM.event.title)} /></Reveal>
         {BM.event.note && <Reveal client:visible><p class="bm-p bm-lede">{BM.event.note}</p></Reveal>}
+        <ol class="bm-tl">
+          {BM.event.timeline.map((x: any) => <Reveal client:visible><li><span class="mono">{x.when}</span><h3>{x.t}</h3><p>{x.x}</p></li></Reveal>)}
+        </ol>
         <Reveal client:visible><BmImage {...BM.event.main} /></Reveal>
         <div class="bm-event-more">
           {BM.event.more.map((g: any) => <Reveal client:visible><BmImage {...g} /></Reveal>)}

@@ -27,6 +27,7 @@ export const BM = {
   org: 'AIESEC in SLIIT',
   role: 'Organising Committee President',
   dates: 'Oct 2024 - Dec 2024',
+  eventDays: '30 Nov and 7 Dec 2024',
   award: 'Most Outstanding Event Award, AIESEC in SLIIT',
   eyebrow: 'Leadership & event execution',
   headline: 'Leading *people*. Building *experiences*. Delivering *impact*.',
@@ -37,15 +38,15 @@ export const BM = {
   stats: [
     { value: 18, suffix: '', label: 'Organising committee members led' },
     { value: 600, suffix: '+', label: 'Registrations generated' },
-    { value: 400, suffix: '+', label: 'Delegates accommodated' },
-    { value: 100, suffix: '+', label: 'Hackathon teams involved' },
+    { value: 400, suffix: '+', label: 'Delegates across two days' },
+    { value: 100, suffix: '', label: 'Competing hackathon teams' },
   ],
 
   challenge: {
     title: 'Bringing an *ambitious vision* to life.',
     body: [
-      'Delivering a large-scale event requires more than a good idea. It requires people working towards the same objectives, effective coordination between teams and the ability to keep multiple moving parts aligned.',
-      'As Organising Committee President, my responsibility was to bring together an 18-member team, establish direction and ensure that our collective efforts translated into a successful event experience.',
+      'Benchmark 3.0 was AIESEC in SLIIT\'s signature event and a pioneering UI/UX event, which came with real weight. Delivering something at that scale takes more than a good idea. It takes people moving towards the same objectives, teams that stay aligned and a lot of moving parts held together.',
+      'As Organising Committee President, I led an 18-person team from diverse backgrounds, many working in functions they had little or no prior experience in. Over three months, my job was to set direction and help them turn it into a brand and an event worth showing up for.',
     ],
     pull: 'The challenge was not simply organising an event. It was getting an entire team to move towards *one shared goal*.',
     image: { id: 'benchmark-speaker-01', alt: 'A speaker addressing delegates at Benchmark 3.0', ratio: '4 / 5', pos: '50% 30%' },
@@ -54,11 +55,14 @@ export const BM = {
   roles: {
     title: 'Leading *beyond* the title.',
     items: [
-      { icon: 'users', t: 'People leadership', x: 'Led and coordinated an 18-member organising committee, ensuring team members understood their responsibilities and worked towards shared objectives.' },
-      { icon: 'compass', t: 'Strategic planning', x: 'Translated event objectives into actionable plans, priorities and deliverables, helping maintain direction throughout the preparation process.' },
-      { icon: 'network', t: 'Cross-functional coordination', x: 'Worked across different organising functions, ensuring teams remained aligned and that dependencies and responsibilities were managed effectively.' },
-      { icon: 'rocket', t: 'Event execution', x: 'Oversaw preparation and execution, helping ensure that plans translated into an actual event experience.' },
+      { icon: 'users', t: 'People leadership', x: 'Led an 18-person team from diverse backgrounds, many in functions that were new to them, and helped everyone find their footing.' },
+      { icon: 'compass', t: 'Strategic planning', x: 'Turned the event objectives into plans, priorities and deliverables, keeping the committee pointed the same way through three months of preparation.' },
+      { icon: 'network', t: 'Cross-functional coordination', x: 'Kept seven functions aligned, so that dependencies and responsibilities were managed across the whole committee.' },
+      { icon: 'rocket', t: 'Event execution', x: 'Oversaw two event days and the hackathon stages in between, from 100 competing teams down to the 25 that presented on the final day.' },
     ],
+    functionsLabel: 'Functions I guided',
+    functions: ['Marketing', 'Logistics', 'Partnership development', 'Public relations', 'Delegate experience', 'Finance', 'Web development'],
+    build: 'The team also built Benchmark 3.0\'s own WordPress website, SEO-optimised so that searches for "Benchmark" put it at the top.',
   },
 
   gallery: {
@@ -66,16 +70,21 @@ export const BM = {
     items: [
       { id: 'benchmark-team-01', alt: 'The organising committee in black, standing together', caption: 'The organising committee, one team.', ratio: '3 / 2', span: 7 },
       { id: 'benchmark-team-02', alt: 'Committee members and partners posing in front of the Benchmark 3.0 backdrop', caption: 'In front of the Benchmark 3.0 backdrop.', ratio: '5 / 4', span: 5, pos: '50% 40%' },
-      { id: 'benchmark-delegates-01', alt: 'Delegates in a circle holding event cards', caption: 'Delegates coming together.', ratio: '1 / 1', span: 4 },
+      { id: 'benchmark-committee-01', alt: 'Committee members in a circle holding event cards', caption: 'The committee, in a circle.', ratio: '1 / 1', span: 4 },
       { id: 'benchmark-detail-01', alt: 'Benchmark 3.0 wristbands', caption: 'The little details.', ratio: '1 / 1', span: 4 },
-      { id: 'benchmark-stage-01', alt: 'A committee member in a jacket looking out at the stage', caption: 'Before the doors opened.', ratio: '1 / 1', span: 4, pos: '50% 40%' },
+      { id: 'benchmark-stage-01', alt: 'A committee member in a jacket looking out at the stage', caption: 'Looking out at the stage.', ratio: '1 / 1', span: 4, pos: '50% 40%' },
       { id: 'benchmark-team-03', alt: 'Committee members and delegates celebrating on stage', caption: 'And a moment to celebrate.', ratio: '2 / 1', span: 12, pos: '50% 62%' },
     ],
   },
 
   event: {
     title: 'And then, it all *came together*.',
-    note: 'Under the theme "Designing the Next Revolution", Benchmark 3.0 brought together 400+ delegates and 100+ hackathon teams.',
+    note: 'Under the theme "Designing the Next Revolution", Benchmark 3.0 brought together 400+ delegates across two days and 100 hackathon teams.',
+    timeline: [
+      { when: '30 Nov 2024', t: 'Day 1', x: 'The bootcamp for delegates.' },
+      { when: 'In between', t: 'Hackathon stages', x: '100 teams competed across the stages, and 25 were shortlisted.' },
+      { when: '7 Dec 2024', t: 'Day 2', x: 'The 25 shortlisted teams presented their solutions on the final day.' },
+    ],
     main: { id: 'benchmark-event-01', alt: 'Delegates listening to speakers in the Benchmark 3.0 session hall', ratio: '16 / 9' },
     more: [
       { id: 'benchmark-arrival-01', alt: 'Delegates arriving at the Benchmark 3.0 venue', caption: 'Delegates arrive.', ratio: '4 / 3' },
@@ -89,9 +98,9 @@ export const BM = {
   reflection: {
     title: 'More than *managing* a team.',
     body: [
-      'Benchmark 3.0 taught me that leadership is not simply about delegating responsibilities or ensuring deadlines are met.',
-      'It is about *creating clarity* when things get complicated, *bringing people together* when priorities differ and *taking ownership* of the outcome even when things do not go according to plan.',
-      'The experience strengthened my ability to manage people, navigate challenges and turn collective effort into something tangible.',
+      'Benchmark 3.0 was a turning point for me. It taught me that leadership is not simply about delegating work and watching deadlines.',
+      'It is about *creating clarity* when things get complicated, *bringing people together* when priorities differ and *taking ownership* of the outcome when things do not go to plan, including the last-minute, high-stress moments I would never face in my day-to-day life.',
+      'It also meant giving newcomers to AIESEC in SLIIT a great first experience, and learning what it takes to turn collective effort into something tangible.',
     ],
   },
 
@@ -107,6 +116,6 @@ export const BM = {
 
   seo: {
     title: 'Benchmark 3.0: Leading an 18-Member Organising Committee | Yohan Wickramasinghe',
-    desc: 'How Yohan Wickramasinghe led an 18-member organising committee at AIESEC in SLIIT to deliver Benchmark 3.0, with 600+ registrations, 400+ delegates and 100+ hackathon teams.',
+    desc: 'How Yohan Wickramasinghe led an 18-member organising committee at AIESEC in SLIIT to deliver Benchmark 3.0, with 600+ registrations, 400+ delegates across two days and 100 competing hackathon teams.',
   },
 };
