@@ -52,24 +52,20 @@
 .ar-phil-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(1.6rem,5vw,5rem);align-items:start}
 .ar-lede{font-size:clamp(1.15rem,1.7vw,1.4rem);line-height:1.55;max-width:34ch;font-weight:500}
 .ar-reach{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 2rem}
-.ar-reach li{padding:1rem 0;border-top:1px solid var(--line);display:grid;gap:.35rem;align-content:start}
-.ar-reach b{font-weight:700;font-size:1rem}
-.ar-reach span{color:var(--mute);font-size:.9rem;line-height:1.55}
+.ar-rl{font-weight:700;margin-bottom:1rem}
+.ar-reach{grid-template-columns:1fr!important;gap:0!important}
+.ar-reach li{padding:.9rem 0;border-top:1px solid var(--line);font-weight:600;font-size:clamp(1rem,1.4vw,1.2rem);line-height:1.4;letter-spacing:-.015em}
 
 /* identity plates */
 .ar-plates{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(1.2rem,2.4vw,2.2rem) clamp(.8rem,1.6vw,1.4rem);margin-top:clamp(2.4rem,5vw,4rem);align-items:start}
 .ar-g0{grid-column:1/7}.ar-g1{grid-column:7/13}
 .ar-g2{grid-column:1/6;grid-row:2/4}.ar-g3{grid-column:6/13;grid-row:2}.ar-g4{grid-column:6/13;grid-row:3}
 .ar-g5{grid-column:1/8;grid-row:4/6}.ar-g6{grid-column:8/13;grid-row:4}.ar-g7{grid-column:8/13;grid-row:5}
-.ar-g8{grid-column:1/8;grid-row:6}.ar-g9{grid-column:8/13;grid-row:6}
+
 .ar-pl .fr{width:100%;overflow:hidden;background:#000;border:1px solid var(--line)}
 .ar-pl img{width:100%;height:100%;object-fit:cover;display:block}
 .ar-pl figcaption{display:flex;flex-wrap:wrap;gap:.2rem 1rem;margin-top:.6rem;font-size:.82rem;color:var(--mute)}
 .ar-pl figcaption b{color:var(--fg)}
-.ar-voice{align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;background:var(--gold);color:#000;padding:clamp(1.2rem,2.4vw,2rem);min-height:12rem}
-.ar-vl{font-weight:700;font-size:.9rem}
-.ar-voice ul{display:grid;gap:.1rem}
-.ar-voice li{font-weight:600;font-size:clamp(1.8rem,3.2vw,2.8rem);letter-spacing:-.04em;line-height:1.05}
 
 /* website recreations, on slate */
 .ar-order{display:flex;flex-wrap:wrap;gap:.5rem;margin:clamp(2rem,4vw,3.2rem) 0;counter-reset:s}

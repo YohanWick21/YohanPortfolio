@@ -7,7 +7,7 @@ import { asset } from '../../data/site';
 import '../../styles/arkive.css';
 const logoW = asset('Full Logo White.png');
 const PL = AK.plates;
-const RATIO: Record<string,string> = { 'guide-logomark':'2187 / 918','guide-logotype':'2187 / 918','guide-lockup':'1058 / 1297','guide-clearspace':'2187 / 918','guide-minsize':'2187 / 918','guide-palette':'1824 / 1289','guide-combos':'2191 / 938','guide-type':'2187 / 1018','guide-weights':'2187 / 1042' };
+const RATIO: Record<string,string> = { 'guide-logomark':'2187 / 918','guide-logotype':'2187 / 918','guide-lockup':'1058 / 1297','guide-clearspace':'2187 / 918','guide-minsize':'2187 / 918','guide-palette':'1824 / 1289','guide-combos':'2191 / 938','guide-type':'2187 / 1018' };
 const plate = (k: string[]) => ({ src: `/assets/arkive/${k[0]}.webp`, ratio: RATIO[k[0]], t: k[1], x: k[2] });
 const shots = { hero: akSrc('arkive-site-hero'), system: akSrc('arkive-site-system'), approach: akSrc('arkive-site-approach') };
 const schema = {
@@ -56,9 +56,12 @@ const schema = {
       <div class="ar-rule"></div>
       <div class="ar-phil-grid">
         <Reveal client:visible><p class="ar-lede">{AK.philosophy.body}</p></Reveal>
-        <ul class="ar-reach">
-          {AK.philosophy.values.map(([t, x]) => <li><b>{t}</b><span>{x}</span></li>)}
-        </ul>
+        <div>
+          <p class="ar-rl">{AK.philosophy.reachLabel}</p>
+          <ul class="ar-reach">
+            {AK.philosophy.reach.map((x: string) => <li>{x}</li>)}
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -71,7 +74,7 @@ const schema = {
         <div>{AK.identity.body.map((t: string) => <Reveal client:visible><p class="ar-p">{t}</p></Reveal>)}</div>
       </div>
       <div class="ar-plates">
-        {[[PL.logomark],[PL.logotype],[PL.lockup],[PL.clear],[PL.min],['SWATCH'],[PL.combos],[PL.type],[PL.weights]].map(([k]: any, i: number) => { if (k === 'SWATCH') return (
+        {[[PL.logomark],[PL.logotype],[PL.lockup],[PL.clear],[PL.min],['SWATCH'],[PL.combos],[PL.type]].map(([k]: any, i: number) => { if (k === 'SWATCH') return (
           <Reveal client:visible className={`ar-plate-w ar-g${i}`}>
             <figure class="ar-pl"><div class="ar-pal">{AK.identity.palette.map(([n, h, r, t]: string[]) => <div style={`background:${h};color:${t}`}><b>{n}</b><span>{h}</span><span>RGB {r}</span></div>)}</div><figcaption><b>Palette</b><span>Four colours.</span></figcaption></figure>
           </Reveal>
@@ -80,10 +83,6 @@ const schema = {
             <figure class="ar-pl"><div class="fr" style={`aspect-ratio:${p.ratio}`}><img src={p.src} alt={`${p.t}: ${p.x}`} loading="lazy" /></div><figcaption><b>{p.t}</b><span>{p.x}</span></figcaption></figure>
           </Reveal>
         ); })}
-        <div class="ar-voice ar-g9">
-          <p class="ar-vl">{AK.identity.voiceNote}</p>
-          <ul>{AK.identity.voice.map((v: string) => <li>{v}</li>)}</ul>
-        </div>
       </div>
       <p class="ar-note">{AK.identity.note}</p>
     </div>
