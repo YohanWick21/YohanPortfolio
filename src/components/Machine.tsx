@@ -188,7 +188,7 @@ export default function Machine({ jobs }: { jobs: Job[] }) {
             <div className="after">
               <button className="btn line" type="button" onClick={() => { touched.current = true; loadJob((cur + 1) % jobs.length); }}><SkipForward size={16} /> Next job</button>
               <a className="btn line" href={j.href}>See the full project <ArrowUpRight size={16} /></a>
-              <a className="btn" href="/arkive-labs/"><Wand2 size={16} /> Do this for my brand</a>
+              <a className="btn" href="/work/arkive-labs/"><Wand2 size={16} /> Do this for my brand</a>
             </div>
           )}
         </div>
