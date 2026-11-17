@@ -102,3 +102,8 @@ body{font-family:var(--body);line-height:1.62}
   .rail-hint{display:none}
 }
 @media (max-width:860px){.hero.press{overflow:clip}}
+/* Contact form: typed text must be dark on the white fields */
+.in{color:#070707;caret-color:#070707;background:#fff}
+.in::placeholder{color:#6b6b66;opacity:1;font-weight:500}
+.in:focus{outline:3px solid #C8FF00;outline-offset:2px}
+.in:-webkit-autofill{-webkit-text-fill-color:#070707;box-shadow:0 0 0 100px #fff inset}
