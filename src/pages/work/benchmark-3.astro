@@ -2,8 +2,9 @@
 import Base from '../../layouts/Base.astro';
 import Reveal from '../../components/Reveal';
 import BmStats from '../../components/BmStats';
+import BmTestimonials from '../../components/BmTestimonials';
 import BmImage from '../../components/BmImage.astro';
-import { Users, Compass, Network, Rocket, Quote, ArrowRight, Award } from 'lucide-react';
+import { Users, Compass, Network, Rocket, ArrowRight, Award } from 'lucide-react';
 import { BM, bmSrc, bmVideo } from '../../data/benchmark';
 import '../../styles/benchmark.css';
 const ICON: Record<string, any> = { users: Users, compass: Compass, network: Network, rocket: Rocket };
@@ -118,20 +119,7 @@ const schema = {
     <section class="bm-sec bm-alt" aria-labelledby="bm-quotes">
       <div class="bm-in">
         <Reveal client:visible><h2 id="bm-quotes" class="bm-h2" set:html={hl(BM.testimonials.title)} /></Reveal>
-        <div class="bm-quotes">
-          {BM.testimonials.items.map((t: any, i: number) => { const ph = bmSrc(t.id); return (
-            <Reveal client:visible delay={(i % 2) * 0.08}>
-              <figure class="bm-quote">
-                <Quote size={28} class="bm-q" aria-hidden="true" />
-                <blockquote>{t.quote}</blockquote>
-                <figcaption>
-                  {ph ? <img src={ph} alt={`Portrait of ${t.name}`} loading="lazy" /> : <span class="bm-av" aria-hidden="true">?</span>}
-                  <span><b>{t.name}</b><small>{t.role}</small></span>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ); })}
-        </div>
+        <Reveal client:visible><BmTestimonials client:visible items={BM.testimonials.items.map((q: any) => ({ name: q.name, role: q.role, preview: q.preview, paragraphs: q.paragraphs, photo: bmSrc(q.id) }))} /></Reveal>
       </div>
     </section>
     )}

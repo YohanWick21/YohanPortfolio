@@ -106,9 +106,26 @@ export const BM = {
   },
 
   testimonials: {
-    show: false, // set to true once real quotes, names and roles are added below
+    show: true,
     title: 'A few *words* from the people who were there.',
-    items: [1, 2, 3, 4].map(n => ({ id: `benchmark-testimonial-0${n}`, quote: '[Testimonial to be added]', name: '[Name]', role: '[Position / Role]' })),
+    /* Add more by copying an entry. Photo: drop benchmark-testimonial-01.jpg (02, 03...) into public/assets/benchmark/. */
+    items: [
+      {
+        id: 'benchmark-testimonial-01',
+        name: 'Warsha Herath',
+        role: 'Marketing Vice President, Benchmark 3.0',
+        preview: 'I was just a newbie when Yohan interviewed me for the OC. Despite being new and having little experience, he believed in me and gave me the chance to be part of his team. Little did I know that this opportunity would become the beginning of an entirely new journey in my life.',
+        paragraphs: [
+          'My journey with AIESEC took a completely different turn when I got the opportunity to be part of the Organizing Committee of Benchmark 3.0 as a Marketing Vice President. And Yohan was the person who made that opportunity possible.',
+          'I was just a newbie when Yohan interviewed me for the OC. Despite being new and having little experience, he believed in me and gave me the chance to be part of his team. Little did I know that this opportunity would become the beginning of an entirely new journey in my life.',
+          'Back then, I was quite an introverted person, and stepping out of my comfort zone wasn\u2019t something I was used to. But Yohan constantly encouraged and guided me to push my boundaries, believe in myself, and explore more opportunities. That experience gave me the confidence to apply for more leadership roles and take on challenges I probably wouldn\u2019t have considered before.',
+          'As an OC President, Yohan was someone who led with so much passion, patience, and dedication. Managing an OC while balancing everything that comes with it is never easy, but he handled it incredibly well. One thing I genuinely appreciated was how he always made sure that his OC members didn\u2019t feel overwhelmed by the workload. He understood his team, supported everyone, and made sure we enjoyed the journey while getting things done.',
+          'Beyond being a great leader, he was also a genuinely great friend. He created an environment where everyone felt comfortable, supported, and valued. His leadership wasn\u2019t just about getting the job done; it was also about helping people grow along the way.',
+          'Looking back, Benchmark 3.0 will always hold a special place in my AIESEC journey because it was where everything started for me. I\u2019m genuinely grateful that Yohan was the person leading that chapter of my life. Thank you for believing in a newbie, giving me that first opportunity, and helping me discover a side of myself I didn\u2019t know existed.',
+          'I\u2019m really glad I got to be part of your OC, and even more grateful to have had you as a leader and a friend.',
+        ],
+      },
+    ],
   },
 
   closing: {
